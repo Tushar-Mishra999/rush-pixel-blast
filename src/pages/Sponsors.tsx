@@ -154,7 +154,7 @@ const Sponsors = () => {
                 </ul>
               </div>
 
-              <Button variant="pixel" size="lg" className="gap-2">
+              <Button variant="glow" size="lg" className="gap-2">
                 <Mail size={18} />
                 Contact for Sponsorship
               </Button>

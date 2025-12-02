@@ -1,36 +1,44 @@
 import { cn } from "@/lib/utils";
 
-interface PixelBlockProps {
+interface HoloElementProps {
   className?: string;
   color?: "primary" | "secondary" | "accent" | "highlight";
   size?: number;
   delay?: number;
+  variant?: "square" | "line" | "dot";
 }
 
-export const PixelBlock = ({ 
+export const HoloElement = ({ 
   className, 
   color = "primary", 
   size = 32,
-  delay = 0 
-}: PixelBlockProps) => {
+  delay = 0,
+  variant = "square"
+}: HoloElementProps) => {
   const colorClasses = {
-    primary: "bg-primary shadow-glow-primary",
-    secondary: "bg-secondary shadow-glow-secondary",
-    accent: "bg-accent shadow-glow-accent",
-    highlight: "bg-highlight",
+    primary: "bg-primary/20",
+    secondary: "bg-secondary/20",
+    accent: "bg-accent/20",
+    highlight: "bg-highlight/20",
+  };
+
+  const variantStyles = {
+    square: { width: size, height: size },
+    line: { width: size * 3, height: 1 },
+    dot: { width: size / 4, height: size / 4, borderRadius: "50%" },
   };
 
   return (
     <div
       className={cn(
-        "absolute animate-float",
+        "absolute animate-float opacity-40",
         colorClasses[color],
         className
       )}
       style={{
-        width: size,
-        height: size,
+        ...variantStyles[variant],
         animationDelay: `${delay}s`,
+        filter: `blur(${variant === "dot" ? 0 : 1}px)`,
       }}
     />
   );
@@ -39,22 +47,27 @@ export const PixelBlock = ({
 export const FloatingPixels = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Cyan blocks */}
-      <PixelBlock color="primary" size={24} className="top-[10%] left-[5%]" delay={0} />
-      <PixelBlock color="primary" size={16} className="top-[30%] right-[10%]" delay={1} />
-      <PixelBlock color="primary" size={20} className="bottom-[20%] left-[15%]" delay={2} />
+      {/* Subtle holographic elements */}
+      <HoloElement color="primary" size={40} className="top-[15%] left-[8%]" delay={0} variant="square" />
+      <HoloElement color="primary" size={60} className="top-[60%] right-[12%]" delay={2} variant="line" />
+      <HoloElement color="secondary" size={30} className="top-[25%] right-[20%]" delay={1} variant="square" />
+      <HoloElement color="secondary" size={50} className="bottom-[30%] left-[5%]" delay={3} variant="line" />
+      <HoloElement color="accent" size={20} className="top-[70%] left-[15%]" delay={1.5} variant="dot" />
+      <HoloElement color="accent" size={25} className="top-[40%] right-[8%]" delay={2.5} variant="square" />
+      <HoloElement color="highlight" size={35} className="bottom-[20%] right-[25%]" delay={0.5} variant="dot" />
       
-      {/* Magenta blocks */}
-      <PixelBlock color="secondary" size={28} className="top-[15%] right-[20%]" delay={0.5} />
-      <PixelBlock color="secondary" size={18} className="bottom-[30%] right-[8%]" delay={1.5} />
-      
-      {/* Yellow blocks */}
-      <PixelBlock color="accent" size={22} className="top-[50%] left-[8%]" delay={1} />
-      <PixelBlock color="accent" size={14} className="bottom-[15%] right-[25%]" delay={2.5} />
-      
-      {/* Green blocks */}
-      <PixelBlock color="highlight" size={20} className="top-[70%] right-[15%]" delay={0.8} />
-      <PixelBlock color="highlight" size={16} className="top-[25%] left-[20%]" delay={1.8} />
+      {/* Gradient orbs */}
+      <div 
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full animate-pulse-glow"
+        style={{ background: 'radial-gradient(circle, hsl(var(--primary) / 0.1) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full animate-pulse-glow"
+        style={{ 
+          background: 'radial-gradient(circle, hsl(var(--secondary) / 0.08) 0%, transparent 70%)',
+          animationDelay: '2s'
+        }}
+      />
     </div>
   );
 };

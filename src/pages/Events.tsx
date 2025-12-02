@@ -165,7 +165,7 @@ const Events = () => {
               <p className="text-muted-foreground mb-6">
                 Compete. Win. Take home glory and prizes.
               </p>
-              <Button variant="pixel-accent" size="lg">
+              <Button variant="glow-accent" size="lg">
                 Register Now
               </Button>
             </div>

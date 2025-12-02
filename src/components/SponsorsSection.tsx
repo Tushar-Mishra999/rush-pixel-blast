@@ -1,96 +1,79 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const sponsors = {
-  title: [
-    { name: "Title Sponsor 1", tier: "title" },
-    { name: "Title Sponsor 2", tier: "title" },
-  ],
-  gold: [
-    { name: "Gold Sponsor 1", tier: "gold" },
-    { name: "Gold Sponsor 2", tier: "gold" },
-    { name: "Gold Sponsor 3", tier: "gold" },
-  ],
-  silver: [
-    { name: "Silver 1", tier: "silver" },
-    { name: "Silver 2", tier: "silver" },
-    { name: "Silver 3", tier: "silver" },
-    { name: "Silver 4", tier: "silver" },
-  ],
-};
+const sponsorTiers = [
+  {
+    tier: "Title",
+    sponsors: [{ name: "Sponsor 1", logo: null }],
+  },
+  {
+    tier: "Gold",
+    sponsors: [
+      { name: "Sponsor 2", logo: null },
+      { name: "Sponsor 3", logo: null },
+    ],
+  },
+  {
+    tier: "Silver",
+    sponsors: [
+      { name: "Sponsor 4", logo: null },
+      { name: "Sponsor 5", logo: null },
+      { name: "Sponsor 6", logo: null },
+    ],
+  },
+];
 
 export const SponsorsSection = () => {
   return (
-    <section className="py-20 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+    <section className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
-            <span className="text-accent">$</span> SPONSORS <span className="text-accent">$</span>
+        <div className="text-center mb-16">
+          <p className="font-display text-xs tracking-[0.4em] text-accent mb-4">PARTNERS</p>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 tracking-wide">
+            OUR SPONSORS
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Powered by industry leaders who believe in celebrating talent and creativity.
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent mx-auto mb-6" />
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Partnering with industry leaders to create extraordinary experiences.
           </p>
         </div>
 
-        {/* Title Sponsors */}
-        <div className="mb-12">
-          <h3 className="font-pixel text-xs text-accent text-center mb-6">// TITLE SPONSORS</h3>
-          <div className="flex justify-center gap-6 flex-wrap">
-            {sponsors.title.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="w-48 h-24 border-2 border-accent bg-accent/5 flex items-center justify-center hover:bg-accent/10 transition-colors group shadow-pixel-accent"
-              >
-                <span className="font-pixel text-[10px] text-accent group-hover:animate-neon-pulse">
-                  {sponsor.name}
-                </span>
+        {/* Sponsor Grid */}
+        <div className="max-w-4xl mx-auto space-y-12 mb-16">
+          {sponsorTiers.map((tierGroup) => (
+            <div key={tierGroup.tier}>
+              <p className="font-display text-xs tracking-[0.3em] text-muted-foreground text-center mb-6">
+                {tierGroup.tier.toUpperCase()} SPONSORS
+              </p>
+              <div className={`grid gap-4 ${
+                tierGroup.tier === "Title" 
+                  ? "grid-cols-1 max-w-xs mx-auto" 
+                  : tierGroup.tier === "Gold"
+                    ? "grid-cols-2 max-w-md mx-auto"
+                    : "grid-cols-3 max-w-lg mx-auto"
+              }`}>
+                {tierGroup.sponsors.map((sponsor, index) => (
+                  <div
+                    key={`${tierGroup.tier}-${index}`}
+                    className="aspect-[3/2] border border-border/30 bg-card/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary/30 transition-all duration-500 cursor-pointer hover:shadow-glow-primary"
+                  >
+                    <span className="font-display text-xs tracking-wider text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                      {sponsor.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Gold Sponsors */}
-        <div className="mb-12">
-          <h3 className="font-pixel text-xs text-primary text-center mb-6">// GOLD PARTNERS</h3>
-          <div className="flex justify-center gap-4 flex-wrap">
-            {sponsors.gold.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="w-36 h-20 border-2 border-primary/50 bg-primary/5 flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors"
-              >
-                <span className="font-pixel text-[8px] text-primary/70 hover:text-primary">
-                  {sponsor.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Silver Sponsors */}
-        <div className="mb-12">
-          <h3 className="font-pixel text-xs text-muted-foreground text-center mb-6">// SILVER PARTNERS</h3>
-          <div className="flex justify-center gap-3 flex-wrap">
-            {sponsors.silver.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="w-28 h-16 border border-border bg-muted/30 flex items-center justify-center hover:border-muted-foreground transition-colors"
-              >
-                <span className="text-[8px] text-muted-foreground">
-                  {sponsor.name}
-                </span>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <p className="text-muted-foreground mb-4">Interested in sponsoring RUSH 2025?</p>
           <Link to="/sponsors">
-            <Button variant="pixel-accent" size="lg">
+            <Button variant="outline" size="lg" className="border-border/50 hover:border-accent/50 hover:bg-accent/5 font-display tracking-wider">
               Become a Sponsor
             </Button>
           </Link>
