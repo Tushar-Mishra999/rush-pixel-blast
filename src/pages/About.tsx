@@ -47,7 +47,7 @@ const About = () => {
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="border-2 border-primary p-6 shadow-pixel">
+                <div className="border-2 border-primary p-6 shadow-pixel transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-primary hover:border-primary">
                   <h3 className="font-pixel text-sm text-primary mb-4">THE VISION</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     RUSH is IIM Ranchi's annual cultural extravaganza that brings together 
@@ -56,7 +56,7 @@ const About = () => {
                   </p>
                 </div>
                 
-                <div className="border-2 border-secondary p-6 shadow-pixel-secondary">
+                <div className="border-2 border-secondary p-6 shadow-pixel-secondary transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-secondary hover:border-secondary">
                   <h3 className="font-pixel text-sm text-secondary mb-4">THE EXPERIENCE</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Three days of non-stop action featuring sports tournaments, cultural 
