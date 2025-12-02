@@ -36,18 +36,16 @@ export const LegacySection = () => {
   const [activeYear, setActiveYear] = useState("2024");
 
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-50" />
+    <section className="py-20 bg-card relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="font-display text-xs tracking-[0.4em] text-secondary mb-4">CHRONICLES</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 tracking-wide">
-            THE LEGACY
+        <div className="text-center mb-12">
+          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
+            <span className="text-primary">[</span> THE LEGACY <span className="text-primary">]</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent mx-auto mb-6" />
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Years of unforgettable moments, legendary performances, and memories that last a lifetime.
           </p>
         </div>
@@ -55,17 +53,22 @@ export const LegacySection = () => {
         {/* Timeline */}
         <div className="max-w-4xl mx-auto">
           {/* Year buttons */}
-          <div className="flex justify-center gap-3 md:gap-6 mb-12 flex-wrap">
+          <div className="flex justify-center gap-2 md:gap-4 mb-8 flex-wrap">
             {legacyItems.map((item) => (
               <button
                 key={item.year}
                 onClick={() => setActiveYear(item.year)}
                 className={cn(
-                  "font-display text-sm tracking-wider px-6 py-3 border transition-all duration-500",
+                  "font-pixel text-xs md:text-sm px-4 py-2 border-2 transition-all duration-200",
                   activeYear === item.year
-                    ? "border-primary/50 text-primary bg-primary/5 shadow-glow-primary"
-                    : "border-border/30 text-muted-foreground hover:border-primary/30 hover:text-foreground"
+                    ? `border-${item.color} text-${item.color} bg-${item.color}/10 shadow-pixel`
+                    : "border-border text-muted-foreground hover:border-primary hover:text-primary"
                 )}
+                style={{
+                  borderColor: activeYear === item.year ? `hsl(var(--${item.color}))` : undefined,
+                  color: activeYear === item.year ? `hsl(var(--${item.color}))` : undefined,
+                  backgroundColor: activeYear === item.year ? `hsl(var(--${item.color}) / 0.1)` : undefined,
+                }}
               >
                 {item.year}
               </button>
@@ -77,31 +80,31 @@ export const LegacySection = () => {
             <div
               key={item.year}
               className={cn(
-                "border border-border/30 p-8 md:p-12 transition-all duration-500 bg-background/50 backdrop-blur-sm",
-                activeYear === item.year ? "opacity-100" : "hidden"
+                "border-2 p-6 md:p-8 transition-all duration-300",
+                activeYear === item.year ? "opacity-100 translate-y-0" : "hidden"
               )}
               style={{
-                boxShadow: `0 0 60px hsl(var(--${item.color}) / 0.1)`,
+                borderColor: `hsl(var(--${item.color}))`,
+                boxShadow: `4px 4px 0px hsl(var(--${item.color}))`,
               }}
             >
-              <div className="flex flex-col md:flex-row md:items-center gap-8">
+              <div className="flex flex-col md:flex-row md:items-center gap-6">
                 <div 
-                  className="font-display text-6xl md:text-8xl font-bold opacity-20"
+                  className="font-pixel text-5xl md:text-7xl"
                   style={{ color: `hsl(var(--${item.color}))` }}
                 >
                   {item.year}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 tracking-wide">
+                  <h3 className="font-pixel text-lg md:text-xl text-foreground mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
+                  <p className="text-muted-foreground mb-4">{item.description}</p>
                   <div 
-                    className="inline-block px-4 py-2 text-xs uppercase tracking-[0.2em] border"
+                    className="inline-block px-3 py-1 text-xs uppercase tracking-wider"
                     style={{ 
-                      borderColor: `hsl(var(--${item.color}) / 0.3)`,
+                      backgroundColor: `hsl(var(--${item.color}) / 0.2)`,
                       color: `hsl(var(--${item.color}))`,
-                      background: `hsl(var(--${item.color}) / 0.05)`,
                     }}
                   >
                     {item.highlight}
@@ -113,21 +116,16 @@ export const LegacySection = () => {
         </div>
 
         {/* Gallery preview */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}
-              className="aspect-square border border-border/20 bg-muted/20 flex items-center justify-center group hover:border-primary/30 transition-all duration-500 cursor-pointer overflow-hidden hover:shadow-glow-primary"
+              className="aspect-square border-2 border-border bg-muted/50 flex items-center justify-center group hover:border-primary transition-colors cursor-pointer overflow-hidden"
             >
               <div className="text-center">
-                <div 
-                  className="w-16 h-16 mx-auto mb-3 opacity-30 group-hover:opacity-60 transition-opacity duration-500"
-                  style={{
-                    background: `linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3))`
-                  }}
-                />
-                <span className="font-display text-[10px] tracking-[0.3em] text-muted-foreground group-hover:text-primary/80 transition-colors duration-500">
-                  MEMORY {i}
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-primary via-secondary to-accent opacity-50 group-hover:opacity-100 transition-opacity" />
+                <span className="font-pixel text-[8px] text-muted-foreground group-hover:text-primary transition-colors">
+                  MEMORY #{i}
                 </span>
               </div>
             </div>

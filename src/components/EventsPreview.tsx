@@ -1,109 +1,117 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Music, Trophy, Mic, Palette, Users, Gamepad2 } from "lucide-react";
 
 const eventCategories = [
   {
+    icon: Music,
     name: "Cultural",
     events: ["Dance Battle", "Singing", "Fashion Show"],
     color: "primary",
-    symbol: "◈",
   },
   {
+    icon: Trophy,
     name: "Sports",
     events: ["Futsal", "Cricket", "Basketball"],
     color: "secondary",
-    symbol: "◇",
   },
   {
+    icon: Mic,
     name: "Literary",
     events: ["Debate", "Quiz", "Poetry Slam"],
     color: "accent",
-    symbol: "△",
   },
   {
+    icon: Palette,
     name: "Arts",
     events: ["Photography", "Film Making", "Graffiti"],
     color: "highlight",
-    symbol: "○",
   },
   {
+    icon: Users,
     name: "Management",
     events: ["Case Study", "Marketing", "B-Plan"],
     color: "primary",
-    symbol: "□",
   },
   {
+    icon: Gamepad2,
     name: "Gaming",
     events: ["Valorant", "FIFA", "BGMI"],
     color: "secondary",
-    symbol: "⬡",
   },
 ];
 
 export const EventsPreview = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern" />
+    <section className="py-20 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="font-display text-xs tracking-[0.4em] text-primary mb-4">EXPLORE</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 tracking-wide">
-            EVENTS
+        <div className="text-center mb-12">
+          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
+            <span className="text-secondary">&gt;</span> EVENTS <span className="text-secondary">&lt;</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-6" />
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             50+ events across multiple categories. Compete, perform, and create memories.
           </p>
         </div>
 
         {/* Event Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-16">
-          {eventCategories.map((category, index) => (
-            <div
-              key={category.name}
-              className="group border border-border/30 p-6 transition-all duration-500 cursor-pointer bg-card/20 backdrop-blur-sm hover:bg-card/40 hover:border-primary/30 hover:shadow-glow-primary"
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
-            >
-              <div className="flex items-start gap-5">
-                <div
-                  className="w-12 h-12 border border-current flex items-center justify-center shrink-0 transition-all duration-500 group-hover:shadow-glow-primary"
-                  style={{ 
-                    borderColor: `hsl(var(--${category.color}) / 0.5)`,
-                    color: `hsl(var(--${category.color}))` 
-                  }}
-                >
-                  <span className="text-lg">{category.symbol}</span>
-                </div>
-                <div>
-                  <h3 
-                    className="font-display text-sm tracking-wider text-foreground mb-3 transition-colors duration-500 group-hover:text-primary"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
+          {eventCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={category.name}
+                className="group border-2 border-border hover:border-current p-6 transition-all duration-300 cursor-pointer bg-card/50 hover:bg-card"
+                style={{
+                  transitionDelay: `${index * 50}ms`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = `hsl(var(--${category.color}))`;
+                  e.currentTarget.style.boxShadow = `4px 4px 0px hsl(var(--${category.color}))`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "";
+                  e.currentTarget.style.boxShadow = "";
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-12 h-12 border-2 flex items-center justify-center shrink-0 transition-colors"
+                    style={{ borderColor: `hsl(var(--${category.color}))` }}
                   >
-                    {category.name}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.events.map((event) => (
-                      <span
-                        key={event}
-                        className="text-xs text-muted-foreground bg-muted/30 px-2 py-1 transition-colors duration-300 group-hover:bg-muted/50"
-                      >
-                        {event}
-                      </span>
-                    ))}
+                    <Icon 
+                      size={24} 
+                      style={{ color: `hsl(var(--${category.color}))` }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-pixel text-sm text-foreground mb-2 group-hover:animate-glitch">
+                      {category.name}
+                    </h3>
+                    <div className="flex flex-wrap gap-1">
+                      {category.events.map((event) => (
+                        <span
+                          key={event}
+                          className="text-xs text-muted-foreground bg-muted px-2 py-0.5"
+                        >
+                          {event}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA */}
         <div className="text-center">
           <Link to="/events">
-            <Button variant="outline" size="lg" className="border-border/50 hover:border-primary/50 hover:bg-primary/5 font-display tracking-wider">
+            <Button variant="pixel-secondary" size="lg">
               View All Events
             </Button>
           </Link>

@@ -1,92 +1,101 @@
 import { Link } from "react-router-dom";
-
-const quickLinks = [
-  { href: "/about", label: "About" },
-  { href: "/events", label: "Events" },
-  { href: "/sponsors", label: "Sponsors" },
-];
-
-const socialLinks = [
-  { name: "Instagram", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "Twitter", href: "#" },
-];
+import { Instagram, Youtube, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-      
-      <div className="container relative z-10 mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-card border-t-2 border-border">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
-          <div className="md:col-span-2">
-            <Link to="/" className="inline-block mb-6">
-              <span className="font-display text-2xl tracking-wider text-foreground">
-                RUSH
-              </span>
-            </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
-              IIM Ranchi's flagship cultural festival. Three days of 
-              art, music, competition, and memories.
-            </p>
-            <p className="font-display text-xs tracking-[0.3em] text-primary">
-              FEBRUARY 2025
+          <div className="space-y-4">
+            <h3 className="font-pixel text-xl text-primary animate-neon-pulse">RUSH</h3>
+            <p className="text-sm text-muted-foreground">
+              IIM Ranchi's premier cultural festival bringing together talent, creativity, and energy from across the nation.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-display text-xs tracking-[0.2em] text-foreground mb-6">
-              NAVIGATION
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            <h4 className="font-pixel text-xs text-accent">Quick Links</h4>
+            <div className="flex flex-col gap-2">
+              <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                About RUSH
+              </Link>
+              <Link to="/events" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Events
+              </Link>
+              <Link to="/sponsors" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Sponsors
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="font-pixel text-xs text-accent">Contact</h4>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail size={16} className="text-primary" />
+                <a href="mailto:rush@iimranchi.ac.in" className="hover:text-primary transition-colors">
+                  rush@iimranchi.ac.in
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone size={16} className="text-primary" />
+                <span>+91 XXXXX XXXXX</span>
+              </div>
+              <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                <MapPin size={16} className="text-primary mt-0.5" />
+                <span>IIM Ranchi, Suchana Bhawan, Audrey House Campus, Ranchi</span>
+              </div>
+            </div>
           </div>
 
           {/* Social */}
-          <div>
-            <h4 className="font-display text-xs tracking-[0.2em] text-foreground mb-6">
-              CONNECT
-            </h4>
-            <ul className="space-y-3">
-              {socialLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            <h4 className="font-pixel text-xs text-accent">Follow Us</h4>
+            <div className="flex gap-4">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-destructive hover:border-destructive transition-colors"
+              >
+                <Youtube size={20} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-muted-foreground">
-              © 2025 RUSH — IIM Ranchi
-            </p>
-            <div className="flex items-center gap-6">
-              <span className="text-xs text-muted-foreground/50">
-                Built with precision
-              </span>
-            </div>
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-muted-foreground">
+            © 2025 RUSH - IIM Ranchi. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-primary animate-neon-pulse" />
+            <div className="w-3 h-3 bg-secondary animate-neon-pulse" style={{ animationDelay: "0.3s" }} />
+            <div className="w-3 h-3 bg-accent animate-neon-pulse" style={{ animationDelay: "0.6s" }} />
+            <div className="w-3 h-3 bg-highlight animate-neon-pulse" style={{ animationDelay: "0.9s" }} />
           </div>
         </div>
       </div>
