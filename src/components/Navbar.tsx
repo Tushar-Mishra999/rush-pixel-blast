@@ -16,26 +16,22 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b-2 border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="font-pixel text-base text-primary transition-all duration-300 hover:text-primary/80"
-            style={{ textShadow: "0 0 20px hsl(185 85% 55% / 0.4)" }}
-          >
+          <Link to="/" className="font-pixel text-lg text-primary animate-neon-pulse">
             RUSH
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "text-xs uppercase tracking-widest transition-all duration-300 hover:text-primary",
+                  "font-pixel text-[10px] uppercase tracking-wider transition-colors hover:text-primary",
                   location.pathname === link.href
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -55,17 +51,17 @@ export const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 animate-slide-up">
+          <div className="md:hidden py-4 border-t border-border animate-slide-up">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -73,7 +69,7 @@ export const Navbar = () => {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-xs uppercase tracking-widest py-2 transition-colors",
+                    "font-pixel text-xs uppercase tracking-wider py-2 transition-colors",
                     location.pathname === link.href
                       ? "text-primary"
                       : "text-muted-foreground hover:text-primary"

@@ -102,36 +102,31 @@ export default {
         },
         "pixel-expand": {
           "0%": { transform: "scale(0)", opacity: "0" },
-          "50%": { transform: "scale(1.05)" },
+          "50%": { transform: "scale(1.1)" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
         "neon-pulse": {
           "0%, 100%": { opacity: "1", filter: "brightness(1)" },
-          "50%": { opacity: "0.85", filter: "brightness(1.15)" },
+          "50%": { opacity: "0.8", filter: "brightness(1.3)" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)", opacity: "0.6" },
-          "50%": { transform: "translateY(-30px) rotate(3deg)", opacity: "0.9" },
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-20px) rotate(3deg)" },
         },
         "bounce-slow": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         "marquee": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
         "glitch": {
-          "0%, 90%, 100%": { transform: "translate(0)" },
-          "92%": { transform: "translate(-1px, 1px)" },
-          "94%": { transform: "translate(1px, -1px)" },
-          "96%": { transform: "translate(-1px, -1px)" },
-          "98%": { transform: "translate(1px, 1px)" },
-        },
-        "holographic-shift": {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
+          "0%, 100%": { transform: "translate(0)" },
+          "20%": { transform: "translate(-2px, 2px)" },
+          "40%": { transform: "translate(-2px, -2px)" },
+          "60%": { transform: "translate(2px, 2px)" },
+          "80%": { transform: "translate(2px, -2px)" },
         },
       },
       animation: {
