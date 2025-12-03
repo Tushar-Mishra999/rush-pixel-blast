@@ -21,30 +21,58 @@ const sponsors = {
 
 export const SponsorsSection = () => {
   return (
-    <section className="py-20 bg-card relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-card">
+      {/* Cyber gradient background */}
+      <div className="absolute inset-0 cyber-gradient opacity-30" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      
+      {/* Decorative cyber lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
-            <span className="text-accent">$</span> SPONSORS <span className="text-accent">$</span>
+            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span> 
+            <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>SPONSORS</span> 
+            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Powered by industry leaders who believe in celebrating talent and creativity.
           </p>
         </div>
 
-        {/* Title Sponsors */}
+        {/* Title Sponsors with holographic effect */}
         <div className="mb-12">
-          <h3 className="font-pixel text-xs text-accent text-center mb-6">// TITLE SPONSORS</h3>
+          <h3 
+            className="font-pixel text-xs text-accent text-center mb-6"
+            style={{ textShadow: "0 0 10px hsl(var(--accent))" }}
+          >
+            // TITLE SPONSORS
+          </h3>
           <div className="flex justify-center gap-6 flex-wrap">
             {sponsors.title.map((sponsor) => (
               <div
                 key={sponsor.name}
-                className="w-48 h-24 border-2 border-accent bg-accent/5 flex items-center justify-center hover:bg-accent/10 transition-colors group shadow-pixel-accent"
+                className="w-48 h-24 border-2 border-accent bg-accent/5 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
+                style={{
+                  boxShadow: "0 0 20px hsl(var(--accent) / 0.2), 4px 4px 0px hsl(var(--accent))"
+                }}
               >
-                <span className="font-pixel text-[10px] text-accent group-hover:animate-neon-pulse">
+                {/* Holographic shine effect */}
+                <div className="absolute inset-0 holographic opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Corner accents */}
+                <div className="absolute top-1 left-1 w-2 h-2 border-t border-l border-accent/50" />
+                <div className="absolute top-1 right-1 w-2 h-2 border-t border-r border-accent/50" />
+                <div className="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-accent/50" />
+                <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-accent/50" />
+                
+                <span 
+                  className="font-pixel text-[10px] text-accent group-hover:animate-neon-pulse relative z-10"
+                  style={{ textShadow: "0 0 10px hsl(var(--accent))" }}
+                >
                   {sponsor.name}
                 </span>
               </div>
@@ -52,16 +80,31 @@ export const SponsorsSection = () => {
           </div>
         </div>
 
-        {/* Gold Sponsors */}
+        {/* Gold Sponsors with cyber styling */}
         <div className="mb-12">
-          <h3 className="font-pixel text-xs text-primary text-center mb-6">// GOLD PARTNERS</h3>
+          <h3 
+            className="font-pixel text-xs text-primary text-center mb-6"
+            style={{ textShadow: "0 0 10px hsl(var(--primary))" }}
+          >
+            // GOLD PARTNERS
+          </h3>
           <div className="flex justify-center gap-4 flex-wrap">
             {sponsors.gold.map((sponsor) => (
               <div
                 key={sponsor.name}
-                className="w-36 h-20 border-2 border-primary/50 bg-primary/5 flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors"
+                className="w-36 h-20 border-2 border-primary/50 bg-primary/5 backdrop-blur-sm flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-pointer relative overflow-hidden group"
+                style={{
+                  boxShadow: "inset 0 0 20px hsl(var(--primary) / 0.1)"
+                }}
               >
-                <span className="font-pixel text-[8px] text-primary/70 hover:text-primary">
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ background: "radial-gradient(circle at center, hsl(var(--primary) / 0.2), transparent 70%)" }}
+                />
+                <span 
+                  className="font-pixel text-[8px] text-primary/70 group-hover:text-primary transition-colors relative z-10"
+                  style={{ textShadow: "0 0 5px currentColor" }}
+                >
                   {sponsor.name}
                 </span>
               </div>
@@ -76,7 +119,7 @@ export const SponsorsSection = () => {
             {sponsors.silver.map((sponsor) => (
               <div
                 key={sponsor.name}
-                className="w-28 h-16 border border-border bg-muted/30 flex items-center justify-center hover:border-muted-foreground transition-colors"
+                className="w-28 h-16 border border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center hover:border-muted-foreground hover:bg-muted/30 transition-all duration-300 cursor-pointer"
               >
                 <span className="text-[8px] text-muted-foreground">
                   {sponsor.name}
@@ -86,12 +129,13 @@ export const SponsorsSection = () => {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA with cyber button */}
         <div className="text-center">
           <p className="text-muted-foreground mb-4">Interested in sponsoring RUSH 2025?</p>
           <Link to="/sponsors">
-            <Button variant="pixel-accent" size="lg">
-              Become a Sponsor
+            <Button variant="pixel-accent" size="lg" className="relative group">
+              <span className="relative z-10">Become a Sponsor</span>
+              <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:bg-accent/40 transition-all" />
             </Button>
           </Link>
         </div>
