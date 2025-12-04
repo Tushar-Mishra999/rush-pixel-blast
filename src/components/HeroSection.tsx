@@ -47,7 +47,7 @@ export const HeroSection = () => {
     const centerY = rect.top + rect.height / 2;
     const x = (e.clientX - centerX) / (rect.width / 2);
     const y = (e.clientY - centerY) / (rect.height / 2);
-    setMousePosition({ x: x * 8, y: y * 8 }); // Max 8 degrees rotation
+    setMousePosition({ x: x * 15, y: y * 15 }); // Max 15 degrees rotation
   };
 
   useEffect(() => {
