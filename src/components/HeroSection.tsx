@@ -184,7 +184,7 @@ export const HeroSection = () => {
               {/* Separator colon - rendered outside the box */}
               {index < countdownUnits.length - 1 && (
                 <span 
-                  className="flex absolute -right-4 md:-right-5 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
                 >
                   :
                 </span>
