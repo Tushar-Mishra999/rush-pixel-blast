@@ -6,9 +6,39 @@ import { ChevronDown } from "lucide-react";
 const RUSH_LETTERS = ["R", "U", "S", "H"];
 const COLORS = ["text-primary", "text-secondary", "text-accent", "text-highlight"];
 
+// Target date: February 14, 2026
+const TARGET_DATE = new Date("2026-02-14T00:00:00").getTime();
+
+const useCountdown = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const calculateTime = () => {
+      const now = new Date().getTime();
+      const difference = TARGET_DATE - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        });
+      }
+    };
+
+    calculateTime();
+    const interval = setInterval(calculateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return timeLeft;
+};
+
 export const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const countdown = useCountdown();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -21,6 +51,13 @@ export const HeroSection = () => {
   const scrollToContent = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
+
+  const countdownUnits = [
+    { value: countdown.days, label: "DAYS", color: "primary" },
+    { value: countdown.hours, label: "HRS", color: "secondary" },
+    { value: countdown.minutes, label: "MIN", color: "accent" },
+    { value: countdown.seconds, label: "SEC", color: "highlight" },
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
@@ -48,16 +85,67 @@ export const HeroSection = () => {
       <div className="container relative z-10 px-4 py-20 text-center">
         {/* Date badge with cyber glow */}
         <div 
-          className={`inline-flex items-center gap-2 mb-8 px-4 py-2 border-2 border-accent bg-accent/10 backdrop-blur-sm transition-all duration-500 ${
+          className={`inline-flex items-center gap-2 mb-6 px-4 py-2 border-2 border-accent bg-accent/10 backdrop-blur-sm transition-all duration-500 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
           style={{
             boxShadow: "0 0 20px hsl(var(--accent) / 0.3), inset 0 0 20px hsl(var(--accent) / 0.1)"
           }}
         >
-          <span className="font-pixel text-[10px] text-accent">FEB 2025</span>
+          <span className="font-pixel text-[10px] text-accent">FEB 2026</span>
           <span className="w-2 h-2 bg-accent animate-neon-pulse" />
           <span className="font-pixel text-[10px] text-accent">3 DAYS</span>
+        </div>
+
+        {/* Countdown Timer */}
+        <div 
+          className={`flex justify-center gap-2 md:gap-4 mb-8 transition-all duration-700 delay-100 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          {countdownUnits.map((unit, index) => (
+            <div
+              key={unit.label}
+              className="relative group"
+            >
+              <div 
+                className={`relative p-3 md:p-4 border-2 bg-card/40 backdrop-blur-sm transition-all duration-300`}
+                style={{
+                  borderColor: `hsl(var(--${unit.color}))`,
+                  boxShadow: `0 0 20px hsl(var(--${unit.color}) / 0.3), inset 0 0 15px hsl(var(--${unit.color}) / 0.1)`
+                }}
+              >
+                {/* Corner accents */}
+                <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
+                <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
+                <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
+                <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
+                
+                <div 
+                  className={`font-pixel text-2xl md:text-4xl text-${unit.color}`}
+                  style={{ 
+                    textShadow: `0 0 10px hsl(var(--${unit.color})), 0 0 20px hsl(var(--${unit.color}) / 0.5)`,
+                    minWidth: "2ch",
+                    display: "block"
+                  }}
+                >
+                  {String(unit.value).padStart(2, "0")}
+                </div>
+                <div className="font-pixel text-[8px] md:text-[10px] text-muted-foreground mt-1 tracking-wider">
+                  {unit.label}
+                </div>
+              </div>
+              
+              {/* Separator colon */}
+              {index < countdownUnits.length - 1 && (
+                <span 
+                  className="absolute -right-2 md:-right-3 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                >
+                  :
+                </span>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Interactive RUSH title with enhanced neon */}
