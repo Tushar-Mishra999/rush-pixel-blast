@@ -38,17 +38,7 @@ const useCountdown = () => {
 export const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const countdown = useCountdown();
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const x = (e.clientX - centerX) / (rect.width / 2);
-    const y = (e.clientY - centerY) / (rect.height / 2);
-    setMousePosition({ x: x * 15, y: y * 15 }); // Max 15 degrees rotation
-  };
 
   useEffect(() => {
     setIsLoaded(true);
@@ -70,10 +60,7 @@ export const HeroSection = () => {
   ];
 
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
-      onMouseMove={handleMouseMove}
-    >
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Cyberpunk radial gradient */}
       <div className="absolute inset-0 cyber-gradient-radial" />
       
@@ -128,8 +115,7 @@ export const HeroSection = () => {
                 textShadow: activeIndex === index 
                   ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
                   : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
-                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)",
-                transform: `rotateY(${mousePosition.x * (1 + index * 0.1)}deg) rotateX(${-mousePosition.y * (1 + index * 0.1)}deg) ${activeIndex === index ? 'scale(1.1)' : 'scale(1)'}`,
+                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
               }}
               onMouseEnter={() => setActiveIndex(index)}
             >
