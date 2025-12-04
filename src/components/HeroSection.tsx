@@ -144,7 +144,7 @@ export const HeroSection = () => {
 
         {/* Countdown Timer */}
         <div 
-          className={`flex justify-center gap-2 md:gap-4 mb-10 transition-all duration-700 delay-600 ${
+          className={`flex justify-center items-center gap-4 md:gap-6 mb-10 transition-all duration-700 delay-600 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -181,10 +181,10 @@ export const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Separator colon */}
+              {/* Separator colon - rendered outside the box */}
               {index < countdownUnits.length - 1 && (
                 <span 
-                  className="absolute -right-2 md:-right-3 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                  className="flex absolute -right-4 md:-right-5 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
                 >
                   :
                 </span>
