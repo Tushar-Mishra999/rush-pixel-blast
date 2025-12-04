@@ -97,9 +97,54 @@ export const HeroSection = () => {
           <span className="font-pixel text-[10px] text-accent">3 DAYS</span>
         </div>
 
+
+        {/* Interactive RUSH title with enhanced neon */}
+        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
+          {RUSH_LETTERS.map((letter, index) => (
+            <div
+              key={letter}
+              className={`
+                font-pixel text-6xl md:text-8xl lg:text-9xl
+                transition-all duration-300 cursor-pointer
+                ${COLORS[index]}
+                ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
+                ${isLoaded ? "opacity-100" : "opacity-0"}
+              `}
+              style={{
+                transitionDelay: `${index * 100}ms`,
+                textShadow: activeIndex === index 
+                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
+                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
+                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
+              }}
+              onMouseEnter={() => setActiveIndex(index)}
+            >
+              {letter}
+            </div>
+          ))}
+        </div>
+
+        {/* Tagline with subtle glow */}
+        <p 
+          className={`text-xl md:text-2xl text-foreground mb-2 transition-all duration-700 delay-300 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+          style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.3)" }}
+        >
+          The Soul Edition
+        </p>
+        <p 
+          className={`text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          IIM Ranchi's premier cultural extravaganza bringing together the finest talent, 
+          electrifying performances, and unforgettable experiences.
+        </p>
+
         {/* Countdown Timer */}
         <div 
-          className={`flex justify-center gap-2 md:gap-4 mb-8 transition-all duration-700 delay-100 ${
+          className={`flex justify-center gap-2 md:gap-4 mb-10 transition-all duration-700 delay-600 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -147,50 +192,6 @@ export const HeroSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Interactive RUSH title with enhanced neon */}
-        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
-          {RUSH_LETTERS.map((letter, index) => (
-            <div
-              key={letter}
-              className={`
-                font-pixel text-6xl md:text-8xl lg:text-9xl
-                transition-all duration-300 cursor-pointer
-                ${COLORS[index]}
-                ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
-                ${isLoaded ? "opacity-100" : "opacity-0"}
-              `}
-              style={{
-                transitionDelay: `${index * 100}ms`,
-                textShadow: activeIndex === index 
-                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
-                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
-                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
-              }}
-              onMouseEnter={() => setActiveIndex(index)}
-            >
-              {letter}
-            </div>
-          ))}
-        </div>
-
-        {/* Tagline with subtle glow */}
-        <p 
-          className={`text-xl md:text-2xl text-foreground mb-2 transition-all duration-700 delay-300 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-          style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.3)" }}
-        >
-          The Soul Edition
-        </p>
-        <p 
-          className={`text-muted-foreground max-w-2xl mx-auto mb-10 transition-all duration-700 delay-500 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          IIM Ranchi's premier cultural extravaganza bringing together the finest talent, 
-          electrifying performances, and unforgettable experiences.
-        </p>
 
         {/* CTA Buttons */}
         <div 
