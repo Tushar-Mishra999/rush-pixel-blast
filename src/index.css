@@ -365,18 +365,3 @@
     background-position: 0% 100%;
   }
 }
-
-@keyframes float-3d {
-  0%, 100% {
-    transform: translateY(0) rotateX(0deg) rotateY(0deg);
-  }
-  25% {
-    transform: translateY(-5px) rotateX(3deg) rotateY(-3deg);
-  }
-  50% {
-    transform: translateY(-8px) rotateX(-3deg) rotateY(3deg);
-  }
-  75% {
-    transform: translateY(-5px) rotateX(3deg) rotateY(-3deg);
-  }
-}

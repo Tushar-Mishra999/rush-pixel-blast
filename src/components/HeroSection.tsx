@@ -98,11 +98,8 @@ export const HeroSection = () => {
         </div>
 
 
-        {/* Interactive RUSH title with enhanced neon and 3D effects */}
-        <div 
-          className="mb-6 flex justify-center items-center gap-2 md:gap-4"
-          style={{ perspective: "1000px" }}
-        >
+        {/* Interactive RUSH title with enhanced neon */}
+        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
           {RUSH_LETTERS.map((letter, index) => (
             <div
               key={letter}
@@ -118,31 +115,11 @@ export const HeroSection = () => {
                 textShadow: activeIndex === index 
                   ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
                   : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
-                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)",
-                transform: `
-                  ${activeIndex === index ? "scale(1.1)" : "scale(1)"}
-                  rotateY(${activeIndex === index ? "15deg" : "0deg"})
-                  rotateX(${activeIndex === index ? "-10deg" : "0deg"})
-                  translateZ(${activeIndex === index ? "30px" : "0px"})
-                `,
-                transformStyle: "preserve-3d",
-                animation: isLoaded ? `float-3d 4s ease-in-out ${index * 0.5}s infinite` : "none"
+                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
               }}
               onMouseEnter={() => setActiveIndex(index)}
             >
-              {/* 3D depth layers */}
-              <span className="relative" style={{ transformStyle: "preserve-3d" }}>
-                {letter}
-                <span 
-                  className="absolute inset-0 opacity-30"
-                  style={{ 
-                    transform: "translateZ(-10px)",
-                    filter: "blur(2px)"
-                  }}
-                >
-                  {letter}
-                </span>
-              </span>
+              {letter}
             </div>
           ))}
         </div>
@@ -203,6 +180,15 @@ export const HeroSection = () => {
                   {unit.label}
                 </div>
               </div>
+
+              {/* Separator colon - rendered outside the box */}
+              {index < countdownUnits.length - 1 && (
+                <span 
+                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                >
+                  :
+                </span>
+              )}
             </div>
           ))}
         </div>
