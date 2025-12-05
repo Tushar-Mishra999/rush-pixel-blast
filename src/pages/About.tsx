@@ -76,25 +76,40 @@ const About = () => {
               <span className="text-accent">[</span> THE JOURNEY <span className="text-accent">]</span>
             </h2>
             
-            <div className="max-w-3xl mx-auto">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={milestone.year}
-                  className="flex gap-4 mb-8 last:mb-0"
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 border-2 border-accent flex items-center justify-center bg-accent/10">
-                      <span className="font-pixel text-xs text-accent">{milestone.year}</span>
+            <div className="relative max-w-4xl mx-auto">
+              {/* Center vertical line */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 -translate-x-1/2 hidden md:block" />
+              
+              {milestones.map((milestone, index) => {
+                const isLeft = index % 2 === 0;
+                
+                return (
+                  <div
+                    key={milestone.year}
+                    className={`relative flex items-center mb-12 last:mb-0 ${
+                      isLeft ? 'md:justify-start' : 'md:justify-end'
+                    }`}
+                  >
+                    {/* Center dot on the line */}
+                    <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-accent border-2 border-background z-10 hidden md:block" />
+                    
+                    {/* Timeline card */}
+                    <div
+                      className={`w-full md:w-[45%] border-2 border-accent p-6 bg-card transition-all duration-300 hover:scale-105 hover:shadow-glow-primary ${
+                        isLeft ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'
+                      }`}
+                    >
+                      <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
+                        <div className="w-14 h-14 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
+                          <span className="font-pixel text-xs text-accent">{milestone.year}</span>
+                        </div>
+                        <div className={`h-0.5 flex-1 bg-gradient-to-r ${isLeft ? 'md:from-transparent md:to-accent' : 'from-accent to-transparent'}`} />
+                      </div>
+                      <p className="text-foreground">{milestone.event}</p>
                     </div>
-                    {index < milestones.length - 1 && (
-                      <div className="w-0.5 h-full bg-border mt-2" />
-                    )}
                   </div>
-                  <div className="flex-1 pt-4">
-                    <p className="text-foreground">{milestone.event}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
