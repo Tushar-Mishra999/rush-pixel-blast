@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FloatingPixels } from "@/components/PixelBlock";
 import { ChevronDown } from "lucide-react";
+import { Rush3DLogo } from "@/components/Rush3DLogo";
 
-const RUSH_LETTERS = ["R", "U", "S", "H"];
 const COLORS = ["text-primary", "text-secondary", "text-accent", "text-highlight"];
 
 // Target date: February 14, 2026
@@ -36,16 +36,11 @@ const useCountdown = () => {
 };
 
 export const HeroSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const countdown = useCountdown();
 
   useEffect(() => {
     setIsLoaded(true);
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 4);
-    }, 500);
-    return () => clearInterval(interval);
   }, []);
 
   const scrollToContent = () => {
@@ -98,30 +93,13 @@ export const HeroSection = () => {
         </div>
 
 
-        {/* Interactive RUSH title with enhanced neon */}
-        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
-          {RUSH_LETTERS.map((letter, index) => (
-            <div
-              key={letter}
-              className={`
-                font-pixel text-6xl md:text-8xl lg:text-9xl
-                transition-all duration-300 cursor-pointer
-                ${COLORS[index]}
-                ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
-                ${isLoaded ? "opacity-100" : "opacity-0"}
-              `}
-              style={{
-                transitionDelay: `${index * 100}ms`,
-                textShadow: activeIndex === index 
-                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
-                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
-                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
-              }}
-              onMouseEnter={() => setActiveIndex(index)}
-            >
-              {letter}
-            </div>
-          ))}
+        {/* Interactive 3D RUSH title */}
+        <div 
+          className={`mb-6 transition-all duration-700 delay-200 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <Rush3DLogo />
         </div>
 
         {/* Tagline with subtle glow */}
