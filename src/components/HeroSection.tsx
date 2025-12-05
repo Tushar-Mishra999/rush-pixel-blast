@@ -63,24 +63,24 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Cyberpunk radial gradient */}
       <div className="absolute inset-0 cyber-gradient-radial" />
-      
+
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-      
+
       {/* Horizontal neon lines */}
       <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent" />
-      
+
       {/* Vertical neon accents */}
       <div className="absolute top-0 bottom-0 left-1/4 w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent" />
       <div className="absolute top-0 bottom-0 right-1/4 w-px bg-gradient-to-b from-transparent via-secondary/20 to-transparent" />
-      
+
       {/* VHS scanlines overlay */}
       <div className="absolute inset-0 vhs-lines pointer-events-none" />
-      
+
       {/* Floating pixel blocks */}
       <FloatingPixels />
-      
+
       {/* Main content */}
       <div className="container relative z-10 px-4 py-20 text-center">
         {/* Date badge with cyber glow */}
@@ -144,7 +144,7 @@ export const HeroSection = () => {
 
         {/* Countdown Timer */}
         <div 
-          className={`flex justify-center gap-2 md:gap-4 mb-10 transition-all duration-700 delay-600 ${
+          className={`flex justify-center items-center gap-4 md:gap-6 mb-10 transition-all duration-700 delay-600 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -165,7 +165,7 @@ export const HeroSection = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
                 <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
                 <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
-                
+
                 <div 
                   className={`font-pixel text-2xl md:text-4xl text-${unit.color}`}
                   style={{ 
@@ -180,11 +180,11 @@ export const HeroSection = () => {
                   {unit.label}
                 </div>
               </div>
-              
-              {/* Separator colon */}
+
+              {/* Separator colon - rendered outside the box */}
               {index < countdownUnits.length - 1 && (
                 <span 
-                 className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
                 >
                   :
                 </span>
@@ -233,7 +233,7 @@ export const HeroSection = () => {
               <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2" style={{ borderColor: `hsl(var(--${stat.color}))` }} />
               <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2" style={{ borderColor: `hsl(var(--${stat.color}))` }} />
               <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2" style={{ borderColor: `hsl(var(--${stat.color}))` }} />
-              
+
               <div 
                 className={`font-pixel text-lg md:text-2xl text-${stat.color} group-hover:animate-neon-pulse`}
                 style={{ textShadow: `0 0 20px hsl(var(--${stat.color}) / 0.5)` }}
