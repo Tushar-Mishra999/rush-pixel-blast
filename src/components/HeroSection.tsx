@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FloatingPixels } from "@/components/PixelBlock";
-import { RushLogo3D } from "@/components/RushLogo3D";
 import { ChevronDown } from "lucide-react";
+
+const RUSH_LETTERS = ["R", "U", "S", "H"];
+const COLORS = ["text-primary", "text-secondary", "text-accent", "text-highlight"];
 
 // Target date: February 14, 2026
 const TARGET_DATE = new Date("2026-02-14T00:00:00").getTime();
@@ -96,16 +98,30 @@ export const HeroSection = () => {
         </div>
 
 
-        {/* Interactive 3D RUSH title */}
-        <div 
-          className={`mb-6 transition-all duration-700 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <RushLogo3D 
-            activeIndex={activeIndex} 
-            onHover={(index) => setActiveIndex(index)} 
-          />
+        {/* Interactive RUSH title with enhanced neon */}
+        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
+          {RUSH_LETTERS.map((letter, index) => (
+            <div
+              key={letter}
+              className={`
+                font-pixel text-6xl md:text-8xl lg:text-9xl
+                transition-all duration-300 cursor-pointer
+                ${COLORS[index]}
+                ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
+                ${isLoaded ? "opacity-100" : "opacity-0"}
+              `}
+              style={{
+                transitionDelay: `${index * 100}ms`,
+                textShadow: activeIndex === index 
+                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
+                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
+                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
+              }}
+              onMouseEnter={() => setActiveIndex(index)}
+            >
+              {letter}
+            </div>
+          ))}
         </div>
 
         {/* Tagline with subtle glow */}
@@ -128,7 +144,7 @@ export const HeroSection = () => {
 
         {/* Countdown Timer */}
         <div 
-          className={`flex justify-center items-center gap-4 md:gap-6 mb-10 transition-all duration-700 delay-600 ${
+          className={`flex justify-center gap-2 md:gap-4 mb-10 transition-all duration-700 delay-600 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -165,10 +181,10 @@ export const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Separator colon - rendered outside the box */}
+              {/* Separator colon */}
               {index < countdownUnits.length - 1 && (
                 <span 
-                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                  className="absolute -right-2 md:-right-3 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
                 >
                   :
                 </span>
