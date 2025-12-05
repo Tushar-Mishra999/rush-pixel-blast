@@ -98,8 +98,11 @@ export const HeroSection = () => {
         </div>
 
 
-        {/* Interactive RUSH title with enhanced neon */}
-        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
+        {/* Interactive RUSH title with enhanced neon and 3D effects */}
+        <div 
+          className="mb-6 flex justify-center items-center gap-2 md:gap-4"
+          style={{ perspective: "1000px" }}
+        >
           {RUSH_LETTERS.map((letter, index) => (
             <div
               key={letter}
@@ -115,11 +118,31 @@ export const HeroSection = () => {
                 textShadow: activeIndex === index 
                   ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
                   : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
-                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
+                filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)",
+                transform: `
+                  ${activeIndex === index ? "scale(1.1)" : "scale(1)"}
+                  rotateY(${activeIndex === index ? "15deg" : "0deg"})
+                  rotateX(${activeIndex === index ? "-10deg" : "0deg"})
+                  translateZ(${activeIndex === index ? "30px" : "0px"})
+                `,
+                transformStyle: "preserve-3d",
+                animation: isLoaded ? `float-3d 4s ease-in-out ${index * 0.5}s infinite` : "none"
               }}
               onMouseEnter={() => setActiveIndex(index)}
             >
-              {letter}
+              {/* 3D depth layers */}
+              <span className="relative" style={{ transformStyle: "preserve-3d" }}>
+                {letter}
+                <span 
+                  className="absolute inset-0 opacity-30"
+                  style={{ 
+                    transform: "translateZ(-10px)",
+                    filter: "blur(2px)"
+                  }}
+                >
+                  {letter}
+                </span>
+              </span>
             </div>
           ))}
         </div>
