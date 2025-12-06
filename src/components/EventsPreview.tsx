@@ -65,7 +65,7 @@ export const EventsPreview = () => {
           {eventCategories.map((category) => (
             <div
               key={category.name}
-              className="group cursor-pointer p-4 border border-border/50 bg-card/30 backdrop-blur-sm transition-all duration-300 hover:border-secondary/50 hover:shadow-[0_0_20px_hsl(var(--secondary)/0.15),0_4px_20px_hsl(var(--background)/0.5)]"
+              className="group cursor-pointer"
             >
               {/* Image Card */}
               <div className="relative aspect-[4/3] overflow-hidden border-2 border-border mb-4 transition-all duration-300 group-hover:border-secondary group-hover:shadow-[0_0_30px_hsl(var(--secondary)/0.3)]">
