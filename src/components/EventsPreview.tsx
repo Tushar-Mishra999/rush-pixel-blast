@@ -1,156 +1,116 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Music, Trophy, Mic, Palette, Users, Gamepad2 } from "lucide-react";
 
 const eventCategories = [
   {
-    icon: Music,
-    name: "Cultural",
-    events: ["Dance Battle", "Singing", "Fashion Show"],
-    color: "primary",
+    code: "CAT_01",
+    name: "CULTURAL",
+    events: ["Dance Battle", "Singing", "Fashion Show", "Drama"],
+    gradient: "from-purple-900 via-pink-800 to-purple-600",
   },
   {
-    icon: Trophy,
-    name: "Sports",
-    events: ["Futsal", "Cricket", "Basketball"],
-    color: "secondary",
+    code: "CAT_02",
+    name: "MANAGEMENT",
+    events: ["Case Study", "Best Manager", "B-Plan", "Marketing"],
+    gradient: "from-amber-800 via-orange-700 to-yellow-600",
   },
   {
-    icon: Mic,
-    name: "Literary",
-    events: ["Debate", "Quiz", "Poetry Slam"],
-    color: "accent",
+    code: "CAT_03",
+    name: "SPORTS",
+    events: ["Cricket", "Futsal", "Basketball", "Athletics"],
+    gradient: "from-slate-700 via-gray-600 to-slate-500",
   },
   {
-    icon: Palette,
-    name: "Arts",
-    events: ["Photography", "Film Making", "Graffiti"],
-    color: "highlight",
+    code: "CAT_04",
+    name: "LITERARY",
+    events: ["Debate", "Quiz", "Poetry Slam", "MUN"],
+    gradient: "from-teal-800 via-cyan-700 to-teal-500",
   },
   {
-    icon: Users,
-    name: "Management",
-    events: ["Case Study", "Marketing", "B-Plan"],
-    color: "primary",
+    code: "CAT_05",
+    name: "ARTS",
+    events: ["Photography", "Film Making", "Graffiti", "Sketching"],
+    gradient: "from-rose-800 via-red-700 to-orange-600",
   },
   {
-    icon: Gamepad2,
-    name: "Gaming",
-    events: ["Valorant", "FIFA", "BGMI"],
-    color: "secondary",
+    code: "CAT_06",
+    name: "GAMING",
+    events: ["Valorant", "FIFA", "BGMI", "Chess"],
+    gradient: "from-indigo-900 via-violet-800 to-purple-600",
   },
 ];
 
 export const EventsPreview = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
-      {/* Cyber background effects */}
+      {/* Background effects */}
       <div className="absolute inset-0 cyber-gradient-radial opacity-30" />
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       
-      {/* Animated corner accents */}
-      <div className="absolute top-0 left-0 w-32 h-32">
-        <div className="absolute top-4 left-4 w-full h-px bg-gradient-to-r from-primary to-transparent" />
-        <div className="absolute top-4 left-4 h-full w-px bg-gradient-to-b from-primary to-transparent" />
-      </div>
-      <div className="absolute top-0 right-0 w-32 h-32">
-        <div className="absolute top-4 right-4 w-full h-px bg-gradient-to-l from-secondary to-transparent" />
-        <div className="absolute top-4 right-4 h-full w-px bg-gradient-to-b from-secondary to-transparent" />
-      </div>
-      
       <div className="container relative z-10 px-4">
-        {/* Section Header with neon styling */}
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
-            <span className="text-secondary" style={{ textShadow: "0 0 20px hsl(var(--secondary))" }}>&gt;</span> 
-            <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>EVENTS</span> 
-            <span className="text-secondary" style={{ textShadow: "0 0 20px hsl(var(--secondary))" }}>&lt;</span>
+          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4 flex items-center justify-center gap-3">
+            <span className="text-secondary animate-pulse">&gt;</span>
+            <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>PRESS START</span>
+            <span className="w-6 h-1 bg-secondary ml-2" />
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            50+ events across multiple categories. Compete, perform, and create memories.
+          <p className="text-muted-foreground">
+            Choose your arena and dominate
           </p>
         </div>
 
-        {/* Event Categories Grid with cyber cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
-          {eventCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <div
-                key={category.name}
-                className="group border-2 border-border p-6 transition-all duration-300 cursor-pointer bg-card/30 backdrop-blur-sm relative overflow-hidden"
-                style={{
-                  transitionDelay: `${index * 50}ms`,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = `hsl(var(--${category.color}))`;
-                  e.currentTarget.style.boxShadow = `0 0 30px hsl(var(--${category.color}) / 0.3), 4px 4px 0px hsl(var(--${category.color}))`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "";
-                  e.currentTarget.style.boxShadow = "";
-                }}
-              >
-                {/* Hover glow background */}
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ 
-                    background: `radial-gradient(circle at center, hsl(var(--${category.color}) / 0.1), transparent 70%)`
-                  }}
-                />
+        {/* Event Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+          {eventCategories.map((category) => (
+            <div
+              key={category.name}
+              className="group cursor-pointer"
+            >
+              {/* Image Card */}
+              <div className="relative aspect-[4/3] overflow-hidden border-2 border-border mb-4 transition-all duration-300 group-hover:border-secondary group-hover:shadow-[0_0_30px_hsl(var(--secondary)/0.3)]">
+                {/* Gradient Background (placeholder for images) */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} transition-transform duration-500 group-hover:scale-110`} />
                 
-                {/* Corner brackets */}
-                <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-transparent group-hover:border-current transition-colors" style={{ borderColor: `hsl(var(--${category.color}) / 0)` }} />
-                <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-transparent group-hover:border-current transition-colors" />
-                <div className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-transparent group-hover:border-current transition-colors" />
-                <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-transparent group-hover:border-current transition-colors" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-colors" />
                 
-                <div className="flex items-start gap-4 relative z-10">
-                  <div
-                    className="w-12 h-12 border-2 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:shadow-lg"
-                    style={{ 
-                      borderColor: `hsl(var(--${category.color}))`,
-                      boxShadow: `inset 0 0 10px hsl(var(--${category.color}) / 0.2)`
-                    }}
-                  >
-                    <Icon 
-                      size={24} 
-                      style={{ 
-                        color: `hsl(var(--${category.color}))`,
-                        filter: "drop-shadow(0 0 5px currentColor)"
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <h3 
-                      className="font-pixel text-sm text-foreground mb-2 group-hover:animate-glitch"
-                      style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.2)" }}
-                    >
-                      {category.name}
-                    </h3>
-                    <div className="flex flex-wrap gap-1">
-                      {category.events.map((event) => (
-                        <span
-                          key={event}
-                          className="text-xs text-muted-foreground bg-muted/50 px-2 py-0.5 border border-border/50"
-                        >
-                          {event}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                {/* Scanlines effect */}
+                <div className="absolute inset-0 scanlines opacity-30" />
+                
+                {/* Category Code Label */}
+                <div className="absolute bottom-3 left-3">
+                  <span className="font-pixel text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
+                    {category.code}
+                  </span>
                 </div>
               </div>
-            );
-          })}
+              
+              {/* Category Info */}
+              <div>
+                <h3 
+                  className="font-pixel text-lg text-foreground mb-2 group-hover:text-secondary transition-colors"
+                  style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.2)" }}
+                >
+                  {category.name}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {category.events.join(", ")}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* CTA with glow */}
+        {/* CTA Button */}
         <div className="text-center">
           <Link to="/events">
-            <Button variant="pixel-secondary" size="lg" className="relative group">
-              <span className="relative z-10">View All Events</span>
-              <div className="absolute inset-0 bg-secondary/20 blur-xl group-hover:bg-secondary/40 transition-all" />
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="font-pixel text-xs border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all px-8"
+            >
+              VIEW ALL EVENTS
             </Button>
           </Link>
         </div>
