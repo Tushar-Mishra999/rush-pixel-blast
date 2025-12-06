@@ -63,12 +63,26 @@ export const EventsPreview = () => {
         {/* Event Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {eventCategories.map((category) => (
-            <div
+          <div
               key={category.name}
-              className="group cursor-pointer"
+              className="group cursor-pointer transition-all duration-300 hover:-translate-y-3"
+              style={{
+                transition: "transform 0.3s ease, box-shadow 0.3s ease"
+              }}
             >
               {/* Image Card */}
-              <div className="relative aspect-[4/3] overflow-hidden border-2 border-border mb-4 transition-all duration-300 group-hover:border-secondary group-hover:shadow-[0_0_30px_hsl(var(--secondary)/0.3)]">
+              <div className="relative aspect-[4/3] overflow-hidden border-2 border-border mb-4 transition-all duration-300 group-hover:border-secondary group-hover:shadow-[0_0_40px_hsl(var(--secondary)/0.5),0_0_80px_hsl(var(--secondary)/0.2)] group-hover:translate-y-0"
+                style={{
+                  boxShadow: "4px 4px 0px hsl(var(--border))",
+                  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "8px 8px 0px hsl(var(--secondary)), 0 0 40px hsl(var(--secondary)/0.5)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "4px 4px 0px hsl(var(--border))";
+                }}
+              >
                 {/* Gradient Background (placeholder for images) */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} transition-transform duration-500 group-hover:scale-110`} />
                 
