@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/brick-sans');
+
+@font-face {
+  font-family: 'NT Brick Sans';
+  src: url('/fonts/NTBrickSans.otf') format('opentype'),
+       url('/fonts/NTBrickSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;

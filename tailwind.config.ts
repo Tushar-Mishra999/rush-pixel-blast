@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         pixel: ['"Press Start 2P"', 'cursive'],
         sans: ['Inter', 'sans-serif'],
-        heading: ['"Brick Sans"', 'sans-serif'],
+        heading: ['"NT Brick Sans"', 'sans-serif'],
         subheading: ['Poppins', 'sans-serif'],
       },
       colors: {
