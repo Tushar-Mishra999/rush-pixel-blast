@@ -101,7 +101,7 @@ const About = () => {
                     >
                       <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
                         <div className="w-14 h-14 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
-                          <span className="font-pixel text-xs text-accent">{milestone.year}</span>
+                          <span className="font-heading text-xs text-accent">{milestone.year}</span>
                         </div>
                         <div className={`h-0.5 flex-1 bg-gradient-to-r ${isLeft ? 'md:from-transparent md:to-accent' : 'from-accent to-transparent'}`} />
                       </div>
@@ -128,9 +128,9 @@ const About = () => {
                   className="border-2 border-border hover:border-highlight p-6 text-center transition-all group"
                 >
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-highlight/30 to-secondary/30 flex items-center justify-center">
-                    <span className="font-pixel text-2xl text-foreground">♪</span>
+                    <span className="font-heading text-2xl text-foreground">♪</span>
                   </div>
-                  <h3 className="font-pixel text-xs text-foreground mb-1 group-hover:text-highlight transition-colors">
+                  <h3 className="font-heading text-xs text-foreground mb-1 group-hover:text-highlight transition-colors">
                     {artist.name}
                   </h3>
                   <p className="text-xs text-muted-foreground">{artist.type}</p>

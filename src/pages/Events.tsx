@@ -77,7 +77,7 @@ const Events = () => {
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
                   className={cn(
-                    "px-4 py-2 border-2 whitespace-nowrap transition-all text-sm font-pixel text-[10px]",
+                    "px-4 py-2 border-2 whitespace-nowrap transition-all text-sm font-heading text-[10px]",
                     activeCategory === cat.id
                       ? "text-background"
                       : "border-border text-muted-foreground hover:text-foreground"
@@ -128,7 +128,7 @@ const Events = () => {
                       
                       {/* Category Code Label */}
                       <div className="absolute bottom-3 left-3">
-                        <span className="font-pixel text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
+                        <span className="font-heading text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
                           {categoryData.code}
                         </span>
                       </div>
@@ -136,7 +136,7 @@ const Events = () => {
                       {/* Prize Badge */}
                       <div className="absolute top-3 right-3">
                         <span 
-                          className="font-pixel text-xs px-2 py-1 border"
+                          className="font-heading text-xs px-2 py-1 border"
                           style={{ 
                             backgroundColor: `${categoryData.accentColor}20`,
                             borderColor: categoryData.accentColor,
@@ -152,7 +152,7 @@ const Events = () => {
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <h3 
-                          className="font-pixel text-lg text-foreground transition-colors"
+                          className="font-heading text-lg text-foreground transition-colors"
                           style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.2)" }}
                         >
                           {event.name}
@@ -199,9 +199,9 @@ const Events = () => {
               className="max-w-2xl mx-auto border-2 border-secondary p-8"
               style={{ boxShadow: "8px 8px 0px hsl(var(--secondary))" }}
             >
-              <p className="font-pixel text-xs text-secondary mb-4">TOTAL PRIZE POOL</p>
+              <p className="font-heading text-xs text-secondary mb-4">TOTAL PRIZE POOL</p>
               <p 
-                className="font-pixel text-4xl md:text-6xl text-foreground mb-4"
+                className="font-heading text-4xl md:text-6xl text-foreground mb-4"
                 style={{ textShadow: "0 0 20px hsl(var(--secondary) / 0.5)" }}
               >
                 ₹15,00,000+
@@ -212,7 +212,7 @@ const Events = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="font-pixel text-xs border-2 border-secondary text-secondary hover:bg-secondary hover:text-background transition-all px-8"
+                className="font-heading text-xs border-2 border-secondary text-secondary hover:bg-secondary hover:text-background transition-all px-8"
               >
                 REGISTER NOW
               </Button>

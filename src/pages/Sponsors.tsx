@@ -72,7 +72,7 @@ const Sponsors = () => {
             <div className="container px-4">
               <div className="text-center mb-8">
                 <h2 
-                  className="font-pixel text-lg md:text-xl mb-2"
+                  className="font-heading text-lg md:text-xl mb-2"
                   style={{ color: `hsl(var(--${tier.color}))` }}
                 >
                   {tier.tier}
@@ -105,7 +105,7 @@ const Sponsors = () => {
                     }}
                   >
                     <span 
-                      className="font-pixel text-center"
+                      className="font-heading text-center"
                       style={{ 
                         fontSize: tier.tier === "Title Sponsor" ? "10px" : "8px",
                         color: `hsl(var(--${tier.color}) / 0.7)`,
@@ -133,7 +133,7 @@ const Sponsors = () => {
               </p>
               
               <div className="border-2 border-primary p-8 shadow-pixel mb-8">
-                <h3 className="font-pixel text-sm text-primary mb-4">WHY SPONSOR RUSH?</h3>
+                <h3 className="font-heading text-sm text-primary mb-4">WHY SPONSOR RUSH?</h3>
                 <ul className="text-left space-y-2 text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary" />

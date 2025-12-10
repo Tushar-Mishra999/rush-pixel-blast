@@ -30,7 +30,7 @@ export const MarqueeStrip = () => {
         {[...items, ...items, ...items, ...items].map((item, index) => (
           <span
             key={index}
-            className={`font-pixel text-xs mx-4 ${
+            className={`font-heading text-xs mx-4 ${
               item === "◆" 
                 ? "text-accent" 
                 : index % 2 === 0 
