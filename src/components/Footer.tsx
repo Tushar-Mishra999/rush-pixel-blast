@@ -8,15 +8,15 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-pixel text-xl text-primary animate-neon-pulse">RUSH</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="font-heading text-xl text-primary animate-neon-pulse">RUSH</h3>
+            <p className="font-subheading text-sm text-muted-foreground">
               IIM Ranchi's premier cultural festival bringing together talent, creativity, and energy from across the nation.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-pixel text-xs text-accent">Quick Links</h4>
+            <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Quick Links</h4>
             <div className="flex flex-col gap-2">
               <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Home
@@ -35,7 +35,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="font-pixel text-xs text-accent">Contact</h4>
+            <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Contact</h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={16} className="text-primary" />
@@ -56,7 +56,7 @@ export const Footer = () => {
 
           {/* Social */}
           <div className="space-y-4">
-            <h4 className="font-pixel text-xs text-accent">Follow Us</h4>
+            <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Follow Us</h4>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com"

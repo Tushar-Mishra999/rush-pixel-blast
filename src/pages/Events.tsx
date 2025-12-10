@@ -57,12 +57,12 @@ const Events = () => {
           <div className="absolute inset-0 cyber-gradient-radial opacity-30" />
           <div className="absolute inset-0 bg-grid-pattern opacity-20" />
           <div className="container px-4 text-center relative z-10">
-            <h1 className="font-pixel text-3xl md:text-4xl text-foreground mb-4 flex items-center justify-center gap-3">
+            <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4 flex items-center justify-center gap-3">
               <span className="text-secondary animate-pulse">&gt;</span>
               <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>SELECT EVENT</span>
               <span className="w-6 h-1 bg-secondary ml-2" />
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
               50+ events across 6 categories. Find your arena, show your skills, win big.
             </p>
           </div>

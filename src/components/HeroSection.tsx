@@ -126,7 +126,7 @@ export const HeroSection = () => {
 
         {/* Tagline with subtle glow */}
         <p 
-          className={`text-xl md:text-2xl text-foreground mb-2 transition-all duration-700 delay-300 ${
+          className={`font-heading text-xl md:text-2xl text-foreground mb-2 transition-all duration-700 delay-300 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
           style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.3)" }}
@@ -134,11 +134,11 @@ export const HeroSection = () => {
           The Soul Edition
         </p>
         <p 
-          className={`text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${
+          className={`font-subheading text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          IIM Ranchi's premier cultural extravaganza bringing together the finest talent, 
+          IIM Ranchi's premier cultural extravaganza bringing together the finest talent,
           electrifying performances, and unforgettable experiences.
         </p>
 

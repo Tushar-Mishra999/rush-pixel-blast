@@ -50,12 +50,12 @@ export const LegacySection = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">
             <span className="text-primary" style={{ textShadow: "0 0 20px hsl(var(--primary))" }}>[</span> 
             <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>THE LEGACY</span> 
             <span className="text-primary" style={{ textShadow: "0 0 20px hsl(var(--primary))" }}>]</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
             Years of unforgettable moments, legendary performances, and memories that last a lifetime.
           </p>
         </div>
