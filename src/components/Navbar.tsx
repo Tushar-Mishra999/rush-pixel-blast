@@ -20,7 +20,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="font-pixel text-lg text-primary animate-neon-pulse">
+          <Link to="/" className="font-heading text-lg text-primary animate-neon-pulse">
             RUSH
           </Link>
 
@@ -31,7 +31,7 @@ export const Navbar = () => {
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "font-pixel text-[10px] uppercase tracking-wider transition-colors hover:text-primary",
+                  "font-heading text-[10px] uppercase tracking-wider transition-colors hover:text-primary",
                   location.pathname === link.href
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -69,7 +69,7 @@ export const Navbar = () => {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "font-pixel text-xs uppercase tracking-wider py-2 transition-colors",
+                    "font-heading text-xs uppercase tracking-wider py-2 transition-colors",
                     location.pathname === link.href
                       ? "text-primary"
                       : "text-muted-foreground hover:text-primary"

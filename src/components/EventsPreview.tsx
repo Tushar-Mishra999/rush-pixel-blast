@@ -98,7 +98,7 @@ export const EventsPreview = () => {
                 
                 {/* Category Code Label */}
                 <div className="absolute bottom-3 left-3">
-                  <span className="font-pixel text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
+                  <span className="font-heading text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
                     {category.code}
                   </span>
                 </div>
@@ -107,7 +107,7 @@ export const EventsPreview = () => {
               {/* Category Info */}
               <div>
                 <h3 
-                  className="font-pixel text-lg text-foreground mb-2 transition-colors"
+                  className="font-heading text-lg text-foreground mb-2 transition-colors"
                   style={{ 
                     textShadow: "0 0 10px hsl(var(--foreground) / 0.2)"
                   }}
@@ -128,7 +128,7 @@ export const EventsPreview = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="font-pixel text-xs border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all px-8"
+              className="font-heading text-xs border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all px-8"
             >
               VIEW ALL EVENTS
             </Button>

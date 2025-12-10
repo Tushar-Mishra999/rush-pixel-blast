@@ -69,7 +69,7 @@ export const LegacySection = () => {
                 key={item.year}
                 onClick={() => setActiveYear(item.year)}
                 className={cn(
-                  "font-pixel text-xs md:text-sm px-4 py-2 border-2 transition-all duration-300 relative overflow-hidden",
+                  "font-heading text-xs md:text-sm px-4 py-2 border-2 transition-all duration-300 relative overflow-hidden",
                   activeYear === item.year
                     ? "shadow-pixel"
                     : "border-border text-muted-foreground hover:text-foreground"
@@ -114,7 +114,7 @@ export const LegacySection = () => {
               
               <div className="flex flex-col md:flex-row md:items-center gap-6 relative z-10">
                 <div 
-                  className="font-pixel text-5xl md:text-7xl"
+                  className="font-heading text-5xl md:text-7xl"
                   style={{ 
                     color: `hsl(var(--${item.color}))`,
                     textShadow: `0 0 30px hsl(var(--${item.color}) / 0.5)`
@@ -123,7 +123,7 @@ export const LegacySection = () => {
                   {item.year}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-pixel text-lg md:text-xl text-foreground mb-2">
+                  <h3 className="font-heading text-lg md:text-xl text-foreground mb-2">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground mb-4">{item.description}</p>
@@ -176,7 +176,7 @@ export const LegacySection = () => {
                   }}
                 />
                 <span 
-                  className="font-pixel text-[8px] text-muted-foreground group-hover:text-primary transition-colors"
+                  className="font-heading text-[8px] text-muted-foreground group-hover:text-primary transition-colors"
                   style={{ textShadow: "0 0 10px currentColor" }}
                 >
                   MEMORY #{i + 1}

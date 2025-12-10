@@ -24,13 +24,13 @@ const buttonVariants = cva(
         link: 
           "text-primary underline-offset-4 hover:underline",
         pixel:
-          "font-pixel text-xs bg-primary text-primary-foreground border-2 border-primary shadow-pixel hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_hsl(var(--primary))] active:translate-x-1 active:translate-y-1 active:shadow-none",
+          "font-heading text-xs bg-primary text-primary-foreground border-2 border-primary shadow-pixel hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_hsl(var(--primary))] active:translate-x-1 active:translate-y-1 active:shadow-none",
         "pixel-outline":
-          "font-pixel text-xs border-2 border-primary bg-transparent text-primary shadow-pixel hover:bg-primary hover:text-primary-foreground hover:translate-x-0.5 hover:translate-y-0.5",
+          "font-heading text-xs border-2 border-primary bg-transparent text-primary shadow-pixel hover:bg-primary hover:text-primary-foreground hover:translate-x-0.5 hover:translate-y-0.5",
         "pixel-secondary":
-          "font-pixel text-xs bg-secondary text-secondary-foreground border-2 border-secondary shadow-pixel-secondary hover:translate-x-0.5 hover:translate-y-0.5",
+          "font-heading text-xs bg-secondary text-secondary-foreground border-2 border-secondary shadow-pixel-secondary hover:translate-x-0.5 hover:translate-y-0.5",
         "pixel-accent":
-          "font-pixel text-xs bg-accent text-accent-foreground border-2 border-accent shadow-pixel-accent hover:translate-x-0.5 hover:translate-y-0.5",
+          "font-heading text-xs bg-accent text-accent-foreground border-2 border-accent shadow-pixel-accent hover:translate-x-0.5 hover:translate-y-0.5",
         glow:
           "bg-primary text-primary-foreground border-2 border-primary shadow-glow-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.8),0_0_60px_hsl(var(--primary)/0.4)]",
       },

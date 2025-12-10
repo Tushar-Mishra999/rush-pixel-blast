@@ -46,7 +46,7 @@ export const SponsorsSection = () => {
         {/* Title Sponsors with holographic effect */}
         <div className="mb-12">
           <h3 
-            className="font-pixel text-xs text-accent text-center mb-6"
+            className="font-heading text-xs text-accent text-center mb-6"
             style={{ textShadow: "0 0 10px hsl(var(--accent))" }}
           >
             // TITLE SPONSORS
@@ -70,7 +70,7 @@ export const SponsorsSection = () => {
                 <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-accent/50" />
                 
                 <span 
-                  className="font-pixel text-[10px] text-accent group-hover:animate-neon-pulse relative z-10"
+                  className="font-heading text-[10px] text-accent group-hover:animate-neon-pulse relative z-10"
                   style={{ textShadow: "0 0 10px hsl(var(--accent))" }}
                 >
                   {sponsor.name}
@@ -83,7 +83,7 @@ export const SponsorsSection = () => {
         {/* Gold Sponsors with cyber styling */}
         <div className="mb-12">
           <h3 
-            className="font-pixel text-xs text-primary text-center mb-6"
+            className="font-heading text-xs text-primary text-center mb-6"
             style={{ textShadow: "0 0 10px hsl(var(--primary))" }}
           >
             // GOLD PARTNERS
@@ -102,7 +102,7 @@ export const SponsorsSection = () => {
                   style={{ background: "radial-gradient(circle at center, hsl(var(--primary) / 0.2), transparent 70%)" }}
                 />
                 <span 
-                  className="font-pixel text-[8px] text-primary/70 group-hover:text-primary transition-colors relative z-10"
+                  className="font-heading text-[8px] text-primary/70 group-hover:text-primary transition-colors relative z-10"
                   style={{ textShadow: "0 0 5px currentColor" }}
                 >
                   {sponsor.name}
@@ -114,7 +114,7 @@ export const SponsorsSection = () => {
 
         {/* Silver Sponsors */}
         <div className="mb-12">
-          <h3 className="font-pixel text-xs text-muted-foreground text-center mb-6">// SILVER PARTNERS</h3>
+          <h3 className="font-heading text-xs text-muted-foreground text-center mb-6">// SILVER PARTNERS</h3>
           <div className="flex justify-center gap-3 flex-wrap">
             {sponsors.silver.map((sponsor) => (
               <div

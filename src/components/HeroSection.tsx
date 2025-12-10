@@ -92,9 +92,9 @@ export const HeroSection = () => {
             boxShadow: "0 0 20px hsl(var(--accent) / 0.3), inset 0 0 20px hsl(var(--accent) / 0.1)"
           }}
         >
-          <span className="font-pixel text-[10px] text-accent">FEB 2026</span>
+          <span className="font-heading text-[10px] text-accent">FEB 2026</span>
           <span className="w-2 h-2 bg-accent animate-neon-pulse" />
-          <span className="font-pixel text-[10px] text-accent">3 DAYS</span>
+          <span className="font-heading text-[10px] text-accent">3 DAYS</span>
         </div>
 
 
@@ -104,7 +104,7 @@ export const HeroSection = () => {
             <div
               key={letter}
               className={`
-                font-pixel text-6xl md:text-8xl lg:text-9xl
+                font-heading text-6xl md:text-8xl lg:text-9xl
                 transition-all duration-300 cursor-pointer
                 ${COLORS[index]}
                 ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
@@ -167,7 +167,7 @@ export const HeroSection = () => {
                 <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2" style={{ borderColor: `hsl(var(--${unit.color}))` }} />
 
                 <div 
-                  className={`font-pixel text-2xl md:text-4xl text-${unit.color}`}
+                  className={`font-heading text-2xl md:text-4xl text-${unit.color}`}
                   style={{ 
                     textShadow: `0 0 10px hsl(var(--${unit.color})), 0 0 20px hsl(var(--${unit.color}) / 0.5)`,
                     minWidth: "2ch",
@@ -176,7 +176,7 @@ export const HeroSection = () => {
                 >
                   {String(unit.value).padStart(2, "0")}
                 </div>
-                <div className="font-pixel text-[8px] md:text-[10px] text-muted-foreground mt-1 tracking-wider">
+                <div className="font-heading text-[8px] md:text-[10px] text-muted-foreground mt-1 tracking-wider">
                   {unit.label}
                 </div>
               </div>
@@ -184,7 +184,7 @@ export const HeroSection = () => {
               {/* Separator colon - rendered outside the box */}
               {index < countdownUnits.length - 1 && (
                 <span 
-                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-pixel text-xl md:text-2xl text-muted-foreground animate-pulse"
+                  className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-heading text-xl md:text-2xl text-muted-foreground animate-pulse"
                 >
                   :
                 </span>
@@ -235,7 +235,7 @@ export const HeroSection = () => {
               <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2" style={{ borderColor: `hsl(var(--${stat.color}))` }} />
 
               <div 
-                className={`font-pixel text-lg md:text-2xl text-${stat.color} group-hover:animate-neon-pulse`}
+                className={`font-heading text-lg md:text-2xl text-${stat.color} group-hover:animate-neon-pulse`}
                 style={{ textShadow: `0 0 20px hsl(var(--${stat.color}) / 0.5)` }}
               >
                 {stat.value}
