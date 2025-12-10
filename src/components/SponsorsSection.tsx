@@ -33,12 +33,12 @@ export const SponsorsSection = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">
             <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span> 
             <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>SPONSORS</span> 
             <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
             Powered by industry leaders who believe in celebrating talent and creativity.
           </p>
         </div>

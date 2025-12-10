@@ -56,12 +56,12 @@ export const EventsPreview = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-pixel text-2xl md:text-3xl text-foreground mb-4 flex items-center justify-center gap-3">
+          <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4 flex items-center justify-center gap-3">
             <span className="text-secondary animate-pulse">&gt;</span>
             <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>PRESS START</span>
             <span className="w-6 h-1 bg-secondary ml-2" />
           </h2>
-          <p className="text-muted-foreground">
+          <p className="font-subheading text-muted-foreground">
             Choose your arena and dominate
           </p>
         </div>

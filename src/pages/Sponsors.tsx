@@ -57,10 +57,10 @@ const Sponsors = () => {
         {/* Header */}
         <section className="py-16 bg-card border-b-2 border-border">
           <div className="container px-4 text-center">
-            <h1 className="font-pixel text-3xl md:text-4xl text-foreground mb-4">
+            <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
               <span className="text-accent">$</span> SPONSORS <span className="text-accent">$</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
               Our partners make RUSH possible. Join the league of brands that power Eastern India's biggest B-school fest.
             </p>
           </div>
@@ -124,11 +124,11 @@ const Sponsors = () => {
         <section className="py-20 bg-card">
           <div className="container px-4">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-pixel text-xl md:text-2xl text-foreground mb-4">
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-4">
                 Become a Sponsor
               </h2>
-              <p className="text-muted-foreground mb-8">
-                Partner with RUSH 2025 and reach 10,000+ future business leaders. 
+              <p className="font-subheading text-muted-foreground mb-8">
+                Partner with RUSH 2025 and reach 10,000+ future business leaders.
                 Get unparalleled brand visibility and connect with top talent from premier B-schools.
               </p>
               

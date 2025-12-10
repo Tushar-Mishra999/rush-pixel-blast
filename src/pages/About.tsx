@@ -29,10 +29,10 @@ const About = () => {
           <FloatingPixels />
           
           <div className="container relative z-10 px-4 text-center">
-            <h1 className="font-pixel text-3xl md:text-5xl text-foreground mb-6">
+            <h1 className="font-heading text-3xl md:text-5xl text-foreground mb-6">
               <span className="text-primary">ABOUT</span> RUSH
             </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="font-subheading text-lg text-muted-foreground max-w-3xl mx-auto">
               More than a fest. It's where dreams take flight, talents shine, and memories become legends.
             </p>
           </div>
@@ -42,14 +42,14 @@ const About = () => {
         <section className="py-20 bg-background">
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-pixel text-xl md:text-2xl text-foreground mb-8 text-center">
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-8 text-center">
                 <span className="text-secondary">&gt;</span> WHAT IS RUSH <span className="text-secondary">&lt;</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="border-2 border-primary p-6 shadow-pixel transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-primary hover:border-primary">
-                  <h3 className="font-pixel text-sm text-primary mb-4">THE VISION</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="font-heading text-sm text-primary mb-4 uppercase tracking-wider">THE VISION</h3>
+                  <p className="font-subheading text-muted-foreground leading-relaxed">
                     RUSH is IIM Ranchi's annual cultural extravaganza that brings together 
                     the brightest minds from B-schools across India. It's a platform where 
                     competition meets celebration, where strategy meets creativity.
@@ -57,8 +57,8 @@ const About = () => {
                 </div>
                 
                 <div className="border-2 border-secondary p-6 shadow-pixel-secondary transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-secondary hover:border-secondary">
-                  <h3 className="font-pixel text-sm text-secondary mb-4">THE EXPERIENCE</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="font-heading text-sm text-secondary mb-4 uppercase tracking-wider">THE EXPERIENCE</h3>
+                  <p className="font-subheading text-muted-foreground leading-relaxed">
                     Three days of non-stop action featuring sports tournaments, cultural 
                     performances, management competitions, and star-studded nights. 
                     RUSH is where future leaders come to play.
@@ -72,7 +72,7 @@ const About = () => {
         {/* Timeline */}
         <section className="py-20 bg-card">
           <div className="container px-4">
-            <h2 className="font-pixel text-xl md:text-2xl text-foreground mb-12 text-center">
+            <h2 className="font-heading text-xl md:text-2xl text-foreground mb-12 text-center">
               <span className="text-accent">[</span> THE JOURNEY <span className="text-accent">]</span>
             </h2>
             
@@ -117,7 +117,7 @@ const About = () => {
         {/* Past Artists */}
         <section className="py-20 bg-background">
           <div className="container px-4">
-            <h2 className="font-pixel text-xl md:text-2xl text-foreground mb-12 text-center">
+            <h2 className="font-heading text-xl md:text-2xl text-foreground mb-12 text-center">
               <span className="text-highlight">♪</span> ARTIST LEGACY <span className="text-highlight">♪</span>
             </h2>
             
