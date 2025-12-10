@@ -49,6 +49,10 @@ export default {
           DEFAULT: "hsl(var(--highlight))",
           foreground: "hsl(var(--highlight-foreground))",
         },
+        azure: "hsl(var(--azure))",
+        green: "hsl(var(--green))",
+        magenta: "hsl(var(--magenta))",
+        olive: "hsl(var(--olive))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -77,9 +81,11 @@ export default {
         'pixel': 'var(--pixel-shadow)',
         'pixel-secondary': 'var(--pixel-shadow-secondary)',
         'pixel-accent': 'var(--pixel-shadow-accent)',
+        'pixel-highlight': 'var(--pixel-shadow-highlight)',
         'glow-primary': 'var(--glow-primary)',
         'glow-secondary': 'var(--glow-secondary)',
         'glow-accent': 'var(--glow-accent)',
+        'glow-highlight': 'var(--glow-highlight)',
       },
       keyframes: {
         "accordion-down": {
