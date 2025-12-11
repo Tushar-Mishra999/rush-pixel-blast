@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 const categories = [
-  { id: "all", name: "ALL", code: "CAT_00", gradient: "from-gray-700 via-gray-600 to-gray-500", accentColor: "#6b7280" },
-  { id: "cultural", name: "CULTURAL", code: "CAT_01", gradient: "from-purple-900 via-pink-800 to-purple-600", accentColor: "#d946ef" },
-  { id: "management", name: "MANAGEMENT", code: "CAT_02", gradient: "from-amber-800 via-orange-700 to-yellow-600", accentColor: "#f59e0b" },
-  { id: "sports", name: "SPORTS", code: "CAT_03", gradient: "from-slate-700 via-gray-600 to-slate-500", accentColor: "#94a3b8" },
-  { id: "literary", name: "LITERARY", code: "CAT_04", gradient: "from-teal-800 via-cyan-700 to-teal-500", accentColor: "#14b8a6" },
-  { id: "arts", name: "ARTS", code: "CAT_05", gradient: "from-rose-800 via-red-700 to-orange-600", accentColor: "#f43f5e" },
-  { id: "gaming", name: "GAMING", code: "CAT_06", gradient: "from-indigo-900 via-violet-800 to-purple-600", accentColor: "#8b5cf6" },
+  { id: "all", name: "ALL", code: "CAT_00", gradient: "from-muted via-muted/80 to-muted/60", accentColor: "#20ABE5" },
+  { id: "cultural", name: "CULTURAL", code: "CAT_01", gradient: "from-magenta/80 via-magenta/60 to-magenta/40", accentColor: "#DE0081" },
+  { id: "management", name: "MANAGEMENT", code: "CAT_02", gradient: "from-olive/80 via-olive/60 to-olive/40", accentColor: "#ECDE01" },
+  { id: "sports", name: "SPORTS", code: "CAT_03", gradient: "from-azure/80 via-azure/60 to-azure/40", accentColor: "#20ABE5" },
+  { id: "literary", name: "LITERARY", code: "CAT_04", gradient: "from-green/80 via-green/60 to-green/40", accentColor: "#35B847" },
+  { id: "arts", name: "ARTS", code: "CAT_05", gradient: "from-magenta/70 via-azure/60 to-magenta/50", accentColor: "#DE0081" },
+  { id: "gaming", name: "GAMING", code: "CAT_06", gradient: "from-azure/70 via-green/60 to-azure/50", accentColor: "#20ABE5" },
 ];
 
 const events = [
