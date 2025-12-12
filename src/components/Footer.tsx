@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import rushLogo from "@/assets/rush-logo.png";
 
 export const Footer = () => {
   return (
@@ -8,7 +9,9 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-heading text-xl text-primary animate-neon-pulse">RUSH</h3>
+            <Link to="/">
+              <img src={rushLogo} alt="RUSH Logo" className="h-12 w-auto" />
+            </Link>
             <p className="font-subheading text-sm text-muted-foreground">
               IIM Ranchi's premier cultural festival bringing together talent, creativity, and energy from across the nation.
             </p>
