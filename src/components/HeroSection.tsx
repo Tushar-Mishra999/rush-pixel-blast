@@ -4,7 +4,8 @@ import { FloatingPixels } from "@/components/PixelBlock";
 import { ChevronDown } from "lucide-react";
 
 const RUSH_LETTERS = ["R", "U", "S", "H"];
-const COLORS = ["text-primary", "text-secondary", "text-accent", "text-highlight"];
+const COLORS = ["text-azure", "text-green", "text-magenta", "text-olive"];
+const COLOR_VARS = ["azure", "green", "magenta", "olive"];
 
 // Target date: February 14, 2026
 const TARGET_DATE = new Date("2026-02-14T00:00:00").getTime();
@@ -53,10 +54,10 @@ export const HeroSection = () => {
   };
 
   const countdownUnits = [
-    { value: countdown.days, label: "DAYS", color: "primary" },
-    { value: countdown.hours, label: "HRS", color: "secondary" },
-    { value: countdown.minutes, label: "MIN", color: "accent" },
-    { value: countdown.seconds, label: "SEC", color: "highlight" },
+    { value: countdown.days, label: "DAYS", color: "azure" },
+    { value: countdown.hours, label: "HRS", color: "green" },
+    { value: countdown.minutes, label: "MIN", color: "magenta" },
+    { value: countdown.seconds, label: "SEC", color: "olive" },
   ];
 
   return (
@@ -129,8 +130,8 @@ export const HeroSection = () => {
                   activeIndex === index ? "opacity-100 scale-x-100" : "opacity-50 scale-x-75"
                 }`}
                 style={{
-                  background: `linear-gradient(90deg, transparent, hsl(var(--${["primary", "secondary", "accent", "highlight"][index]})), transparent)`,
-                  boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${["primary", "secondary", "accent", "highlight"][index]}))` : "none"
+                  background: `linear-gradient(90deg, transparent, hsl(var(--${COLOR_VARS[index]})), transparent)`,
+                  boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${COLOR_VARS[index]}))` : "none"
                 }}
               />
             </div>
