@@ -89,6 +89,7 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: url('/images/cursor.png'), auto;
   }
   
   body {
