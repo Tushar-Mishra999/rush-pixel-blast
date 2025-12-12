@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import rushLogo from "@/assets/rush-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -20,8 +21,8 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="font-heading text-lg text-primary animate-neon-pulse">
-            RUSH
+          <Link to="/" className="flex items-center">
+            <img src={rushLogo} alt="RUSH Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
