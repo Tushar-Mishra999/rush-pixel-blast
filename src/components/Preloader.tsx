@@ -11,12 +11,12 @@ export const Preloader = ({ onComplete }: PreloaderProps) => {
   useEffect(() => {
     const fadeTimer = setTimeout(() => {
       setIsFading(true);
-    }, 2000);
+    }, 3000);
 
     const completeTimer = setTimeout(() => {
       setIsVisible(false);
       onComplete();
-    }, 2500);
+    }, 3500);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -34,12 +34,12 @@ export const Preloader = ({ onComplete }: PreloaderProps) => {
     >
       <p className="font-heading text-2xl md:text-4xl tracking-wider animate-pulse">
         <span className="text-azure">L</span>
-        <span className="text-green">o</span>
-        <span className="text-magenta">a</span>
-        <span className="text-olive">d</span>
-        <span className="text-azure">i</span>
-        <span className="text-green">n</span>
-        <span className="text-magenta">g</span>
+        <span className="text-green">O</span>
+        <span className="text-magenta">A</span>
+        <span className="text-olive">D</span>
+        <span className="text-azure">I</span>
+        <span className="text-green">N</span>
+        <span className="text-magenta">G</span>
         <span className="text-foreground mx-2"> </span>
         <span className="text-azure">R</span>
         <span className="text-green">U</span>
