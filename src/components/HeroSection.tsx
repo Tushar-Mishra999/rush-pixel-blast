@@ -98,13 +98,13 @@ export const HeroSection = () => {
         </div>
 
 
-        {/* Interactive RUSH title with enhanced neon */}
-        <div className="mb-6 flex justify-center items-center gap-2 md:gap-4">
+        {/* Interactive RUSH title with enhanced neon - inspired by blocky logo */}
+        <div className="mb-6 flex justify-center items-center gap-1 md:gap-2">
           {RUSH_LETTERS.map((letter, index) => (
             <div
               key={letter}
               className={`
-                font-heading text-6xl md:text-8xl lg:text-9xl
+                relative font-heading text-6xl md:text-8xl lg:text-[10rem]
                 transition-all duration-300 cursor-pointer
                 ${COLORS[index]}
                 ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
@@ -112,14 +112,27 @@ export const HeroSection = () => {
               `}
               style={{
                 transitionDelay: `${index * 100}ms`,
+                fontWeight: 900,
+                letterSpacing: "-0.05em",
+                WebkitTextStroke: activeIndex === index ? "2px currentColor" : "1px currentColor",
                 textShadow: activeIndex === index 
-                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor"
-                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background))",
+                  ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
+                  : "0 0 10px currentColor, 0 0 20px hsl(var(--background)), 3px 3px 0 hsl(var(--background))",
                 filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
               }}
               onMouseEnter={() => setActiveIndex(index)}
             >
               {letter}
+              {/* Blocky accent line under each letter */}
+              <div 
+                className={`absolute -bottom-1 left-0 right-0 h-1 md:h-2 transition-all duration-300 ${
+                  activeIndex === index ? "opacity-100 scale-x-100" : "opacity-50 scale-x-75"
+                }`}
+                style={{
+                  background: `linear-gradient(90deg, transparent, hsl(var(--${["primary", "secondary", "accent", "highlight"][index]})), transparent)`,
+                  boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${["primary", "secondary", "accent", "highlight"][index]}))` : "none"
+                }}
+              />
             </div>
           ))}
         </div>
