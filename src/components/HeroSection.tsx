@@ -130,8 +130,8 @@ export const HeroSection = () => {
         <p className={`font-heading text-xl md:text-2xl text-foreground mb-2 transition-all duration-700 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{
         textShadow: "0 0 30px hsl(var(--primary) / 0.3)"
       }}>RENDERING THE FUTURE</p>
-        <p className={`font-subheading text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories.
-  Tomorrow is not coming-it is already in our hands!</p>
+        <p className={`font-subheading text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories. 
+Tomorrow is not coming-it is already in our hands!</p>
 
         {/* Countdown Timer */}
         <div className={`flex justify-center items-center gap-4 md:gap-6 mb-10 transition-all duration-700 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
