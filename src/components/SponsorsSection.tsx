@@ -129,16 +129,6 @@ export const SponsorsSection = () => {
           </div>
         </div>
 
-        {/* CTA with cyber button */}
-        <div className="text-center">
-          <p className="text-muted-foreground mb-4">Interested in sponsoring RUSH 2025?</p>
-          <Link to="/sponsors">
-            <Button variant="pixel-accent" size="lg" className="relative group">
-              <span className="relative z-10">Become a Sponsor</span>
-              <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:bg-accent/40 transition-all" />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
