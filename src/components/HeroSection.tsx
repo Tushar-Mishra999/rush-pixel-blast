@@ -131,8 +131,7 @@ export const HeroSection = () => {
         textShadow: "0 0 30px hsl(var(--primary) / 0.3)"
       }}>RENDERING THE FUTURE</p>
         <p className={`font-subheading text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          IIM Ranchi's premier cultural extravaganza bringing together the finest talent,
-          electrifying performances, and unforgettable experiences.
+          IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories that emerge from us to shape tomorrow. Tomorrow is not coming—it is already in our hands.
         </p>
 
         {/* Countdown Timer */}
