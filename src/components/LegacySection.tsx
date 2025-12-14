@@ -154,7 +154,7 @@ export const LegacySection = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="aspect-square border-2 border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary transition-all duration-300 cursor-pointer overflow-hidden relative"
+              className="aspect-square border-2 border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary transition-all duration-300 overflow-hidden relative"
               style={{
                 boxShadow: "inset 0 0 30px hsl(var(--background))"
               }}

@@ -80,7 +80,7 @@ export const EventsPreview = () => {
             <div
               key={category.name}
               onClick={() => navigate(`/events?category=${category.id}`)}
-              className="group cursor-pointer transition-all duration-300 hover:-translate-y-3 border-2 border-border bg-background p-4"
+              className="group transition-all duration-300 hover:-translate-y-3 border-2 border-border bg-background p-4"
               style={{
                 boxShadow: "4px 4px 0px hsl(var(--border))",
                 transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)"

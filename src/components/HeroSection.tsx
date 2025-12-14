@@ -105,7 +105,7 @@ export const HeroSection = () => {
         <div className="mb-6 flex justify-center items-center gap-1 md:gap-2">
           {RUSH_LETTERS.map((letter, index) => <div key={letter} className={`
                 relative font-heading text-6xl md:text-8xl lg:text-[10rem]
-                transition-all duration-300 cursor-pointer
+                transition-all duration-300
                 ${COLORS[index]}
                 ${activeIndex === index ? "scale-110 animate-glitch" : "scale-100"}
                 ${isLoaded ? "opacity-100" : "opacity-0"}

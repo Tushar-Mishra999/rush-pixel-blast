@@ -32,7 +32,7 @@ export const Navbar = () => {
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "font-heading text-[10px] uppercase tracking-wider transition-colors hover:text-primary",
+                  "font-heading text-[13px] uppercase tracking-wider transition-colors hover:text-primary",
                   location.pathname === link.href
                     ? "text-primary"
                     : "text-muted-foreground"
