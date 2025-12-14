@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import rushLogo from "@/assets/rush-logo.png";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-card border-t-2 border-border">
+  return <footer className="bg-card border-t-2 border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -12,9 +10,7 @@ export const Footer = () => {
             <Link to="/">
               <img src={rushLogo} alt="RUSH Logo" className="h-12 w-auto" />
             </Link>
-            <p className="font-subheading text-sm text-muted-foreground">
-              IIM Ranchi's premier cultural festival bringing together talent, creativity, and energy from across the nation.
-            </p>
+            <p className="font-subheading text-sm text-muted-foreground">IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories. Tomorrow is not coming-it is already in our hands!                </p>
           </div>
 
           {/* Quick Links */}
@@ -61,28 +57,13 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Follow Us</h4>
             <div className="flex gap-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-destructive hover:border-destructive transition-colors"
-              >
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-destructive hover:border-destructive transition-colors">
                 <Youtube size={20} />
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -96,12 +77,17 @@ export const Footer = () => {
           </p>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-primary animate-neon-pulse" />
-            <div className="w-3 h-3 bg-secondary animate-neon-pulse" style={{ animationDelay: "0.3s" }} />
-            <div className="w-3 h-3 bg-accent animate-neon-pulse" style={{ animationDelay: "0.6s" }} />
-            <div className="w-3 h-3 bg-highlight animate-neon-pulse" style={{ animationDelay: "0.9s" }} />
+            <div className="w-3 h-3 bg-secondary animate-neon-pulse" style={{
+            animationDelay: "0.3s"
+          }} />
+            <div className="w-3 h-3 bg-accent animate-neon-pulse" style={{
+            animationDelay: "0.6s"
+          }} />
+            <div className="w-3 h-3 bg-highlight animate-neon-pulse" style={{
+            animationDelay: "0.9s"
+          }} />
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
