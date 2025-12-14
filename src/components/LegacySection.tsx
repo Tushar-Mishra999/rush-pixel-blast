@@ -173,13 +173,13 @@ export const LegacySection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={() => scroll("left")}
-            className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
           >
             <img src={arrowLeft} alt="Previous" className="w-full h-full" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
           >
             <img src={arrowRight} alt="Next" className="w-full h-full" />
           </button>
