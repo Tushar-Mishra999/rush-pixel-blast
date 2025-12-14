@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
+import arrowLeft from "@/assets/arrow-left.png";
+import arrowRight from "@/assets/arrow-right.png";
 
 const legacyItems = [
   {
@@ -32,8 +34,30 @@ const legacyItems = [
   },
 ];
 
+const memoryItems = [
+  { id: 1, color: "primary" },
+  { id: 2, color: "secondary" },
+  { id: 3, color: "accent" },
+  { id: 4, color: "highlight" },
+  { id: 5, color: "primary" },
+  { id: 6, color: "secondary" },
+  { id: 7, color: "accent" },
+  { id: 8, color: "highlight" },
+];
+
 export const LegacySection = () => {
   const [activeYear, setActiveYear] = useState("2024");
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.offsetWidth;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section className="py-20 relative overflow-hidden bg-card">
@@ -144,46 +168,62 @@ export const LegacySection = () => {
           ))}
         </div>
 
-        {/* Gallery preview with cyber frames */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { color: "primary" },
-            { color: "secondary" },
-            { color: "accent" },
-            { color: "highlight" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="aspect-square border-2 border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary transition-all duration-300 overflow-hidden relative"
-              style={{
-                boxShadow: "inset 0 0 30px hsl(var(--background))"
-              }}
-            >
-              {/* Hover glow effect */}
-              <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ 
-                  background: `radial-gradient(circle at center, hsl(var(--${item.color}) / 0.2), transparent 70%)`
+        {/* Gallery preview with navigation */}
+        <div className="mt-16 relative">
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
+          >
+            <img src={arrowLeft} alt="Previous" className="w-full h-full" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 transition-transform hover:scale-110"
+          >
+            <img src={arrowRight} alt="Next" className="w-full h-full" />
+          </button>
+
+          {/* Scrollable Gallery */}
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {memoryItems.map((item) => (
+              <div
+                key={item.id}
+                className="flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)] aspect-square border-2 border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary transition-all duration-300 overflow-hidden relative snap-start"
+                style={{
+                  boxShadow: "inset 0 0 30px hsl(var(--background))"
                 }}
-              />
-              
-              <div className="text-center relative z-10">
+              >
+                {/* Hover glow effect */}
                 <div 
-                  className="w-12 h-12 mx-auto mb-2 opacity-50 group-hover:opacity-100 transition-all duration-300"
-                  style={{
-                    background: `linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)))`,
-                    boxShadow: "0 0 20px hsl(var(--primary) / 0.3)"
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    background: `radial-gradient(circle at center, hsl(var(--${item.color}) / 0.2), transparent 70%)`
                   }}
                 />
-                <span 
-                  className="font-heading text-[8px] text-muted-foreground group-hover:text-primary transition-colors"
-                  style={{ textShadow: "0 0 10px currentColor" }}
-                >
-                  MEMORY #{i + 1}
-                </span>
+                
+                <div className="text-center relative z-10">
+                  <div 
+                    className="w-12 h-12 mx-auto mb-2 opacity-50 group-hover:opacity-100 transition-all duration-300"
+                    style={{
+                      background: `linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)))`,
+                      boxShadow: "0 0 20px hsl(var(--primary) / 0.3)"
+                    }}
+                  />
+                  <span 
+                    className="font-heading text-[8px] text-muted-foreground group-hover:text-primary transition-colors"
+                    style={{ textShadow: "0 0 10px currentColor" }}
+                  >
+                    MEMORY #{item.id}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
