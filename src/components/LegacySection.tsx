@@ -5,28 +5,28 @@ import arrowRight from "@/assets/arrow-right.png";
 
 const legacyItems = [
   {
-    year: "2024",
+    year: "2025",
     title: "The Soul Edition",
     description: "10,000+ attendees witnessed spectacular performances",
     highlight: "Headliner: Major Artist",
     color: "primary",
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Rise Again",
     description: "Post-pandemic comeback with record participation",
     highlight: "50+ events across 3 days",
     color: "secondary",
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Virtual Vibes",
     description: "India's largest virtual B-school fest",
     highlight: "5000+ online participants",
     color: "accent",
   },
   {
-    year: "2019",
+    year: "2022",
     title: "The Genesis",
     description: "Where it all began - the first mega RUSH",
     highlight: "Celebrity performances",

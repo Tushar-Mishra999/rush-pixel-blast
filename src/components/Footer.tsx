@@ -73,7 +73,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2025 RUSH - IIM Ranchi. All rights reserved.
+            © 2026 RUSH - IIM Ranchi. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-primary animate-neon-pulse" />

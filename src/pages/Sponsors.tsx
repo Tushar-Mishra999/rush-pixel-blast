@@ -128,7 +128,7 @@ const Sponsors = () => {
                 Become a Sponsor
               </h2>
               <p className="font-subheading text-muted-foreground mb-8">
-                Partner with RUSH 2025 and reach 10,000+ future business leaders.
+                Partner with RUSH 2026 and reach 10,000+ future business leaders.
                 Get unparalleled brand visibility and connect with top talent from premier B-schools.
               </p>
               
