@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -37,7 +38,15 @@ const events = [
 ];
 
 const Events = () => {
+  const [searchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get("category");
   const [activeCategory, setActiveCategory] = useState("all");
+
+  useEffect(() => {
+    if (categoryFromUrl && categories.some(c => c.id === categoryFromUrl)) {
+      setActiveCategory(categoryFromUrl);
+    }
+  }, [categoryFromUrl]);
 
   const filteredEvents = activeCategory === "all" 
     ? events 
