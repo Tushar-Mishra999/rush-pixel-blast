@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
-import arrowLeft from "@/assets/arrow-left.png";
-import arrowRight from "@/assets/arrow-right.png";
+import arrowLeft from "@/assets/left.png";
+import arrowRight from "@/assets/right.png";
 
 const legacyItems = [
   {
