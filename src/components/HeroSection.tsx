@@ -169,10 +169,6 @@ export const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Separator colon - rendered outside the box */}
-              {index < countdownUnits.length - 1 && <span className="flex absolute -right-4 md:-right-7 top-1/2 -translate-y-1/2 font-heading text-xl md:text-2xl text-muted-foreground animate-pulse">
-                  :
-                </span>}
             </div>)}
         </div>
 
