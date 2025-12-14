@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const eventCategories = [
   {
     code: "CAT_01",
     name: "CULTURAL",
+    id: "cultural",
     events: ["Dance Battle", "Singing", "Fashion Show", "Drama"],
     gradient: "from-magenta/80 via-magenta/60 to-magenta/40",
     accentColor: "#DE0081",
@@ -12,6 +13,7 @@ const eventCategories = [
   {
     code: "CAT_02",
     name: "MANAGEMENT",
+    id: "management",
     events: ["Case Study", "Best Manager", "B-Plan", "Marketing"],
     gradient: "from-olive/80 via-olive/60 to-olive/40",
     accentColor: "#ECDE01",
@@ -19,6 +21,7 @@ const eventCategories = [
   {
     code: "CAT_03",
     name: "SPORTS",
+    id: "sports",
     events: ["Cricket", "Futsal", "Basketball", "Athletics"],
     gradient: "from-azure/80 via-azure/60 to-azure/40",
     accentColor: "#20ABE5",
@@ -26,6 +29,7 @@ const eventCategories = [
   {
     code: "CAT_04",
     name: "LITERARY",
+    id: "literary",
     events: ["Debate", "Quiz", "Poetry Slam", "MUN"],
     gradient: "from-green/80 via-green/60 to-green/40",
     accentColor: "#35B847",
@@ -33,6 +37,7 @@ const eventCategories = [
   {
     code: "CAT_05",
     name: "ARTS",
+    id: "arts",
     events: ["Photography", "Film Making", "Graffiti", "Sketching"],
     gradient: "from-magenta/70 via-azure/60 to-magenta/50",
     accentColor: "#DE0081",
@@ -40,6 +45,7 @@ const eventCategories = [
   {
     code: "CAT_06",
     name: "GAMING",
+    id: "gaming",
     events: ["Valorant", "FIFA", "BGMI", "Chess"],
     gradient: "from-azure/70 via-green/60 to-azure/50",
     accentColor: "#20ABE5",
@@ -47,6 +53,8 @@ const eventCategories = [
 ];
 
 export const EventsPreview = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Background effects */}
@@ -71,6 +79,7 @@ export const EventsPreview = () => {
           {eventCategories.map((category) => (
             <div
               key={category.name}
+              onClick={() => navigate(`/events?category=${category.id}`)}
               className="group cursor-pointer transition-all duration-300 hover:-translate-y-3 border-2 border-border bg-background p-4"
               style={{
                 boxShadow: "4px 4px 0px hsl(var(--border))",
