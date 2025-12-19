@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FloatingPixels } from "@/components/PixelBlock";
 import { ChevronDown } from "lucide-react";
 import pixelCharacter from "@/assets/pixel-character.png";
+import pixelTv from "@/assets/pixel-tv.png";
 const RUSH_LETTERS = ["R", "U", "S", "H"];
 const COLORS = ["text-azure", "text-green", "text-magenta", "text-olive"];
 const COLOR_VARS = ["azure", "green", "magenta", "olive"];
@@ -89,6 +90,13 @@ export const HeroSection = () => {
 
       {/* Floating pixel blocks */}
       <FloatingPixels />
+
+      {/* Pixel TV - mid left with floating animation */}
+      <img 
+        src={pixelTv} 
+        alt="Pixel TV" 
+        className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 lg:left-20 w-24 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float-left"
+      />
 
       {/* Pixel character logo - top right, tilted left with floating animation */}
       <img 
