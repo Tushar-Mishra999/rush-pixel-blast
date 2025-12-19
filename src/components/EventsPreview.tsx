@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import pixelCharacter from "@/assets/pixel-character.png";
 
 const eventCategories = [
   {
@@ -61,24 +60,6 @@ export const EventsPreview = () => {
       {/* Background effects */}
       <div className="absolute inset-0 cyber-gradient-radial opacity-30" />
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-      
-      {/* Pixel Character - Left Side */}
-      <div className="absolute left-0 bottom-0 w-32 md:w-48 lg:w-64 opacity-20 md:opacity-40 pointer-events-none z-0">
-        <img 
-          src={pixelCharacter} 
-          alt="Pixel character" 
-          className="w-full h-auto transform -scale-x-100"
-        />
-      </div>
-      
-      {/* Pixel Character - Right Side */}
-      <div className="absolute right-0 bottom-0 w-32 md:w-48 lg:w-64 opacity-20 md:opacity-40 pointer-events-none z-0">
-        <img 
-          src={pixelCharacter} 
-          alt="Pixel character" 
-          className="w-full h-auto"
-        />
-      </div>
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
