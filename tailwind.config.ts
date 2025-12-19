@@ -88,6 +88,10 @@ export default {
         'glow-highlight': 'var(--glow-highlight)',
       },
       keyframes: {
+        "float": {
+          "0%, 100%": { transform: "translateY(0) rotate(-12deg)" },
+          "50%": { transform: "translateY(-10px) rotate(-12deg)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -138,6 +142,7 @@ export default {
         },
       },
       animation: {
+        "float": "float 3s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-up": "slide-up 0.6s ease-out forwards",
