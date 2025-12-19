@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FloatingPixels } from "@/components/PixelBlock";
 import { ChevronDown } from "lucide-react";
+import pixelCharacter from "@/assets/pixel-character.png";
 const RUSH_LETTERS = ["R", "U", "S", "H"];
 const COLORS = ["text-azure", "text-green", "text-magenta", "text-olive"];
 const COLOR_VARS = ["azure", "green", "magenta", "olive"];
@@ -88,6 +89,13 @@ export const HeroSection = () => {
 
       {/* Floating pixel blocks */}
       <FloatingPixels />
+
+      {/* Pixel character logo - top right, tilted left */}
+      <img 
+        src={pixelCharacter} 
+        alt="Pixel character" 
+        className="absolute top-20 right-4 md:right-12 lg:right-20 w-24 md:w-32 lg:w-40 -rotate-12 z-20 opacity-90 hover:opacity-100 transition-opacity"
+      />
 
       {/* Main content */}
       <div className="container relative z-10 px-4 py-20 text-center">
