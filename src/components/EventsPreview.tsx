@@ -14,7 +14,7 @@ const eventCategories = [
     code: "CAT_02",
     name: "SPORTS",
     id: "sports",
-    events: ["Cricket", "Futsal", "Basketball", "Volleyball"],
+    events: ["Cricket", "Futsal", "Basketball", "Volleyball", "Table Tennis", "Pool", "Throwball", "Powerlifting", "Chess"],
     gradient: "from-azure/80 via-azure/60 to-azure/40",
     accentColor: "#20ABE5",
   },
