@@ -1,5 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import academicIcon from "@/assets/academic-icon.png";
+import sportsIcon from "@/assets/sports-icon.png";
+import culturalIcon from "@/assets/cultural-icon.png";
 
 const eventCategories = [
   {
@@ -9,6 +12,7 @@ const eventCategories = [
     events: ["Sansad Charcha", "Quintessence", "Enigma"],
     gradient: "from-olive/80 via-olive/60 to-olive/40",
     accentColor: "#ECDE01",
+    icon: academicIcon,
   },
   {
     code: "CAT_02",
@@ -17,6 +21,7 @@ const eventCategories = [
     events: ["Cricket", "Futsal", "Basketball", "Volleyball", "Table Tennis", "Pool", "Throwball", "Powerlifting", "Chess"],
     gradient: "from-azure/80 via-azure/60 to-azure/40",
     accentColor: "#20ABE5",
+    icon: sportsIcon,
   },
   {
     code: "CAT_03",
@@ -25,6 +30,7 @@ const eventCategories = [
     events: ["Group Dance", "Battle of Bands", "Fashion Show", "Solo Dance"],
     gradient: "from-magenta/80 via-magenta/60 to-magenta/40",
     accentColor: "#DE0081",
+    icon: culturalIcon,
   },
 ];
 
@@ -71,8 +77,8 @@ export const EventsPreview = () => {
               }}
             >
               {/* Image Card */}
-              <div className="relative aspect-[4/3] overflow-hidden mb-4">
-                {/* Gradient Background (placeholder for images) */}
+              <div className="relative aspect-[4/3] overflow-hidden mb-4 flex items-center justify-center">
+                {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} transition-transform duration-500 group-hover:scale-110`} />
                 
                 {/* Overlay */}
@@ -81,8 +87,16 @@ export const EventsPreview = () => {
                 {/* Scanlines effect */}
                 <div className="absolute inset-0 scanlines opacity-30" />
                 
+                {/* Category Icon */}
+                <img 
+                  src={category.icon} 
+                  alt={category.name} 
+                  className="relative z-10 w-24 h-24 md:w-28 md:h-28 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                  style={{ imageRendering: "pixelated" }}
+                />
+                
                 {/* Category Code Label */}
-                <div className="absolute bottom-3 left-3">
+                <div className="absolute bottom-3 left-3 z-10">
                   <span className="font-heading text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
                     {category.code}
                   </span>
