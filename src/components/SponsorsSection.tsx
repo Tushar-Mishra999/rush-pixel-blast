@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import rupeeIcon from "@/assets/rupee-icon.png";
 
 const sponsors = {
   title: [
@@ -30,13 +31,29 @@ export const SponsorsSection = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
       
+      {/* Left Rupee Icon */}
+      <img 
+        src={rupeeIcon} 
+        alt="Rupee decoration" 
+        className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none"
+        style={{ transform: "translateY(-50%) rotate(-15deg)" }}
+      />
+      
+      {/* Right Rupee Icon */}
+      <img 
+        src={rupeeIcon} 
+        alt="Rupee decoration" 
+        className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none"
+        style={{ transform: "translateY(-50%) rotate(15deg) scaleX(-1)" }}
+      />
+      
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">
-            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span> 
+            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>₹</span> 
             <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>SPONSORS</span> 
-            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>$</span>
+            <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>₹</span>
           </h2>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
             Powered by industry leaders who believe in celebrating talent and creativity.
