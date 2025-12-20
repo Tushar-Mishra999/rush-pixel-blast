@@ -8,33 +8,36 @@ import { ArrowRight } from "lucide-react";
 
 const categories = [
   { id: "all", name: "ALL", code: "CAT_00", gradient: "from-muted via-muted/80 to-muted/60", accentColor: "#20ABE5" },
-  { id: "cultural", name: "CULTURAL", code: "CAT_01", gradient: "from-magenta/80 via-magenta/60 to-magenta/40", accentColor: "#DE0081" },
-  { id: "management", name: "MANAGEMENT", code: "CAT_02", gradient: "from-olive/80 via-olive/60 to-olive/40", accentColor: "#ECDE01" },
-  { id: "sports", name: "SPORTS", code: "CAT_03", gradient: "from-azure/80 via-azure/60 to-azure/40", accentColor: "#20ABE5" },
-  { id: "literary", name: "LITERARY", code: "CAT_04", gradient: "from-green/80 via-green/60 to-green/40", accentColor: "#35B847" },
-  { id: "arts", name: "ARTS", code: "CAT_05", gradient: "from-magenta/70 via-azure/60 to-magenta/50", accentColor: "#DE0081" },
-  { id: "gaming", name: "GAMING", code: "CAT_06", gradient: "from-azure/70 via-green/60 to-azure/50", accentColor: "#20ABE5" },
+  { id: "academic", name: "ACADEMIC", code: "CAT_01", gradient: "from-olive/80 via-olive/60 to-olive/40", accentColor: "#ECDE01" },
+  { id: "sports", name: "SPORTS", code: "CAT_02", gradient: "from-azure/80 via-azure/60 to-azure/40", accentColor: "#20ABE5" },
+  { id: "cultural", name: "CULTURAL", code: "CAT_03", gradient: "from-magenta/80 via-magenta/60 to-magenta/40", accentColor: "#DE0081" },
 ];
 
 const events = [
-  { id: 1, name: "Dance Battle", category: "cultural", prize: "₹50,000", team: "6-8" },
-  { id: 2, name: "Battle of Bands", category: "cultural", prize: "₹40,000", team: "4-8" },
-  { id: 3, name: "Fashion Show", category: "cultural", prize: "₹30,000", team: "10-15" },
-  { id: 4, name: "Solo Singing", category: "cultural", prize: "₹15,000", team: "1" },
-  { id: 5, name: "Futsal", category: "sports", prize: "₹1,00,000", team: "12" },
-  { id: 6, name: "Cricket", category: "sports", prize: "₹75,000", team: "15" },
-  { id: 7, name: "Basketball", category: "sports", prize: "₹50,000", team: "10" },
-  { id: 8, name: "Badminton", category: "sports", prize: "₹20,000", team: "2" },
-  { id: 9, name: "Debate", category: "literary", prize: "₹25,000", team: "2" },
-  { id: 10, name: "Quiz", category: "literary", prize: "₹20,000", team: "3" },
-  { id: 11, name: "Poetry Slam", category: "literary", prize: "₹10,000", team: "1" },
-  { id: 12, name: "Photography", category: "arts", prize: "₹15,000", team: "1" },
-  { id: 13, name: "Short Film", category: "arts", prize: "₹25,000", team: "1-5" },
-  { id: 14, name: "Case Study", category: "management", prize: "₹50,000", team: "3" },
-  { id: 15, name: "B-Plan", category: "management", prize: "₹40,000", team: "3-4" },
-  { id: 16, name: "Valorant", category: "gaming", prize: "₹30,000", team: "5" },
-  { id: 17, name: "FIFA", category: "gaming", prize: "₹15,000", team: "1" },
-  { id: 18, name: "BGMI", category: "gaming", prize: "₹25,000", team: "4" },
+  // Academic
+  { id: 1, name: "Sansad Charcha", category: "academic", prize: "TBA", team: "TBA" },
+  { id: 2, name: "Quintessence (Case Comp)", category: "academic", prize: "TBA", team: "TBA" },
+  { id: 3, name: "Enigma (Escape Room)", category: "academic", prize: "TBA", team: "TBA" },
+  // Sports
+  { id: 4, name: "Volleyball Men", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 5, name: "Volleyball Women", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 6, name: "TT Mixed", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 7, name: "Pool Unisex", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 8, name: "Futsal Men", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 9, name: "Futsal Women", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 10, name: "Throwball Men", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 11, name: "Throwball Women", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 12, name: "Powerlifting Men", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 13, name: "Chess Unisex", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 14, name: "Basketball Men", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 15, name: "Basketball Women", category: "sports", prize: "TBA", team: "TBA" },
+  { id: 16, name: "Cricket Men", category: "sports", prize: "TBA", team: "TBA" },
+  // Cultural
+  { id: 17, name: "Group Dance", category: "cultural", prize: "TBA", team: "TBA" },
+  { id: 18, name: "Battle of Bands", category: "cultural", prize: "TBA", team: "TBA" },
+  { id: 19, name: "Fashion Show", category: "cultural", prize: "TBA", team: "TBA" },
+  { id: 20, name: "Solo Dance", category: "cultural", prize: "TBA", team: "TBA" },
+  { id: 21, name: "Solo Singing", category: "cultural", prize: "TBA", team: "TBA" },
 ];
 
 const Events = () => {
@@ -72,7 +75,7 @@ const Events = () => {
               <span className="w-6 h-1 bg-secondary ml-2" />
             </h1>
             <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
-              50+ events across 6 categories. Find your arena, show your skills, win big.
+              21 events across 3 categories. Find your arena, show your skills, win big.
             </p>
           </div>
         </section>
