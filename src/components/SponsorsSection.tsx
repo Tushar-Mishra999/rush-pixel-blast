@@ -35,16 +35,16 @@ export const SponsorsSection = () => {
       <img 
         src={rupeeIcon} 
         alt="Rupee decoration" 
-        className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none animate-float"
-        style={{ transform: "translateY(-50%) rotate(-15deg)" }}
+        className="absolute left-4 md:left-12 top-[20%] w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none animate-float"
+        style={{ transform: "rotate(-15deg)" }}
       />
       
       {/* Right Rupee Icon */}
       <img 
         src={rupeeIcon} 
         alt="Rupee decoration" 
-        className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none animate-float-delayed"
-        style={{ transform: "translateY(-50%) rotate(15deg)" }}
+        className="absolute right-4 md:right-12 top-[20%] w-16 md:w-24 lg:w-32 opacity-60 pointer-events-none animate-float-delayed"
+        style={{ transform: "rotate(15deg)" }}
       />
       
       <div className="container relative z-10 px-4">
