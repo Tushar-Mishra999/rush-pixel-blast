@@ -46,7 +46,7 @@ const memoryItems = [
 ];
 
 export const LegacySection = () => {
-  const [activeYear, setActiveYear] = useState("2024");
+  const [activeYear, setActiveYear] = useState("2025");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
