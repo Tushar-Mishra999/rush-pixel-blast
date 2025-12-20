@@ -62,8 +62,8 @@ export const EventsPreview = () => {
           </p>
         </div>
 
-        {/* Event Categories - Horizontal Cards */}
-        <div className="flex flex-col gap-4 max-w-5xl mx-auto mb-16">
+        {/* Event Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
           {eventCategories.map((category, index) => (
             <div
               key={category.name}
@@ -73,7 +73,7 @@ export const EventsPreview = () => {
             >
               {/* Main Card */}
               <div 
-                className="relative flex items-center gap-6 p-6 md:p-8 border-2 border-border bg-card transition-all duration-300 overflow-hidden"
+                className="relative flex flex-col items-center p-6 border-2 border-border bg-card transition-all duration-300 overflow-hidden h-full"
                 style={{
                   boxShadow: "6px 6px 0px hsl(var(--border))",
                 }}
@@ -91,14 +91,14 @@ export const EventsPreview = () => {
                 }}
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${category.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-gradient-to-b ${category.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Scanlines */}
                 <div className="absolute inset-0 scanlines opacity-20" />
                 
                 {/* Category Number */}
                 <div 
-                  className="absolute top-0 right-0 px-4 py-2 font-heading text-6xl md:text-8xl font-bold opacity-5 group-hover:opacity-10 transition-opacity select-none"
+                  className="absolute top-2 right-3 font-heading text-5xl font-bold opacity-10 group-hover:opacity-20 transition-opacity select-none"
                   style={{ color: category.accentColor }}
                 >
                   {category.code}
@@ -106,7 +106,7 @@ export const EventsPreview = () => {
 
                 {/* Icon Container */}
                 <div 
-                  className="relative flex-shrink-0 w-20 h-20 md:w-28 md:h-28 flex items-center justify-center border-2 border-border group-hover:border-current transition-colors duration-300"
+                  className="relative flex-shrink-0 w-24 h-24 md:w-28 md:h-28 flex items-center justify-center border-2 border-border group-hover:border-current transition-colors duration-300 mb-5"
                   style={{ 
                     boxShadow: "4px 4px 0px hsl(var(--border))",
                     backgroundColor: "hsl(var(--muted) / 0.5)"
@@ -121,45 +121,33 @@ export const EventsPreview = () => {
                   <img 
                     src={category.icon} 
                     alt={category.name} 
-                    className="w-14 h-14 md:w-20 md:h-20 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+                    className="w-16 h-16 md:w-20 md:h-20 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     style={{ imageRendering: "pixelated" }}
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 
-                      className="font-heading text-xl md:text-2xl lg:text-3xl transition-colors duration-300"
-                      style={{ color: category.accentColor }}
-                    >
-                      {category.name}
-                    </h3>
-                    <span className="px-2 py-1 text-xs font-heading bg-muted border border-border text-muted-foreground">
-                      {category.eventCount} EVENTS
-                    </span>
-                  </div>
-                  <p className="text-sm md:text-base text-muted-foreground line-clamp-2 font-subheading">
-                    {category.events.slice(0, 4).join(" • ")}{category.events.length > 4 && " • ..."}
+                <div className="relative text-center flex-1 flex flex-col">
+                  <h3 
+                    className="font-heading text-xl md:text-2xl mb-2 transition-colors duration-300"
+                    style={{ color: category.accentColor }}
+                  >
+                    {category.name}
+                  </h3>
+                  <span className="inline-block px-3 py-1 text-xs font-heading bg-muted border border-border text-muted-foreground mb-3 mx-auto">
+                    {category.eventCount} EVENTS
+                  </span>
+                  <p className="text-xs text-muted-foreground font-subheading leading-relaxed">
+                    {category.events.slice(0, 3).join(" • ")}{category.events.length > 3 && " ..."}
                   </p>
                 </div>
 
                 {/* Arrow */}
-                <div className="relative flex-shrink-0">
-                  <div 
-                    className="w-12 h-12 flex items-center justify-center border-2 border-border group-hover:border-current group-hover:bg-current transition-all duration-300"
-                    style={{ boxShadow: "3px 3px 0px hsl(var(--border))" }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = category.accentColor;
-                      e.currentTarget.style.backgroundColor = category.accentColor;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "hsl(var(--border))";
-                      e.currentTarget.style.backgroundColor = "transparent";
-                    }}
-                  >
-                    <ChevronRight className="w-6 h-6 text-muted-foreground group-hover:text-background group-hover:translate-x-1 transition-all duration-300" />
-                  </div>
+                <div 
+                  className="relative mt-4 w-10 h-10 flex items-center justify-center border-2 border-border group-hover:border-current group-hover:bg-current transition-all duration-300"
+                  style={{ boxShadow: "3px 3px 0px hsl(var(--border))" }}
+                >
+                  <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-background group-hover:translate-x-0.5 transition-all duration-300" />
                 </div>
               </div>
             </div>
