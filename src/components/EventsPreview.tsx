@@ -11,7 +11,7 @@ const eventCategories = [
     name: "ACADEMIC",
     id: "academic",
     eventCount: 3,
-    events: ["Sansad Charcha", "Quintessence", "Enigma"],
+    tagline: "Where ideas and leadership come alive",
     accentColor: "#ECDE01",
     icon: academicIcon,
   },
@@ -20,7 +20,7 @@ const eventCategories = [
     name: "SPORTS",
     id: "sports",
     eventCount: 9,
-    events: ["Cricket", "Futsal", "Basketball", "Volleyball", "Table Tennis", "Pool", "Throwball", "Powerlifting", "Chess"],
+    tagline: "Where grit and teamwork define the game",
     accentColor: "#20ABE5",
     icon: sportsIcon,
   },
@@ -29,7 +29,7 @@ const eventCategories = [
     name: "CULTURAL",
     id: "cultural",
     eventCount: 5,
-    events: ["Group Dance", "Battle of Bands", "Fashion Show", "Solo Dance", "Solo Singing"],
+    tagline: "Where creativity and expression take centre stage",
     accentColor: "#DE0081",
     icon: culturalIcon,
   },
@@ -136,10 +136,9 @@ export const EventsPreview = () => {
                     <div className="h-px w-8 bg-border" />
                   </div>
 
-                  {/* Events list */}
+                  {/* Tagline */}
                   <p className="text-xs text-muted-foreground text-center font-subheading leading-relaxed mb-6">
-                    {category.events.slice(0, 3).join(" • ")}
-                    {category.events.length > 3 && " ..."}
+                    {category.tagline}
                   </p>
 
                   {/* CTA */}
