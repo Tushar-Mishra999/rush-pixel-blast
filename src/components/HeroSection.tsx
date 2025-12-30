@@ -201,20 +201,20 @@ export const HeroSection = () => {
         {/* Stats with cyberpunk styling */}
         <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto transition-all duration-700 delay-900 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           {[{
-          value: "10K+",
-          label: "Footfall",
+          value: "12+",
+          label: "Years of Legacy",
           color: "primary"
         }, {
-          value: "50+",
+          value: "20+",
           label: "Events",
           color: "secondary"
         }, {
-          value: "₹15L+",
-          label: "Prize Pool",
+          value: "72",
+          label: "Hours of Competition",
           color: "accent"
         }, {
-          value: "100+",
-          label: "Colleges",
+          value: "₹3L+",
+          label: "Prize Pool",
           color: "highlight"
         }].map((stat, index) => <div key={stat.label} className="relative p-4 border-2 border-border bg-card/30 backdrop-blur-sm hover:border-primary transition-all duration-300 group overflow-hidden" style={{
           boxShadow: "inset 0 0 20px hsl(var(--background))"
