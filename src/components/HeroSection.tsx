@@ -147,9 +147,7 @@ export const HeroSection = () => {
         textShadow: "0 0 30px hsl(var(--primary) / 0.3)"
       }}>RENDERING THE FUTURE</p>
         <p className={`font-subheading text-muted-foreground max-w-2xl mx-auto mb-8 transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories.
-          <br />
-          Tomorrow is not coming-it is already in our hands!
+          Rush 2026, IIM Ranchi's flagship annual festival, celebrates imagination, purposeful action and the responsibility to shape progress that truly matters.
         </p>
 
         {/* Countdown Timer */}
