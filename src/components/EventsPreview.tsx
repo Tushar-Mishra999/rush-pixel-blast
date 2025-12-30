@@ -46,12 +46,12 @@ export const EventsPreview = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="font-heading text-xs text-muted-foreground tracking-[0.3em] mb-3">
-            — SELECT YOUR ARENA —
-          </p>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground mb-3">
             EVENTS
           </h2>
+          <p className="font-heading text-xs text-muted-foreground tracking-[0.3em]">
+            — THE ACTION BEGINS —
+          </p>
         </div>
 
         {/* Event Categories Grid */}
