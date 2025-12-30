@@ -11,7 +11,7 @@ const eventCategories = [
     name: "ACADEMIC",
     id: "academic",
     eventCount: 3,
-    tagline: "Where ideas and leadership come alive",
+    tagline: "Where ideas & leadership come alive",
     accentColor: "#ECDE01",
     icon: academicIcon,
   },
