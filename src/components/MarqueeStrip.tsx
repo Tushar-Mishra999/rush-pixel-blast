@@ -1,16 +1,16 @@
 export const MarqueeStrip = () => {
   const items = [
-    "RUSH 2026",
-    "◆",
     "IIM RANCHI",
+    "◆",
+    "RUSH 2026",
     "◆",
     "RENDERING THE FUTURE",
     "◆",
-    "FEB 2026",
+    "6th, 7th, 8th FEB 2026",
     "◆",
-    "50+ EVENTS",
+    "20+ EVENTS",
     "◆",
-    "₹15L+ PRIZES",
+    "₹3,00,000+ PRIZE POOL",
     "◆",
   ];
 
