@@ -111,8 +111,8 @@ export const HeroSection = () => {
         <div className={`inline-flex items-center gap-2 mb-6 px-4 py-2 border-2 border-accent bg-accent/10 backdrop-blur-sm transition-all duration-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{
         boxShadow: "0 0 20px hsl(var(--accent) / 0.3), inset 0 0 20px hsl(var(--accent) / 0.1)"
       }}>
-          <span className="font-heading text-[10px] text-accent">6th, 7th & 8th February, 2026</span>
-          <span className="w-2 h-2 bg-accent animate-neon-pulse" />
+          <span className="font-heading text-[10px] text-accent">6–8 FEB 2026</span>
+          <span className="font-heading text-[10px] text-accent">•</span>
           <span className="font-heading text-[10px] text-accent">3 DAYS</span>
         </div>
 
