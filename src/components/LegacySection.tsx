@@ -79,7 +79,7 @@ export const LegacySection = () => {
             RUSH in Retrospect
           </h2>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
-            Years of unforgettable moments, legendary performances, and memories that last a lifetime.
+            Relive the energy and unforgettable moments from past editions that define the spirit and legacy of RUSH.
           </p>
         </div>
 
