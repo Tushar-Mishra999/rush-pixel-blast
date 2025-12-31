@@ -28,14 +28,7 @@ export const AboutTheme = () => {
               </h3>
               
               <p className="font-subheading text-muted-foreground leading-relaxed">
-                Step into a world where nostalgia meets innovation. RUSH 2026 celebrates the retro-futuristic 
-                aesthetic — blending pixel art vibes, arcade energy, and the bold spirit of a new generation. 
-                This is where the past powers the future.
-              </p>
-              
-              <p className="font-subheading text-muted-foreground leading-relaxed">
-                From 8-bit visuals to neon-lit experiences, every corner of RUSH embodies the charm of 
-                classic gaming culture while pushing boundaries into tomorrow's possibilities.
+                Rendering the Future captures the spirit of a generation ready to move beyond ideas and into action. Rooted in imagination and guided by responsibility, the theme highlights the power of purposeful innovation in shaping progress that truly matters. It celebrates those who take ownership of change, build with intent and recognise that the future is not something to inherit, but something to actively shape.
               </p>
               
               <div className="pt-4">
