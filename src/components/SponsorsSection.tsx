@@ -55,6 +55,9 @@ export const SponsorsSection = () => {
             <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>SPONSORS</span> 
             <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>₹</span>
           </h2>
+          <p className="font-subheading font-bold text-foreground mb-2">
+            Powering RUSH 2026
+          </p>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
             Supported by sponsors who believe youth and talent are rendering the future
           </p>
