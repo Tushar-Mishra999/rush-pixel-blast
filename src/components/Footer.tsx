@@ -10,7 +10,7 @@ export const Footer = () => {
             <Link to="/">
               <img src={rushLogo} alt="RUSH Logo" className="h-12 w-auto" />
             </Link>
-            <p className="font-subheading text-sm text-muted-foreground">IIM Ranchi's cultural fest sparks breakthroughs, revolutions, and stories. Tomorrow is not coming-it is already in our hands!                </p>
+            <p className="font-subheading text-sm text-muted-foreground">Rush 2026, IIM Ranchi's flagship annual festival, celebrates imagination, purposeful action and the responsibility to shape progress that truly matters</p>
           </div>
 
           {/* Quick Links */}
