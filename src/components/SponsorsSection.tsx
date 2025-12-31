@@ -56,7 +56,7 @@ export const SponsorsSection = () => {
             <span className="text-accent" style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>₹</span>
           </h2>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
-            Powered by industry leaders who believe in celebrating talent and creativity.
+            Supported by sponsors who believe youth and talent are rendering the future
           </p>
         </div>
 
