@@ -6,6 +6,7 @@ import { AboutTheme } from "@/components/AboutTheme";
 import { LegacySection } from "@/components/LegacySection";
 import { EventsPreview } from "@/components/EventsPreview";
 import { SponsorsSection } from "@/components/SponsorsSection";
+import { AnnouncementsSection } from "@/components/AnnouncementsSection";
 import { Footer } from "@/components/Footer";
 import { Preloader } from "@/components/Preloader";
 
@@ -31,6 +32,7 @@ const Index = () => {
           <LegacySection />
           <EventsPreview />
           <SponsorsSection />
+          <AnnouncementsSection />
         </main>
         <Footer />
       </div>
