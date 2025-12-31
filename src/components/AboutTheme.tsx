@@ -9,14 +9,6 @@ export const AboutTheme = () => {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       
       <div className="container relative z-10 px-4">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">
-            <span className="text-primary" style={{ textShadow: "0 0 20px hsl(var(--primary))" }}>//</span>{" "}
-            <span style={{ textShadow: "0 0 10px hsl(var(--foreground) / 0.3)" }}>ABOUT THE THEME</span>{" "}
-            <span className="text-primary" style={{ textShadow: "0 0 20px hsl(var(--primary))" }}>//</span>
-          </h2>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto">
@@ -30,9 +22,9 @@ export const AboutTheme = () => {
             <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary/50" />
             
             <div className="space-y-6 text-center">
-              <h3 className="font-heading text-lg md:text-xl text-accent"
+              <h3 className="font-heading text-lg md:text-xl text-accent font-bold"
                 style={{ textShadow: "0 0 10px hsl(var(--accent))" }}>
-                RETROVERSE
+                Rendering the Future That Matters
               </h3>
               
               <p className="font-subheading text-muted-foreground leading-relaxed">
