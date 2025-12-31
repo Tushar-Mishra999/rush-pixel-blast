@@ -13,14 +13,14 @@ const legacyItems = [
   },
   {
     year: "2024",
-    title: "Rise Again",
+    title: "Fractal Fusion",
     description: "Post-pandemic comeback with record participation",
     highlight: "50+ events across 3 days",
     color: "secondary",
   },
   {
     year: "2023",
-    title: "Virtual Vibes",
+    title: "Butterfly Effect",
     description: "India's largest virtual B-school fest",
     highlight: "5000+ online participants",
     color: "accent",
