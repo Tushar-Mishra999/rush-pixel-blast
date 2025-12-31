@@ -33,7 +33,7 @@ const About = () => {
               <span className="text-primary">ABOUT</span> RUSH
             </h1>
             <p className="font-subheading text-lg text-muted-foreground max-w-3xl mx-auto">
-              More than a fest. It's where dreams take flight, talents shine, and memories become legends.
+              A stage for ambition, energy and youth shaping what lies ahead
             </p>
           </div>
         </section>
