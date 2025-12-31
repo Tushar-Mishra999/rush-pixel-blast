@@ -38,8 +38,28 @@ const About = () => {
           </div>
         </section>
 
-        {/* What is RUSH */}
+        {/* About IIM Ranchi */}
         <section className="py-20 bg-background">
+          <div className="container px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-8 text-center font-bold">
+                About IIM Ranchi
+              </h2>
+              
+              <div className="border-2 border-primary p-8 shadow-pixel">
+                <p className="font-subheading text-muted-foreground leading-relaxed mb-6">
+                  The Indian Institute of Management Ranchi is a leading management institute that believes excellence is built not only in classrooms, but through holistic development beyond them. Established in 2009, IIM Ranchi has steadily emerged as a centre for nurturing talent, creativity and leadership, offering students a vibrant ecosystem where academics and extra-curricular pursuits go hand in hand.
+                </p>
+                <p className="font-subheading text-muted-foreground leading-relaxed">
+                  Operating from its state-of-the-art campus at Prabandhan Nagar, Nayasarai, Ranchi, the institute provides a dynamic platform for students to explore interests across cultural, sports, literary and leadership domains. Guided by its Vision, Mission and Core Values, IIM Ranchi follows a progressive approach to education that encourages experimentation, collaboration and creative expression. This balanced focus empowers students to innovate, lead with confidence and make meaningful contributions in an ever-evolving world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What is RUSH */}
+        <section className="py-20 bg-card">
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-8 text-center">
