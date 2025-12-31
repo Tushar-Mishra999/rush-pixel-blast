@@ -71,11 +71,9 @@ const About = () => {
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="border-2 border-primary p-6 shadow-pixel transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-primary hover:border-primary">
-                  <h3 className="font-heading text-sm text-primary mb-4 uppercase tracking-wider">THE VISION</h3>
+                  <h3 className="font-heading text-sm text-primary mb-4 uppercase tracking-wider">What Is Rush?</h3>
                   <p className="font-subheading text-muted-foreground leading-relaxed">
-                    RUSH is IIM Ranchi's annual cultural extravaganza that brings together 
-                    the brightest minds from B-schools across India. It's a platform where 
-                    competition meets celebration, where strategy meets creativity.
+                    RUSH is the flagship annual cultural festival of IIM Ranchi, uniting talented students from leading B-schools nationwide. It is a platform where competition meets celebration, strategy meets creativity and ideas find expression beyond the classroom.
                   </p>
                 </div>
                 
