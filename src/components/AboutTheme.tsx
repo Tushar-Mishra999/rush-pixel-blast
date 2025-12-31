@@ -30,13 +30,6 @@ export const AboutTheme = () => {
               <p className="font-subheading text-muted-foreground leading-relaxed">
                 Rendering the Future captures the spirit of a generation ready to move beyond ideas and into action. Rooted in imagination and guided by responsibility, the theme highlights the power of purposeful innovation in shaping progress that truly matters. It celebrates those who take ownership of change, build with intent and recognise that the future is not something to inherit, but something to actively shape.
               </p>
-              
-              <div className="pt-4">
-                <span className="inline-block font-heading text-xs text-primary/70 border border-primary/30 px-4 py-2"
-                  style={{ textShadow: "0 0 5px hsl(var(--primary))" }}>
-                  PRESS START TO BEGIN
-                </span>
-              </div>
             </div>
           </div>
         </div>
