@@ -18,39 +18,6 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Grid Section */}
-      <section className="py-16">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-4">
-              Core Committee
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {/* Placeholder team members */}
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div
-                key={index}
-                className="bg-card border-2 border-border p-6 text-center hover:border-primary transition-colors"
-              >
-                <div className="w-24 h-24 mx-auto mb-4 bg-muted border-2 border-border flex items-center justify-center">
-                  <span className="font-pixel text-2xl text-muted-foreground">?</span>
-                </div>
-                <h3 className="font-heading text-lg text-foreground mb-1">
-                  Team Member
-                </h3>
-                <p className="font-subheading text-sm text-primary mb-2">
-                  Position
-                </p>
-                <p className="font-subheading text-xs text-muted-foreground">
-                  IIM Ranchi
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
