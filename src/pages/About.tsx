@@ -1,26 +1,44 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingPixels } from "@/components/PixelBlock";
-
-const pastArtists = [
-  { name: "Artist 1", year: "2024", type: "Bollywood" },
-  { name: "Artist 2", year: "2023", type: "EDM" },
-  { name: "Artist 3", year: "2022", type: "Indie" },
-  { name: "Artist 4", year: "2019", type: "Rapper" },
-];
-
-const milestones = [
-  { year: "2015", event: "RUSH debuts as IIM Ranchi's sports and cultural festival" },
-  { year: "2015", event: "Introduction of AGON, the management fest of IIM Ranchi" },
-  { year: "2021", event: "AGON and RUSH converge for the virtual version of the festival" },
-  { year: "2022", event: "Inaugural Rush-a-thon launched, integrating sport with social impact" },
-  { year: "2025", event: "RUSH: The Soul Carnival marks ten years of celebration" },
-  { year: "2026", event: "RUSH 1(1), a fresh beginning marking the 11th edition of RUSH" },
-];
-
+const pastArtists = [{
+  name: "Artist 1",
+  year: "2024",
+  type: "Bollywood"
+}, {
+  name: "Artist 2",
+  year: "2023",
+  type: "EDM"
+}, {
+  name: "Artist 3",
+  year: "2022",
+  type: "Indie"
+}, {
+  name: "Artist 4",
+  year: "2019",
+  type: "Rapper"
+}];
+const milestones = [{
+  year: "2015",
+  event: "RUSH debuts as IIM Ranchi's sports and cultural festival"
+}, {
+  year: "2015",
+  event: "Introduction of AGON, the management fest of IIM Ranchi"
+}, {
+  year: "2021",
+  event: "AGON and RUSH converge for the virtual version of the festival"
+}, {
+  year: "2022",
+  event: "Inaugural Rush-a-thon launched, integrating sport with social impact"
+}, {
+  year: "2025",
+  event: "RUSH: The Soul Carnival marks ten years of celebration"
+}, {
+  year: "2026",
+  event: "RUSH 1(1), a fresh beginning marking the 11th edition of RUSH"
+}];
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       <main className="pt-16">
@@ -98,24 +116,13 @@ const About = () => {
               <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 -translate-x-1/2 hidden md:block" />
               
               {milestones.map((milestone, index) => {
-                const isLeft = index % 2 === 0;
-                
-                return (
-                  <div
-                    key={milestone.year}
-                    className={`relative flex items-center mb-12 last:mb-0 ${
-                      isLeft ? 'md:justify-start' : 'md:justify-end'
-                    }`}
-                  >
+              const isLeft = index % 2 === 0;
+              return <div key={milestone.year} className={`relative flex items-center mb-12 last:mb-0 ${isLeft ? 'md:justify-start' : 'md:justify-end'}`}>
                     {/* Center dot on the line */}
                     <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-accent border-2 border-background z-10 hidden md:block" />
                     
                     {/* Timeline card */}
-                    <div
-                      className={`w-full md:w-[45%] border-2 border-accent p-6 bg-card transition-all duration-300 hover:scale-105 hover:shadow-glow-primary ${
-                        isLeft ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'
-                      }`}
-                    >
+                    <div className={`w-full md:w-[45%] border-2 border-accent p-6 bg-card transition-all duration-300 hover:scale-105 hover:shadow-glow-primary ${isLeft ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
                       <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
                         <div className="w-14 h-14 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
                           <span className="font-heading text-xs text-accent">{milestone.year}</span>
@@ -124,44 +131,19 @@ const About = () => {
                       </div>
                       <p className="text-foreground">{milestone.event}</p>
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </section>
 
         {/* Past Artists */}
         <section className="py-20 bg-background">
-          <div className="container px-4">
-            <h2 className="font-heading text-xl md:text-2xl text-foreground mb-12 text-center">
-              <span className="text-highlight">♪</span> ARTIST LEGACY <span className="text-highlight">♪</span>
-            </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {pastArtists.map((artist) => (
-                <div
-                  key={artist.name}
-                  className="border-2 border-border hover:border-highlight p-6 text-center transition-all group"
-                >
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-highlight/30 to-secondary/30 flex items-center justify-center">
-                    <span className="font-heading text-2xl text-foreground">♪</span>
-                  </div>
-                  <h3 className="font-heading text-xs text-foreground mb-1 group-hover:text-highlight transition-colors">
-                    {artist.name}
-                  </h3>
-                  <p className="text-xs text-muted-foreground">{artist.type}</p>
-                  <p className="text-[10px] text-accent mt-2">{artist.year}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </section>
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
