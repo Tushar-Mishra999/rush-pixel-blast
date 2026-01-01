@@ -20,6 +20,13 @@ import memory2024_5 from "@/assets/memory-2024-5.jpg";
 import memory2024_6 from "@/assets/memory-2024-6.jpg";
 import memory2024_7 from "@/assets/memory-2024-7.jpg";
 import memory2024_8 from "@/assets/memory-2024-8.jpg";
+// 2023 memories
+import memory2023_1 from "@/assets/memory-2023-1.jpg";
+import memory2023_2 from "@/assets/memory-2023-2.jpg";
+import memory2023_3 from "@/assets/memory-2023-3.jpg";
+import memory2023_4 from "@/assets/memory-2023-4.jpg";
+import memory2023_5 from "@/assets/memory-2023-5.jpg";
+import memory2023_6 from "@/assets/memory-2023-6.jpg";
 
 const legacyItems = [
   {
@@ -61,8 +68,19 @@ const memoryItems2024 = [
   { id: 8, color: "highlight", image: memory2024_8 },
 ];
 
+const memoryItems2023 = [
+  { id: 1, color: "accent", image: memory2023_1 },
+  { id: 2, color: "primary", image: memory2023_2 },
+  { id: 3, color: "secondary", image: memory2023_3 },
+  { id: 4, color: "highlight", image: memory2023_4 },
+  { id: 5, color: "accent", image: memory2023_5 },
+  { id: 6, color: "primary", image: memory2023_6 },
+];
+
 const getMemoryItems = (year: string) => {
   switch (year) {
+    case "2023":
+      return memoryItems2023;
     case "2024":
       return memoryItems2024;
     case "2025":
