@@ -10,11 +10,12 @@ const pastArtists = [
 ];
 
 const milestones = [
-  { year: "2015", event: "RUSH was born as a small cultural event" },
-  { year: "2017", event: "First celebrity performance & 5000+ footfall" },
-  { year: "2019", event: "Became one of the biggest B-school fests in East India" },
-  { year: "2022", event: "India's largest virtual B-school cultural fest" },
-  { year: "2024", event: "10K+ footfall, ₹15L+ prize pool" },
+  { year: "2015", event: "RUSH debuts as IIM Ranchi's sports and cultural festival" },
+  { year: "2015", event: "Introduction of AGON, the management fest of IIM Ranchi" },
+  { year: "2021", event: "AGON and RUSH converge for the virtual version of the festival" },
+  { year: "2022", event: "Inaugural Rush-a-thon launched, integrating sport with social impact" },
+  { year: "2025", event: "RUSH: The Soul Carnival marks ten years of celebration" },
+  { year: "2026", event: "RUSH 1(1), a fresh beginning marking the 11th edition of RUSH" },
 ];
 
 const About = () => {
