@@ -65,9 +65,6 @@ const About = () => {
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-4 text-center font-bold">
                 RUSH: An Experience Like No Other
               </h2>
-              <h3 className="font-heading text-lg md:text-xl text-foreground mb-8 text-center">
-                <span className="text-secondary">&gt;</span> WHAT IS RUSH <span className="text-secondary">&lt;</span>
-              </h3>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="border-2 border-primary p-6 shadow-pixel transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-primary hover:border-primary">
