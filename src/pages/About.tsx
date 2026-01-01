@@ -1,6 +1,47 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingPixels } from "@/components/PixelBlock";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "What is Rush 11.0?",
+    answer: "Rush 11.0 is the annual flagship cultural and management fest of IIM Ranchi, bringing together students from colleges across India for competitions, workshops, performances, and unforgettable experiences."
+  },
+  {
+    question: "Who can participate in Rush 11.0?",
+    answer: "Rush 11.0 is open to undergraduate and postgraduate students from all recognized colleges and universities across India."
+  },
+  {
+    question: "How do I register for events?",
+    answer: "You can register through the official Rush 11.0 website by visiting the Events section and completing the online registration form for your chosen event."
+  },
+  {
+    question: "Is there any registration fee?",
+    answer: "Some events may have a registration fee, while others are free. Detailed information is available on the respective event pages."
+  },
+  {
+    question: "Will accommodation be provided?",
+    answer: "Yes, limited accommodation will be provided for outstation participants, subject to prior registration and availability."
+  },
+  {
+    question: "Where will Rush 11.0 be held?",
+    answer: "Rush 11.0 will be hosted at the IIM Ranchi campus and selected venues in Ranchi. Exact details will be shared with registered participants."
+  },
+  {
+    question: "Are certificates provided?",
+    answer: "Yes, all participants will receive e-certificates, and winners will receive merit certificates and prizes."
+  },
+  {
+    question: "How can I contact the organizing team?",
+    answer: "You can reach out to us through the Contact Us section on the website or via our official social media handles."
+  }
+];
 const pastArtists = [{
   name: "Artist 1",
   year: "2024",
@@ -137,9 +178,38 @@ const About = () => {
           </div>
         </section>
 
-        {/* Past Artists */}
+        {/* FAQs Section */}
         <section className="py-20 bg-background">
-          
+          <div className="container px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-4 text-center">
+                <span className="text-primary">FAQs</span> – Rush 11.0
+              </h2>
+              <p className="font-subheading text-muted-foreground text-center mb-10">
+                Got questions? We've got answers!
+              </p>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="border-2 border-primary/50 bg-card px-6 shadow-pixel hover:border-primary transition-all duration-300"
+                  >
+                    <AccordionTrigger className="font-subheading text-left text-foreground hover:text-primary hover:no-underline py-5">
+                      <span className="flex items-center gap-3">
+                        <span className="text-primary font-heading text-xs">Q{index + 1}</span>
+                        {faq.question}
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="font-subheading text-muted-foreground pb-5 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
         </section>
       </main>
 
