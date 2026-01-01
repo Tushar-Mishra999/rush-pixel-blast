@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import arrowLeft from "@/assets/arrow-left.png";
 import arrowRight from "@/assets/arrow-right.png";
+// 2025 memories
 import memory1 from "@/assets/memory-1.jpg";
 import memory2 from "@/assets/memory-2.jpg";
 import memory3 from "@/assets/memory-3.jpg";
@@ -10,6 +11,15 @@ import memory5 from "@/assets/memory-5.jpg";
 import memory6 from "@/assets/memory-6.jpg";
 import memory7 from "@/assets/memory-7.jpg";
 import memory8 from "@/assets/memory-8.jpg";
+// 2024 memories
+import memory2024_1 from "@/assets/memory-2024-1.jpg";
+import memory2024_2 from "@/assets/memory-2024-2.jpg";
+import memory2024_3 from "@/assets/memory-2024-3.jpg";
+import memory2024_4 from "@/assets/memory-2024-4.jpg";
+import memory2024_5 from "@/assets/memory-2024-5.jpg";
+import memory2024_6 from "@/assets/memory-2024-6.jpg";
+import memory2024_7 from "@/assets/memory-2024-7.jpg";
+import memory2024_8 from "@/assets/memory-2024-8.jpg";
 
 const legacyItems = [
   {
@@ -29,7 +39,7 @@ const legacyItems = [
   },
 ];
 
-const memoryItems = [
+const memoryItems2025 = [
   { id: 1, color: "primary", image: memory1 },
   { id: 2, color: "secondary", image: memory2 },
   { id: 3, color: "accent", image: memory3 },
@@ -39,6 +49,27 @@ const memoryItems = [
   { id: 7, color: "accent", image: memory7 },
   { id: 8, color: "highlight", image: memory8 },
 ];
+
+const memoryItems2024 = [
+  { id: 1, color: "secondary", image: memory2024_1 },
+  { id: 2, color: "primary", image: memory2024_2 },
+  { id: 3, color: "accent", image: memory2024_3 },
+  { id: 4, color: "highlight", image: memory2024_4 },
+  { id: 5, color: "secondary", image: memory2024_5 },
+  { id: 6, color: "primary", image: memory2024_6 },
+  { id: 7, color: "accent", image: memory2024_7 },
+  { id: 8, color: "highlight", image: memory2024_8 },
+];
+
+const getMemoryItems = (year: string) => {
+  switch (year) {
+    case "2024":
+      return memoryItems2024;
+    case "2025":
+    default:
+      return memoryItems2025;
+  }
+};
 
 export const LegacySection = () => {
   const [activeYear, setActiveYear] = useState("2025");
@@ -172,7 +203,7 @@ export const LegacySection = () => {
             className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {memoryItems.map((item) => (
+            {getMemoryItems(activeYear).map((item) => (
               <div
                 key={item.id}
                 className="flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)] aspect-square border-2 border-border group hover:border-primary transition-all duration-300 overflow-hidden relative snap-start"
