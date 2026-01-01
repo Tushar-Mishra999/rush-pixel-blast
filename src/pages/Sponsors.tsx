@@ -58,11 +58,8 @@ const Sponsors = () => {
         <section className="py-16 bg-card border-b-2 border-border">
           <div className="container px-4 text-center">
             <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
-              <span className="text-accent">$</span> SPONSORS <span className="text-accent">$</span>
+              Partner with RUSH 2026
             </h1>
-            <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
-              Our partners make RUSH possible. Join the league of brands that power Eastern India's biggest B-school fest.
-            </p>
           </div>
         </section>
 
