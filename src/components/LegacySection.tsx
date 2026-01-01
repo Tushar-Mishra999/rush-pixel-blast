@@ -2,6 +2,14 @@ import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import arrowLeft from "@/assets/arrow-left.png";
 import arrowRight from "@/assets/arrow-right.png";
+import memory1 from "@/assets/memory-1.jpg";
+import memory2 from "@/assets/memory-2.jpg";
+import memory3 from "@/assets/memory-3.jpg";
+import memory4 from "@/assets/memory-4.jpg";
+import memory5 from "@/assets/memory-5.jpg";
+import memory6 from "@/assets/memory-6.jpg";
+import memory7 from "@/assets/memory-7.jpg";
+import memory8 from "@/assets/memory-8.jpg";
 
 const legacyItems = [
   {
@@ -22,14 +30,14 @@ const legacyItems = [
 ];
 
 const memoryItems = [
-  { id: 1, color: "primary" },
-  { id: 2, color: "secondary" },
-  { id: 3, color: "accent" },
-  { id: 4, color: "highlight" },
-  { id: 5, color: "primary" },
-  { id: 6, color: "secondary" },
-  { id: 7, color: "accent" },
-  { id: 8, color: "highlight" },
+  { id: 1, color: "primary", image: memory1 },
+  { id: 2, color: "secondary", image: memory2 },
+  { id: 3, color: "accent", image: memory3 },
+  { id: 4, color: "highlight", image: memory4 },
+  { id: 5, color: "primary", image: memory5 },
+  { id: 6, color: "secondary", image: memory6 },
+  { id: 7, color: "accent", image: memory7 },
+  { id: 8, color: "highlight", image: memory8 },
 ];
 
 export const LegacySection = () => {
@@ -167,34 +175,26 @@ export const LegacySection = () => {
             {memoryItems.map((item) => (
               <div
                 key={item.id}
-                className="flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)] aspect-square border-2 border-border bg-muted/20 backdrop-blur-sm flex items-center justify-center group hover:border-primary transition-all duration-300 overflow-hidden relative snap-start"
+                className="flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)] aspect-square border-2 border-border group hover:border-primary transition-all duration-300 overflow-hidden relative snap-start"
                 style={{
-                  boxShadow: "inset 0 0 30px hsl(var(--background))"
+                  boxShadow: "0 0 20px hsl(var(--background))"
                 }}
               >
-                {/* Hover glow effect */}
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ 
-                    background: `radial-gradient(circle at center, hsl(var(--${item.color}) / 0.2), transparent 70%)`
-                  }}
+                <img 
+                  src={item.image} 
+                  alt={`Rush Memory ${item.id}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                
-                <div className="text-center relative z-10">
-                  <div 
-                    className="w-12 h-12 mx-auto mb-2 opacity-50 group-hover:opacity-100 transition-all duration-300"
-                    style={{
-                      background: `linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)))`,
-                      boxShadow: "0 0 20px hsl(var(--primary) / 0.3)"
-                    }}
-                  />
-                  <span 
-                    className="font-heading text-[8px] text-muted-foreground group-hover:text-primary transition-colors"
-                    style={{ textShadow: "0 0 10px currentColor" }}
-                  >
-                    MEMORY #{item.id}
-                  </span>
-                </div>
+                {/* Overlay on hover */}
+                <div 
+                  className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <span 
+                  className="absolute bottom-2 left-2 font-heading text-[10px] text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ textShadow: "0 0 10px currentColor" }}
+                >
+                  MEMORY #{item.id}
+                </span>
               </div>
             ))}
           </div>
