@@ -5,7 +5,7 @@ const announcements = [
   {
     id: 1,
     title: "Early Bird Registrations Open!",
-    date: "Jan 15, 2025",
+    date: "Jan 15, 2026",
     description: "Get exclusive discounts on event passes. Limited spots available!",
     type: "registration",
     color: "primary",
@@ -13,7 +13,7 @@ const announcements = [
   {
     id: 2,
     title: "Headliner Announcement Coming Soon",
-    date: "Jan 20, 2025",
+    date: "Jan 20, 2026",
     description: "Stay tuned for the biggest reveal of the season.",
     type: "event",
     color: "accent",
@@ -21,7 +21,7 @@ const announcements = [
   {
     id: 3,
     title: "Campus Ambassador Program",
-    date: "Jan 10, 2025",
+    date: "Jan 10, 2026",
     description: "Join as a campus ambassador and unlock exclusive perks.",
     type: "opportunity",
     color: "secondary",
@@ -29,8 +29,8 @@ const announcements = [
   {
     id: 4,
     title: "Sponsorship Deck Released",
-    date: "Jan 5, 2025",
-    description: "Partner with RUSH 2025 and reach 10,000+ attendees.",
+    date: "Jan 5, 2026",
+    description: "Partner with RUSH 2026 and reach 10,000+ attendees.",
     type: "sponsor",
     color: "highlight",
   },
