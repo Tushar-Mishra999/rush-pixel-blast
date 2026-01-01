@@ -7,30 +7,17 @@ const legacyItems = [
   {
     year: "2025",
     title: "The Soul Edition",
-    description: "10,000+ attendees witnessed spectacular performances",
-    highlight: "Headliner: Major Artist",
     color: "primary",
   },
   {
     year: "2024",
     title: "Fractal Fusion",
-    description: "Post-pandemic comeback with record participation",
-    highlight: "50+ events across 3 days",
     color: "secondary",
   },
   {
     year: "2023",
     title: "Butterfly Effect",
-    description: "India's largest virtual B-school fest",
-    highlight: "5000+ online participants",
     color: "accent",
-  },
-  {
-    year: "2022",
-    title: "The Genesis",
-    description: "Where it all began - the first mega RUSH",
-    highlight: "Celebrity performances",
-    color: "highlight",
   },
 ];
 
@@ -146,21 +133,9 @@ export const LegacySection = () => {
                   {item.year}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-heading text-lg md:text-xl text-foreground mb-2">
+                  <h3 className="font-heading text-lg md:text-xl text-foreground">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground mb-4">{item.description}</p>
-                  <div 
-                    className="inline-block px-3 py-1 text-xs uppercase tracking-wider border"
-                    style={{ 
-                      backgroundColor: `hsl(var(--${item.color}) / 0.2)`,
-                      color: `hsl(var(--${item.color}))`,
-                      borderColor: `hsl(var(--${item.color}) / 0.5)`,
-                      boxShadow: `0 0 10px hsl(var(--${item.color}) / 0.3)`
-                    }}
-                  >
-                    {item.highlight}
-                  </div>
                 </div>
               </div>
             </div>
