@@ -78,11 +78,9 @@ const About = () => {
                 </div>
                 
                 <div className="border-2 border-secondary p-6 shadow-pixel-secondary transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-glow-secondary hover:border-secondary">
-                  <h3 className="font-heading text-sm text-secondary mb-4 uppercase tracking-wider">THE EXPERIENCE</h3>
+                  <h3 className="font-heading text-sm text-secondary mb-4 uppercase tracking-wider">What Awaits You?</h3>
                   <p className="font-subheading text-muted-foreground leading-relaxed">
-                    Three days of non-stop action featuring sports tournaments, cultural 
-                    performances, management competitions, and star-studded nights. 
-                    RUSH is where future leaders come to play.
+                    Three days of non-stop action featuring sports tournaments, cultural performances, management competitions, and star-studded nights. RUSH is where future leaders come to compete, celebrate and shine.
                   </p>
                 </div>
               </div>
