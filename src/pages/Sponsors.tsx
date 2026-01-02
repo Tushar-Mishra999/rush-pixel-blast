@@ -100,6 +100,46 @@ const Sponsors = () => {
           </div>
         </section>
 
+        {/* Our Reach */}
+        <section className="py-16 bg-card border-b-2 border-border">
+          <div className="container px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
+                Our Reach
+              </h2>
+              <p className="font-subheading text-muted-foreground text-lg">
+                Our Footprint
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {[
+                { number: "34K+", label: "Followers - LinkedIn" },
+                { number: "13K+", label: "Followers - Facebook" },
+                { number: "13K+", label: "Followers - Instagram" },
+                { number: "5K+", label: "Alumni Network" },
+                { number: "5K+", label: "Subscribers - YouTube" },
+                { number: "37K+", label: "Views on Top Reels" },
+                { number: "500K+", label: "Views on RUSH page in 2024" },
+                { number: "118K+", label: "Views on Top Videos - YouTube" },
+                { number: "1K+", label: "Students on Campus" },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="border-2 border-accent/30 p-6 text-center hover:border-accent transition-colors hover:bg-accent/5"
+                >
+                  <div className="font-heading text-2xl md:text-3xl text-primary mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="font-subheading text-xs text-muted-foreground">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Sponsor Tiers */}
         {sponsorTiers.map((tier) => (
           <section key={tier.tier} className="py-16 border-b border-border">
