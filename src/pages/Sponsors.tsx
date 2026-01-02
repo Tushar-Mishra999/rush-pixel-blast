@@ -300,6 +300,45 @@ const Sponsors = () => {
                 </div>
               </div>
             </div>
+
+            {/* Event Sponsor Card */}
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="border-2 border-border p-8 bg-card relative overflow-hidden">
+                {/* Corner accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-muted-foreground/50" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-muted-foreground/50" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-muted-foreground/50" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-muted-foreground/50" />
+
+                <h3 
+                  className="font-heading text-xl md:text-2xl text-foreground text-center mb-8"
+                >
+                  Event Sponsor
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Logos on main Banner, Poster and Newspaper",
+                    "Logos on all kind of entry passes (Back Side)",
+                    "Social media promotion through posters",
+                    "Website Promotion",
+                    "Shout-out at the events",
+                    "VIP Passes (5)",
+                    "Logos on participants' and winners' certificate",
+                  ].map((benefit, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-muted-foreground flex-shrink-0" />
+                      <span className="font-subheading text-sm text-foreground">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
