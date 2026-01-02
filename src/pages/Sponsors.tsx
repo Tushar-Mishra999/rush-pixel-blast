@@ -140,6 +140,76 @@ const Sponsors = () => {
           </div>
         </section>
 
+        {/* Sponsor Tiers - Title Sponsor Benefits */}
+        <section className="py-16 bg-background border-b-2 border-border">
+          <div className="container px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
+                Sponsor Tiers
+              </h2>
+              <p className="font-subheading text-muted-foreground text-lg mb-4">
+                Sponsorship & Marketing Opportunities
+              </p>
+              <p className="font-subheading text-muted-foreground max-w-3xl mx-auto">
+                Collaborate with RUSH 2026 to amplify your brand presence and engage directly with exceptional talent from India's premier B-schools.
+              </p>
+            </div>
+
+            {/* Title Sponsor Card */}
+            <div className="max-w-4xl mx-auto">
+              <div className="border-2 border-accent p-8 bg-accent/5 relative overflow-hidden">
+                {/* Corner accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-accent" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-accent" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-accent" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-accent" />
+
+                <h3 
+                  className="font-heading text-xl md:text-2xl text-accent text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--accent) / 0.5)" }}
+                >
+                  Title Sponsor
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Logos on main Banner, Poster and Newspaper",
+                    "Logos on all kind of entry passes (Back Side)",
+                    "Standees in the premiere locations on the campus",
+                    "Logos on event posters and banners",
+                    "Logos on all kind of entry passes (Front Side)",
+                    "Social media promotion through posters",
+                    "Website Promotion",
+                    "Feature in our official after-movie",
+                    "Exclusive In-store / promo video",
+                    "Exclusive social-media mention",
+                    "Permission to setup stalls/canopies (02)",
+                    "Shout-out at the events",
+                    "Permission to distribute products and materials",
+                    "Permission to setup Selfie-point",
+                    "Permission to promote in campus digital screen",
+                    "VIP Passes (20)",
+                    "Logos on participants' and winners' certificate",
+                    "Shoutout at the Opening Ceremony",
+                    "Sticker on audience seat cover",
+                    "Logo on merchandise",
+                  ].map((benefit, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-3 p-3 border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-accent flex-shrink-0" />
+                      <span className="font-subheading text-sm text-foreground">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sponsor Tiers */}
         {sponsorTiers.map((tier) => (
           <section key={tier.tier} className="py-16 border-b border-border">
