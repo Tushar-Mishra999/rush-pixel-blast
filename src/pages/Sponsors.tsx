@@ -291,7 +291,7 @@ const Sponsors = () => {
                       key={index}
                       className="flex items-center gap-3 p-3 border border-muted-foreground/30 bg-muted/20 hover:bg-muted/30 transition-colors"
                     >
-                      <span className="w-2 h-2 bg-muted-foreground flex-shrink-0" />
+                      <span className="w-2 h-2 bg-magenta flex-shrink-0" />
                       <span className="font-subheading text-sm text-foreground">
                         {benefit}
                       </span>
@@ -305,10 +305,10 @@ const Sponsors = () => {
             <div className="max-w-4xl mx-auto mt-12">
               <div className="border-2 border-green p-8 bg-card relative overflow-hidden">
                 {/* Corner accents */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-muted-foreground/50" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-muted-foreground/50" />
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-muted-foreground/50" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-muted-foreground/50" />
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-green" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-green" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-green" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-green" />
 
                 <h3 
                   className="font-heading text-xl md:text-2xl text-foreground text-center mb-8"
@@ -330,7 +330,7 @@ const Sponsors = () => {
                       key={index}
                       className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
                     >
-                      <span className="w-2 h-2 bg-muted-foreground flex-shrink-0" />
+                      <span className="w-2 h-2 bg-green flex-shrink-0" />
                       <span className="font-subheading text-sm text-foreground">
                         {benefit}
                       </span>
