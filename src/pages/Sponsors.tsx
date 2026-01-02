@@ -303,7 +303,7 @@ const Sponsors = () => {
 
             {/* Event Sponsor Card */}
             <div className="max-w-4xl mx-auto mt-12">
-              <div className="border-2 border-brand-green p-8 bg-card relative overflow-hidden">
+              <div className="border-2 border-green p-8 bg-card relative overflow-hidden">
                 {/* Corner accents */}
                 <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-muted-foreground/50" />
                 <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-muted-foreground/50" />
