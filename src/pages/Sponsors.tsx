@@ -63,6 +63,43 @@ const Sponsors = () => {
           </div>
         </section>
 
+        {/* RUSH Highlights */}
+        <section className="py-16 bg-background border-b-2 border-border">
+          <div className="container px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
+                RUSH Highlights
+              </h2>
+              <p className="font-subheading text-muted-foreground text-lg">
+                RUSH at a Glance
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {[
+                { number: "10+", label: "Events Every Year" },
+                { number: "11", label: "Years of Successful Celebrations" },
+                { number: "50+", label: "Past Participating B-Schools" },
+                { number: "250+", label: "Trusted Past Sponsors" },
+                { number: "2000+", label: "Footfall Every Year" },
+                { number: "15+", label: "Artists from the Industry Hosted" },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="border-2 border-primary/30 p-6 text-center hover:border-primary transition-colors hover:bg-primary/5"
+                >
+                  <div className="font-heading text-3xl md:text-4xl text-accent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="font-subheading text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Sponsor Tiers */}
         {sponsorTiers.map((tier) => (
           <section key={tier.tier} className="py-16 border-b border-border">
