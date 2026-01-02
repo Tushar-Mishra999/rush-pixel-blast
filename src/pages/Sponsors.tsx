@@ -258,6 +258,48 @@ const Sponsors = () => {
                 </div>
               </div>
             </div>
+
+            {/* Associate Sponsor Card */}
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="border-2 border-secondary p-8 bg-secondary/5 relative overflow-hidden">
+                {/* Corner accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-secondary" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-secondary" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-secondary" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-secondary" />
+
+                <h3 
+                  className="font-heading text-xl md:text-2xl text-secondary-foreground text-center mb-8"
+                >
+                  Associate Sponsor
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Logos on main Banner, Poster and Newspaper",
+                    "Logos on all kind of entry passes (Back Side)",
+                    "Standees in the premiere locations on the campus",
+                    "Social media promotion through posters",
+                    "Website Promotion",
+                    "Feature in our official after-movie",
+                    "Permission to setup stalls/canopies (01)",
+                    "Shout-out at the events",
+                    "Permission to distribute products and materials",
+                    "VIP Passes (10)",
+                  ].map((benefit, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-3 p-3 border border-muted-foreground/30 bg-muted/20 hover:bg-muted/30 transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-muted-foreground flex-shrink-0" />
+                      <span className="font-subheading text-sm text-foreground">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
