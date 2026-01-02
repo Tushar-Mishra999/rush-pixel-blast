@@ -207,6 +207,57 @@ const Sponsors = () => {
                 </div>
               </div>
             </div>
+
+            {/* Co-Sponsor Card */}
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="border-2 border-primary p-8 bg-primary/5 relative overflow-hidden">
+                {/* Corner accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-primary" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-primary" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-primary" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary" />
+
+                <h3 
+                  className="font-heading text-xl md:text-2xl text-primary text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--primary) / 0.5)" }}
+                >
+                  Co-Sponsor
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Logos on main Banner, Poster and Newspaper",
+                    "Logos on all kind of entry passes (Back Side)",
+                    "Standees in the premiere locations on the campus",
+                    "Logos on event posters and banners",
+                    "Logos on all kind of entry passes (Front Side)",
+                    "Social media promotion through posters",
+                    "Website Promotion",
+                    "Feature in our official after-movie",
+                    "Exclusive In-store / promo video",
+                    "Permission to setup stalls/canopies (01)",
+                    "Shout-out at the events",
+                    "Permission to distribute products and materials",
+                    "Permission to setup Selfie-point",
+                    "Permission to promote in campus digital screen",
+                    "VIP Passes (15)",
+                    "Logos on participants' and winners' certificate",
+                    "Shoutout at the Opening Ceremony",
+                    "Sticker on audience seat cover",
+                  ].map((benefit, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-3 p-3 border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-primary flex-shrink-0" />
+                      <span className="font-subheading text-sm text-foreground">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
