@@ -1,18 +1,15 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 const Team = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-card border-b-2 border-border">
         <div className="container px-4 text-center">
-          <h1 
-            className="font-heading text-3xl md:text-4xl text-magenta mb-4"
-            style={{ textShadow: "0 0 20px hsl(var(--magenta)), 0 0 40px hsl(var(--magenta) / 0.5)" }}
-          >
+          <h1 style={{
+          textShadow: "0 0 20px hsl(var(--magenta)), 0 0 40px hsl(var(--magenta) / 0.5)"
+        }} className="font-heading text-3xl text-magenta mb-4 md:text-3xl">
             MEET THE TEAM: The Force Behind the Festival
           </h1>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto font-bold">
@@ -30,7 +27,9 @@ const Team = () => {
               <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center">
                 <span className="font-pixel text-4xl text-accent">$</span>
               </div>
-              <h3 className="font-heading text-xl text-accent mb-3" style={{ textShadow: "0 0 15px hsl(var(--accent) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-accent mb-3" style={{
+              textShadow: "0 0 15px hsl(var(--accent) / 0.5)"
+            }}>
                 Sponsorship Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
@@ -43,7 +42,9 @@ const Team = () => {
               <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center">
                 <span className="font-pixel text-4xl text-primary">📢</span>
               </div>
-              <h3 className="font-heading text-xl text-primary mb-3" style={{ textShadow: "0 0 15px hsl(var(--primary) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-primary mb-3" style={{
+              textShadow: "0 0 15px hsl(var(--primary) / 0.5)"
+            }}>
                 Promotions Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
@@ -56,7 +57,9 @@ const Team = () => {
               <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center">
                 <span className="font-pixel text-4xl text-magenta">🎨</span>
               </div>
-              <h3 className="font-heading text-xl text-magenta mb-3" style={{ textShadow: "0 0 15px hsl(var(--magenta) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-magenta mb-3" style={{
+              textShadow: "0 0 15px hsl(var(--magenta) / 0.5)"
+            }}>
                 Creative & Design Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
@@ -69,7 +72,9 @@ const Team = () => {
               <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center">
                 <span className="font-pixel text-4xl text-green">⚙️</span>
               </div>
-              <h3 className="font-heading text-xl text-green mb-3" style={{ textShadow: "0 0 15px hsl(var(--green) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-green mb-3" style={{
+              textShadow: "0 0 15px hsl(var(--green) / 0.5)"
+            }}>
                 Operations Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
@@ -82,7 +87,9 @@ const Team = () => {
               <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center">
                 <span className="font-pixel text-4xl text-accent">📸</span>
               </div>
-              <h3 className="font-heading text-xl text-accent mb-3" style={{ textShadow: "0 0 15px hsl(var(--accent) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-accent mb-3" style={{
+              textShadow: "0 0 15px hsl(var(--accent) / 0.5)"
+            }}>
                 Media and Communications Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
@@ -94,8 +101,6 @@ const Team = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Team;
