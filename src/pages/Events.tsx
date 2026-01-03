@@ -300,7 +300,7 @@ const Events = () => {
               <p className="font-heading text-4xl md:text-6xl text-foreground mb-4" style={{
               textShadow: "0 0 20px hsl(var(--secondary) / 0.5)"
             }}>
-                ₹15,00,000+
+                ₹3,00,000+
               </p>
               <p className="text-muted-foreground mb-6">
                 Compete. Win. Take home glory and prizes.
