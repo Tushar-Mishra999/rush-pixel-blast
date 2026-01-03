@@ -15,7 +15,7 @@ const Team = () => {
           >
             MEET THE TEAM: The Force Behind the Festival
           </h1>
-          <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-subheading text-muted-foreground max-w-2xl mx-auto font-bold">
             The passionate minds behind RUSH 2026
           </p>
         </div>
