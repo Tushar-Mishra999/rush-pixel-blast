@@ -281,7 +281,7 @@ const Sponsors = () => {
                   ].map((benefit, index) => (
                     <div 
                       key={index}
-                      className="flex items-center gap-3 p-3 border border-muted-foreground/30 bg-muted/20 hover:bg-muted/30 transition-colors"
+                      className="flex items-center gap-3 p-3 border border-magenta/30 bg-magenta/5 hover:bg-magenta/10 transition-colors"
                     >
                       <span className="w-2 h-2 bg-magenta flex-shrink-0" style={{ boxShadow: "0 0 8px hsl(var(--magenta))" }} />
                       <span className="font-subheading text-sm text-foreground">
@@ -321,7 +321,7 @@ const Sponsors = () => {
                   ].map((benefit, index) => (
                     <div 
                       key={index}
-                      className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
+                      className="flex items-center gap-3 p-3 border border-green/30 bg-green/5 hover:bg-green/10 transition-colors"
                     >
                       <span className="w-2 h-2 bg-green flex-shrink-0" style={{ boxShadow: "0 0 8px hsl(var(--green))" }} />
                       <span className="font-subheading text-sm text-foreground">
