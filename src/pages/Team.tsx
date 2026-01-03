@@ -25,67 +25,67 @@ const Team = () => {
       <section className="py-16">
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Sponsorship Team */}
-            <div className="bg-card border-2 border-border hover:border-primary transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-muted border-2 border-border flex items-center justify-center">
-                <span className="font-pixel text-4xl text-primary">$</span>
+            {/* Sponsorship Team - Yellow */}
+            <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center">
+                <span className="font-pixel text-4xl text-accent">$</span>
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">
+              <h3 className="font-heading text-xl text-accent mb-3" style={{ textShadow: "0 0 15px hsl(var(--accent) / 0.5)" }}>
                 Sponsorship Team
               </h3>
-              <p className="font-subheading text-sm text-muted-foreground">
+              <p className="font-subheading text-sm text-muted-foreground font-bold">
                 Hota sabke paas hai, sab chupa ke rakhte hai, deta koi nahi!!
               </p>
             </div>
 
-            {/* Promotions Team */}
-            <div className="bg-card border-2 border-border hover:border-accent transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-muted border-2 border-border flex items-center justify-center">
-                <span className="font-pixel text-4xl text-accent">📢</span>
+            {/* Promotions Team - Blue */}
+            <div className="bg-cyan/10 border-2 border-cyan hover:border-cyan/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-cyan/20 border-2 border-cyan flex items-center justify-center">
+                <span className="font-pixel text-4xl text-cyan">📢</span>
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">
+              <h3 className="font-heading text-xl text-cyan mb-3" style={{ textShadow: "0 0 15px hsl(var(--cyan) / 0.5)" }}>
                 Promotions Team
               </h3>
-              <p className="font-subheading text-sm text-muted-foreground">
+              <p className="font-subheading text-sm text-muted-foreground font-bold">
                 50 rupaye kaat overacting ka
               </p>
             </div>
 
-            {/* Creative & Design Team */}
-            <div className="bg-card border-2 border-border hover:border-highlight transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-muted border-2 border-border flex items-center justify-center">
-                <span className="font-pixel text-4xl text-highlight">🎨</span>
+            {/* Creative & Design Team - Pink */}
+            <div className="bg-magenta/10 border-2 border-magenta hover:border-magenta/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center">
+                <span className="font-pixel text-4xl text-magenta">🎨</span>
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">
+              <h3 className="font-heading text-xl text-magenta mb-3" style={{ textShadow: "0 0 15px hsl(var(--magenta) / 0.5)" }}>
                 Creative & Design Team
               </h3>
-              <p className="font-subheading text-sm text-muted-foreground">
+              <p className="font-subheading text-sm text-muted-foreground font-bold">
                 Pinterest pe design dekh ke hume same banane bolna IS NOT FUNNY
               </p>
             </div>
 
-            {/* Operations Team */}
-            <div className="bg-card border-2 border-border hover:border-green transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-muted border-2 border-border flex items-center justify-center">
+            {/* Operations Team - Green */}
+            <div className="bg-green/10 border-2 border-green hover:border-green/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center">
                 <span className="font-pixel text-4xl text-green">⚙️</span>
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">
+              <h3 className="font-heading text-xl text-green mb-3" style={{ textShadow: "0 0 15px hsl(var(--green) / 0.5)" }}>
                 Operations Team
               </h3>
-              <p className="font-subheading text-sm text-muted-foreground">
+              <p className="font-subheading text-sm text-muted-foreground font-bold">
                 Main, merko sab aata hai, main expert hoon
               </p>
             </div>
 
-            {/* Media and Communications Team */}
-            <div className="bg-card border-2 border-border hover:border-magenta transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-muted border-2 border-border flex items-center justify-center">
-                <span className="font-pixel text-4xl text-magenta">📸</span>
+            {/* Media and Communications Team - Yellow */}
+            <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center">
+                <span className="font-pixel text-4xl text-accent">📸</span>
               </div>
-              <h3 className="font-heading text-xl text-foreground mb-3">
+              <h3 className="font-heading text-xl text-accent mb-3" style={{ textShadow: "0 0 15px hsl(var(--accent) / 0.5)" }}>
                 Media and Communications Team
               </h3>
-              <p className="font-subheading text-sm text-muted-foreground">
+              <p className="font-subheading text-sm text-muted-foreground font-bold">
                 Oh my god, aaj to bohot crazy kar diya mene
               </p>
             </div>
