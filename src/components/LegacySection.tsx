@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import arrowLeft from "@/assets/arrow-left.png";
 import arrowRight from "@/assets/arrow-right.png";
@@ -92,6 +92,16 @@ const getMemoryItems = (year: string) => {
 export const LegacySection = () => {
   const [activeYear, setActiveYear] = useState("2025");
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+  [...memoryItems2025, ...memoryItems2024, ...memoryItems2023].forEach(
+    (item) => {
+      const img = new Image();
+      img.src = item.image;
+    }
+  );
+}, []);
+
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -231,6 +241,8 @@ export const LegacySection = () => {
               >
                 <img 
                   src={item.image} 
+                  loading="eager"
+                  decoding="async"
                   alt={`Rush Memory ${item.id}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
