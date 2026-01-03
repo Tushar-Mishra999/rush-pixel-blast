@@ -332,16 +332,16 @@ const Sponsors = () => {
             </div>
             {/* Partnerships Card */}
             <div className="max-w-4xl mx-auto mt-12">
-              <div className="border-2 border-cyan p-8 bg-cyan/5 relative overflow-hidden">
+              <div className="border-2 border-accent p-8 bg-accent/5 relative overflow-hidden" style={{ boxShadow: "0 0 30px hsl(var(--accent) / 0.3)" }}>
                 {/* Corner accents */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-cyan" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-cyan" />
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-cyan" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-cyan" />
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-accent" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-accent" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-accent" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-accent" />
 
                 <h3 
-                  className="font-heading text-xl md:text-2xl text-cyan text-center mb-8"
-                  style={{ textShadow: "0 0 20px hsl(var(--cyan) / 0.5)" }}
+                  className="font-heading text-xl md:text-2xl text-accent text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--accent) / 0.5)" }}
                 >
                   Partnerships
                 </h3>
@@ -359,9 +359,9 @@ const Sponsors = () => {
                   ].map((partner, index) => (
                     <div 
                       key={index}
-                      className="flex items-center gap-3 p-3 border border-cyan/30 bg-cyan/5 hover:bg-cyan/10 transition-colors"
+                      className="flex items-center gap-3 p-3 border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-colors"
                     >
-                      <span className="w-2 h-2 bg-cyan flex-shrink-0" />
+                      <span className="w-2 h-2 bg-accent flex-shrink-0" style={{ boxShadow: "0 0 8px hsl(var(--accent))" }} />
                       <span className="font-subheading text-sm text-foreground">
                         {partner}
                       </span>
