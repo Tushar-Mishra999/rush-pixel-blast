@@ -102,11 +102,8 @@ const Sponsors = () => {
           <div className="container px-4">
             <div className="text-center mb-12">
               <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
-                Our Reach
-              </h2>
-              <p className="font-subheading text-muted-foreground text-lg">
                 Our Footprint
-              </p>
+              </h2>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
