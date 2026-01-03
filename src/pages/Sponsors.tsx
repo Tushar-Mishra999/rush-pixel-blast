@@ -260,7 +260,8 @@ const Sponsors = () => {
                 <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-secondary" />
 
                 <h3 
-                  className="font-heading text-xl md:text-2xl text-secondary-foreground text-center mb-8"
+                  className="font-heading text-xl md:text-2xl text-magenta text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--magenta) / 0.5)" }}
                 >
                   Associate Sponsor
                 </h3>
@@ -282,7 +283,7 @@ const Sponsors = () => {
                       key={index}
                       className="flex items-center gap-3 p-3 border border-muted-foreground/30 bg-muted/20 hover:bg-muted/30 transition-colors"
                     >
-                      <span className="w-2 h-2 bg-magenta flex-shrink-0" />
+                      <span className="w-2 h-2 bg-magenta flex-shrink-0" style={{ boxShadow: "0 0 8px hsl(var(--magenta))" }} />
                       <span className="font-subheading text-sm text-foreground">
                         {benefit}
                       </span>
@@ -302,7 +303,8 @@ const Sponsors = () => {
                 <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-green" />
 
                 <h3 
-                  className="font-heading text-xl md:text-2xl text-foreground text-center mb-8"
+                  className="font-heading text-xl md:text-2xl text-green text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--green) / 0.5)" }}
                 >
                   Event Sponsor
                 </h3>
@@ -321,7 +323,7 @@ const Sponsors = () => {
                       key={index}
                       className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
                     >
-                      <span className="w-2 h-2 bg-green flex-shrink-0" />
+                      <span className="w-2 h-2 bg-green flex-shrink-0" style={{ boxShadow: "0 0 8px hsl(var(--green))" }} />
                       <span className="font-subheading text-sm text-foreground">
                         {benefit}
                       </span>
