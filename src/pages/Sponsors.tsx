@@ -138,12 +138,9 @@ const Sponsors = () => {
         <section className="py-16 bg-background border-b-2 border-border">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
-                Sponsor Tiers
-              </h2>
-              <p className="font-subheading text-muted-foreground text-lg mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl text-primary mb-4">
                 Sponsorship & Marketing Opportunities
-              </p>
+              </h2>
               <p className="font-subheading text-muted-foreground max-w-3xl mx-auto">
                 Collaborate with RUSH 2026 to amplify your brand presence and engage directly with exceptional talent from India's premier B-schools.
               </p>
