@@ -44,11 +44,11 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={16} className="text-primary" />
-                <span>+91 XXXXX XXXXX</span>
+                <span>+91 93526 30583</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin size={16} className="text-primary mt-0.5" />
-                <span>IIM Ranchi, Suchana Bhawan, Audrey House Campus, Ranchi</span>
+                <span>IIM Ranchi, Prabandhan Nagar, Nayasarai Road, Ranchi - 835303, Jharkhand, India</span>
               </div>
             </div>
           </div>
@@ -57,13 +57,13 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/rush_iimr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors">
+              <a href="https://www.instagram.com/rush_iimr/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="https://www.youtube.com/@IIMRanchi1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-destructive hover:border-destructive transition-colors">
                 <Youtube size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/rush-iim-ranchi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+              <a href="https://www.linkedin.com/school/indian-institute-of-management-ranchi/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
