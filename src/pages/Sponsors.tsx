@@ -332,7 +332,7 @@ const Sponsors = () => {
             </div>
             {/* Partnerships Card */}
             <div className="max-w-4xl mx-auto mt-12">
-              <div className="border-2 border-cyan p-8 bg-card relative overflow-hidden">
+              <div className="border-2 border-cyan p-8 bg-cyan/5 relative overflow-hidden">
                 {/* Corner accents */}
                 <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-cyan" />
                 <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-cyan" />
@@ -340,7 +340,8 @@ const Sponsors = () => {
                 <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-cyan" />
 
                 <h3 
-                  className="font-heading text-xl md:text-2xl text-foreground text-center mb-8"
+                  className="font-heading text-xl md:text-2xl text-cyan text-center mb-8"
+                  style={{ textShadow: "0 0 20px hsl(var(--cyan) / 0.5)" }}
                 >
                   Partnerships
                 </h3>
@@ -358,7 +359,7 @@ const Sponsors = () => {
                   ].map((partner, index) => (
                     <div 
                       key={index}
-                      className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
+                      className="flex items-center gap-3 p-3 border border-cyan/30 bg-cyan/5 hover:bg-cyan/10 transition-colors"
                     >
                       <span className="w-2 h-2 bg-cyan flex-shrink-0" />
                       <span className="font-subheading text-sm text-foreground">
