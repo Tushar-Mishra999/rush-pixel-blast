@@ -68,11 +68,8 @@ const Sponsors = () => {
           <div className="container px-4">
             <div className="text-center mb-12">
               <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
-                RUSH Highlights
-              </h2>
-              <p className="font-subheading text-muted-foreground text-lg">
                 RUSH at a Glance
-              </p>
+              </h2>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
