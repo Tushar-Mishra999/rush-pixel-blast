@@ -74,10 +74,10 @@ const About = () => {
           <FloatingPixels />
           
           <div className="container relative z-10 px-4 text-center">
-            <h1 className="font-heading text-3xl text-foreground mb-6 md:text-3xl">
-              <span className="text-primary">ABOUT</span> RUSH
+            <h1 className="font-heading text-3xl text-primary drop-shadow-[0_0_10px_hsl(var(--primary))] mb-6 md:text-3xl">
+              ABOUT RUSH
             </h1>
-            <p className="font-subheading text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="font-subheading text-lg text-muted-foreground max-w-3xl mx-auto font-bold">
               A stage for ambition, energy and youth shaping what lies ahead
             </p>
           </div>
