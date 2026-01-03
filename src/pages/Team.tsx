@@ -9,8 +9,11 @@ const Team = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-card border-b-2 border-border">
         <div className="container px-4 text-center">
-          <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
-            MEET THE <span className="text-primary">TEAM</span>: The Force Behind the Festival
+          <h1 
+            className="font-heading text-3xl md:text-4xl text-magenta mb-4"
+            style={{ textShadow: "0 0 20px hsl(var(--magenta)), 0 0 40px hsl(var(--magenta) / 0.5)" }}
+          >
+            MEET THE TEAM: The Force Behind the Festival
           </h1>
           <p className="font-subheading text-muted-foreground max-w-2xl mx-auto">
             The passionate minds behind RUSH 2026
