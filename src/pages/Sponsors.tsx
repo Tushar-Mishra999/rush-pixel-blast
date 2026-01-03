@@ -330,6 +330,45 @@ const Sponsors = () => {
                 </div>
               </div>
             </div>
+            {/* Partnerships Card */}
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="border-2 border-cyan p-8 bg-card relative overflow-hidden">
+                {/* Corner accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-cyan" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-cyan" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-cyan" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-cyan" />
+
+                <h3 
+                  className="font-heading text-xl md:text-2xl text-foreground text-center mb-8"
+                >
+                  Partnerships
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Food & Beverage Partner",
+                    "Radio Partner",
+                    "Gift Partner",
+                    "Fashion Partner",
+                    "Print Media Partner",
+                    "Travel Partner",
+                    "Hospitality Partner",
+                    "Beauty Partner",
+                  ].map((partner, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-3 p-3 border border-border bg-muted/10 hover:bg-muted/20 transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-cyan flex-shrink-0" />
+                      <span className="font-subheading text-sm text-foreground">
+                        {partner}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
