@@ -39,11 +39,11 @@ const Team = () => {
             </div>
 
             {/* Promotions Team - Blue */}
-            <div className="bg-cyan/10 border-2 border-cyan hover:border-cyan/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-cyan/20 border-2 border-cyan flex items-center justify-center">
-                <span className="font-pixel text-4xl text-cyan">📢</span>
+            <div className="bg-primary/10 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center">
+              <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center">
+                <span className="font-pixel text-4xl text-primary">📢</span>
               </div>
-              <h3 className="font-heading text-xl text-cyan mb-3" style={{ textShadow: "0 0 15px hsl(var(--cyan) / 0.5)" }}>
+              <h3 className="font-heading text-xl text-primary mb-3" style={{ textShadow: "0 0 15px hsl(var(--primary) / 0.5)" }}>
                 Promotions Team
               </h3>
               <p className="font-subheading text-sm text-muted-foreground font-bold">
