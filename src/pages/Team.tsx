@@ -43,7 +43,7 @@ const Team = () => {
             </div>
 
             {/* Promotions Team - Blue */}
-            <div className="bg-primary/10 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center">
+            <div className="bg-primary/20 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center" style={{ boxShadow: "0 0 30px hsl(var(--primary) / 0.3), inset 0 0 20px hsl(var(--primary) / 0.1)" }}>
               <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden">
                 <img src={promotionsIcon} alt="Promotions" className="w-full h-full object-cover" />
               </div>
@@ -58,7 +58,7 @@ const Team = () => {
             </div>
 
             {/* Creative & Design Team - Pink */}
-            <div className="bg-magenta/10 border-2 border-magenta hover:border-magenta/80 transition-colors p-6 flex flex-col items-center text-center">
+            <div className="bg-magenta/20 border-2 border-magenta hover:border-magenta/80 transition-colors p-6 flex flex-col items-center text-center" style={{ boxShadow: "0 0 30px hsl(var(--magenta) / 0.3), inset 0 0 20px hsl(var(--magenta) / 0.1)" }}>
               <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center overflow-hidden">
                 <img src={creativeIcon} alt="Creative & Design" className="w-full h-full object-cover" />
               </div>
@@ -73,7 +73,7 @@ const Team = () => {
             </div>
 
             {/* Operations Team - Green */}
-            <div className="bg-green/10 border-2 border-green hover:border-green/80 transition-colors p-6 flex flex-col items-center text-center">
+            <div className="bg-green/20 border-2 border-green hover:border-green/80 transition-colors p-6 flex flex-col items-center text-center" style={{ boxShadow: "0 0 30px hsl(var(--green) / 0.3), inset 0 0 20px hsl(var(--green) / 0.1)" }}>
               <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center overflow-hidden">
                 <img src={operationsIcon} alt="Operations" className="w-full h-full object-cover" />
               </div>
@@ -88,7 +88,7 @@ const Team = () => {
             </div>
 
             {/* Media and Communications Team - Yellow */}
-            <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
+            <div className="bg-accent/20 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center" style={{ boxShadow: "0 0 30px hsl(var(--accent) / 0.3), inset 0 0 20px hsl(var(--accent) / 0.1)" }}>
               <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center overflow-hidden">
                 <img src={mediaIcon} alt="Media and Communications" className="w-full h-full object-cover" />
               </div>
