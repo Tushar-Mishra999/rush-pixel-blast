@@ -9,11 +9,20 @@ import centralBank from "@/assets/sponsors/central-bank.png";
 import chetak from "@/assets/sponsors/chetak.webp";
 import honda from "@/assets/sponsors/honda.jpg";
 import jawedHabib from "@/assets/sponsors/jawed-habib.png";
-import lg from "@/assets/sponsors/lg.png";
+import lg from "@/assets/sponsors/LG.png";
 import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
 import omLogistics from "@/assets/sponsors/om-logistics.webp";
 import piesThighs from "@/assets/sponsors/pies-thighs.png";
 import prabhatKhabar from "@/assets/sponsors/prabhat-khabar.jpg";
+import RE from "@/assets/sponsors/RE.png";
+import SkilledSapien from "@/assets/sponsors/SkilledSapien.png";
+import spykar from "@/assets/sponsors/spykar.jpg";
+import Stockedge from "@/assets/sponsors/Stockedge.png";
+import ToI from "@/assets/sponsors/TOI.png";
+import Triumph from "@/assets/sponsors/Triumph.jpg";
+import Ultratech from "@/assets/sponsors/Ultratech.jpg";
+import Unstop from "@/assets/sponsors/Unstop.png";
+import ZippyRabbit from "@/assets/sponsors/ZippyRabbit.jpg";
 
 const pastSponsors = [
   { name: "Aprilla & Vespa", logo: aprillaVespa },
@@ -26,6 +35,16 @@ const pastSponsors = [
   { name: "OM Logistics", logo: omLogistics },
   { name: "Pies & Thighs", logo: piesThighs },
   { name: "Prabhat Khabar", logo: prabhatKhabar },
+  { name: "Royal Enfield", logo: RE },
+  { name: "Skilled Sapien", logo: SkilledSapien },
+  { name: "Spykar", logo: spykar },
+  { name: "Stockedge", logo: Stockedge },
+  { name: "The Times of India", logo: ToI },
+  { name: "Triumph", logo: Triumph },
+  { name: "Ultratech", logo: Ultratech },
+  { name: "Unstop", logo: Unstop },
+  { name: "Zippy Rabbit", logo: ZippyRabbit }
+
 ];
 const sponsorTiers = [{
   tier: "Title Sponsor",
@@ -360,7 +379,7 @@ const Sponsors = () => {
               {pastSponsors.map((sponsor) => (
                 <div
                   key={sponsor.name}
-                  className="w-32 h-24 md:w-40 md:h-28 border border-border/50 bg-background/50 backdrop-blur-sm flex items-center justify-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 cursor-pointer p-4 group"
+                  className="w-32 h-24 md:w-40 md:h-28 border border-border/50 bg-background/50 backdrop-blur-sm flex items-center justify-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 cursor-pointer p-2 group"
                 >
                   <img 
                     src={sponsor.logo} 
