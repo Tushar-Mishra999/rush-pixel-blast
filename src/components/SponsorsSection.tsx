@@ -2,6 +2,31 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import rupeeIcon from "@/assets/rupee-icon.png";
 
+// Past Sponsor logos
+import aprillaVespa from "@/assets/sponsors/aprilla-vespa.png";
+import centralBank from "@/assets/sponsors/central-bank.png";
+import chetak from "@/assets/sponsors/chetak.webp";
+import honda from "@/assets/sponsors/honda.jpg";
+import jawedHabib from "@/assets/sponsors/jawed-habib.png";
+import lg from "@/assets/sponsors/lg.png";
+import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
+import omLogistics from "@/assets/sponsors/om-logistics.webp";
+import piesThighs from "@/assets/sponsors/pies-thighs.png";
+import prabhatKhabar from "@/assets/sponsors/prabhat-khabar.jpg";
+
+const pastSponsors = [
+  { name: "Aprilla & Vespa", logo: aprillaVespa },
+  { name: "Central Bank of India", logo: centralBank },
+  { name: "Chetak", logo: chetak },
+  { name: "Honda", logo: honda },
+  { name: "Jawed Habib", logo: jawedHabib },
+  { name: "LG", logo: lg },
+  { name: "Olives n Figs", logo: olivesNFigs },
+  { name: "OM Logistics", logo: omLogistics },
+  { name: "Pies & Thighs", logo: piesThighs },
+  { name: "Prabhat Khabar", logo: prabhatKhabar },
+];
+
 const sponsors = {
   title: [
     { name: "Title Sponsor 1", tier: "title" },
@@ -144,6 +169,30 @@ export const SponsorsSection = () => {
                 <span className="text-[8px] text-muted-foreground">
                   {sponsor.name}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Past Sponsors */}
+        <div className="mb-8">
+          <h3 
+            className="font-heading text-xs text-foreground/70 text-center mb-8"
+            style={{ textShadow: "0 0 5px hsl(var(--foreground) / 0.2)" }}
+          >
+            // PAST SPONSORS
+          </h3>
+          <div className="flex justify-center gap-4 flex-wrap max-w-5xl mx-auto">
+            {pastSponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="w-28 h-20 md:w-32 md:h-24 border border-border/50 bg-background/50 backdrop-blur-sm flex items-center justify-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 cursor-pointer p-3 group"
+              >
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name}
+                  className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                />
               </div>
             ))}
           </div>
