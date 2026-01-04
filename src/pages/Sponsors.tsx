@@ -12,7 +12,6 @@ import jawedHabib from "@/assets/sponsors/jawed-habib.png";
 import lg from "@/assets/sponsors/lg.png";
 import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
 import omLogistics from "@/assets/sponsors/om-logistics.webp";
-import piesThighs from "@/assets/sponsors/pies-thighs.png";
 import prabhatKhabar from "@/assets/sponsors/prabhat-khabar.jpg";
 import RE from "@/assets/sponsors/re.png";
 import SkilledSapien from "@/assets/sponsors/skilledsapien.png";
@@ -33,7 +32,6 @@ const pastSponsors = [
   { name: "LG", logo: lg },
   { name: "Olives n Figs", logo: olivesNFigs },
   { name: "OM Logistics", logo: omLogistics },
-  { name: "Pies & Thighs", logo: piesThighs },
   { name: "Prabhat Khabar", logo: prabhatKhabar },
   { name: "Royal Enfield", logo: RE },
   { name: "Skilled Sapien", logo: SkilledSapien },
