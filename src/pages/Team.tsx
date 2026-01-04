@@ -5,6 +5,7 @@ import promotionsIcon from "@/assets/promotions-icon.png";
 import creativeIcon from "@/assets/creative-icon.png";
 import operationsIcon from "@/assets/operations-icon.png";
 import mediaIcon from "@/assets/media-icon.png";
+import promotionsBg from "@/assets/promotions-bg.png";
 const Team = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -43,16 +44,21 @@ const Team = () => {
             </div>
 
             {/* Promotions Team - Blue */}
-            <div className="bg-primary/10 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center">
-              
-              <h3 className="font-heading text-xl text-primary mb-3" style={{
-              textShadow: "0 0 15px hsl(var(--primary) / 0.5)"
-            }}>
-                Promotions Team
-              </h3>
-              <p className="font-subheading text-sm text-muted-foreground font-bold">
-                50 rupaye kaat overacting ka
-              </p>
+            <div 
+              className="border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center bg-cover bg-center relative"
+              style={{ backgroundImage: `url(${promotionsBg})` }}
+            >
+              <div className="absolute inset-0 bg-background/60" />
+              <div className="relative z-10">
+                <h3 className="font-heading text-xl text-primary mb-3" style={{
+                  textShadow: "0 0 15px hsl(var(--primary) / 0.5)"
+                }}>
+                  Promotions Team
+                </h3>
+                <p className="font-subheading text-sm text-muted-foreground font-bold">
+                  50 rupaye kaat overacting ka
+                </p>
+              </div>
             </div>
 
             {/* Creative & Design Team - Pink */}
