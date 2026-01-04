@@ -2,6 +2,31 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+
+// Past Sponsor logos
+import aprillaVespa from "@/assets/sponsors/aprilla-vespa.png";
+import centralBank from "@/assets/sponsors/central-bank.png";
+import chetak from "@/assets/sponsors/chetak.webp";
+import honda from "@/assets/sponsors/honda.jpg";
+import jawedHabib from "@/assets/sponsors/jawed-habib.png";
+import lg from "@/assets/sponsors/lg.png";
+import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
+import omLogistics from "@/assets/sponsors/om-logistics.webp";
+import piesThighs from "@/assets/sponsors/pies-thighs.png";
+import prabhatKhabar from "@/assets/sponsors/prabhat-khabar.jpg";
+
+const pastSponsors = [
+  { name: "Aprilla & Vespa", logo: aprillaVespa },
+  { name: "Central Bank of India", logo: centralBank },
+  { name: "Chetak", logo: chetak },
+  { name: "Honda", logo: honda },
+  { name: "Jawed Habib", logo: jawedHabib },
+  { name: "LG", logo: lg },
+  { name: "Olives n Figs", logo: olivesNFigs },
+  { name: "OM Logistics", logo: omLogistics },
+  { name: "Pies & Thighs", logo: piesThighs },
+  { name: "Prabhat Khabar", logo: prabhatKhabar },
+];
 const sponsorTiers = [{
   tier: "Title Sponsor",
   color: "accent",
@@ -331,12 +356,19 @@ const Sponsors = () => {
               </p>
             </div>
 
-            <div className="flex justify-center gap-6 flex-wrap max-w-4xl mx-auto">
-              {["Sponsor A", "Sponsor B", "Sponsor C", "Sponsor D", "Sponsor E", "Sponsor F", "Sponsor G", "Sponsor H"].map((sponsor, index) => <div key={index} className="w-32 h-20 md:w-40 md:h-24 border border-border bg-muted/20 flex items-center justify-center hover:bg-muted/30 transition-colors">
-                  <span className="font-subheading text-xs text-muted-foreground">
-                    {sponsor}
-                  </span>
-                </div>)}
+            <div className="flex justify-center gap-6 flex-wrap max-w-5xl mx-auto">
+              {pastSponsors.map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="w-32 h-24 md:w-40 md:h-28 border border-border/50 bg-background/50 backdrop-blur-sm flex items-center justify-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 cursor-pointer p-4 group"
+                >
+                  <img 
+                    src={sponsor.logo} 
+                    alt={sponsor.name}
+                    className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
