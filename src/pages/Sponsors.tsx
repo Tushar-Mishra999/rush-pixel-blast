@@ -9,7 +9,7 @@ import centralBank from "@/assets/sponsors/central-bank.png";
 import chetak from "@/assets/sponsors/chetak.webp";
 import honda from "@/assets/sponsors/honda.jpg";
 import jawedHabib from "@/assets/sponsors/jawed-habib.png";
-import lg from "@/assets/sponsors/LG.png";
+import lg from "@/assets/sponsors/lg.png";
 import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
 import omLogistics from "@/assets/sponsors/om-logistics.webp";
 import piesThighs from "@/assets/sponsors/pies-thighs.png";
