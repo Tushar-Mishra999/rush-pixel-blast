@@ -14,15 +14,15 @@ import olivesNFigs from "@/assets/sponsors/olives-n-figs.webp";
 import omLogistics from "@/assets/sponsors/om-logistics.webp";
 import piesThighs from "@/assets/sponsors/pies-thighs.png";
 import prabhatKhabar from "@/assets/sponsors/prabhat-khabar.jpg";
-import RE from "@/assets/sponsors/RE.png";
-import SkilledSapien from "@/assets/sponsors/SkilledSapien.png";
+import RE from "@/assets/sponsors/re.png";
+import SkilledSapien from "@/assets/sponsors/skilledsapien.png";
 import spykar from "@/assets/sponsors/spykar.jpg";
-import Stockedge from "@/assets/sponsors/Stockedge.png";
-import ToI from "@/assets/sponsors/TOI.png";
-import Triumph from "@/assets/sponsors/Triumph.jpg";
-import Ultratech from "@/assets/sponsors/Ultratech.jpg";
-import Unstop from "@/assets/sponsors/Unstop.png";
-import ZippyRabbit from "@/assets/sponsors/ZippyRabbit.jpg";
+import Stockedge from "@/assets/sponsors/stockedge.png";
+import ToI from "@/assets/sponsors/toi.png";
+import Triumph from "@/assets/sponsors/triumph.jpg";
+import Ultratech from "@/assets/sponsors/ultratech.jpg";
+import Unstop from "@/assets/sponsors/unstop.png";
+import ZippyRabbit from "@/assets/sponsors/zippyrabbit.jpg";
 
 const pastSponsors = [
   { name: "Aprilla & Vespa", logo: aprillaVespa },
