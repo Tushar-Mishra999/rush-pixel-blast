@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import sponsorshipIcon from "@/assets/sponsorship-icon.png";
+import promotionsIcon from "@/assets/promotions-icon.png";
 const Team = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -40,8 +41,8 @@ const Team = () => {
 
             {/* Promotions Team - Blue */}
             <div className="bg-primary/10 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center">
-                <span className="font-pixel text-4xl text-primary">📢</span>
+              <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden">
+                <img src={promotionsIcon} alt="Promotions" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-primary mb-3" style={{
               textShadow: "0 0 15px hsl(var(--primary) / 0.5)"
