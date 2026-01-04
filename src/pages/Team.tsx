@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import sponsorshipIcon from "@/assets/sponsorship-icon.png";
 import promotionsIcon from "@/assets/promotions-icon.png";
+import creativeIcon from "@/assets/creative-icon.png";
 const Team = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -56,8 +57,8 @@ const Team = () => {
 
             {/* Creative & Design Team - Pink */}
             <div className="bg-magenta/10 border-2 border-magenta hover:border-magenta/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center">
-                <span className="font-pixel text-4xl text-magenta">🎨</span>
+              <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center overflow-hidden">
+                <img src={creativeIcon} alt="Creative & Design" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-magenta mb-3" style={{
               textShadow: "0 0 15px hsl(var(--magenta) / 0.5)"
