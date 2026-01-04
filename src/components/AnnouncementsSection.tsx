@@ -4,35 +4,19 @@ import { cn } from "@/lib/utils";
 const announcements = [
   {
     id: 1,
-    title: "Early Bird Registrations Open!",
-    date: "Jan 15, 2026",
-    description: "Get exclusive discounts on event passes. Limited spots available!",
-    type: "registration",
+    title: "Theme Reveal: Rendering the Future",
+    date: "Dec 22, 2025",
+    description: "The theme for RUSH 2026 has been unveiled!",
+    type: "announcement",
     color: "primary",
   },
   {
     id: 2,
-    title: "Headliner Announcement Coming Soon",
-    date: "Jan 20, 2026",
-    description: "Stay tuned for the biggest reveal of the season.",
+    title: "Date Reveal: 6-8 Feb 2026",
+    date: "Dec 28, 2025",
+    description: "Mark your calendars for the biggest fest of the year!",
     type: "event",
     color: "accent",
-  },
-  {
-    id: 3,
-    title: "Campus Ambassador Program",
-    date: "Jan 10, 2026",
-    description: "Join as a campus ambassador and unlock exclusive perks.",
-    type: "opportunity",
-    color: "secondary",
-  },
-  {
-    id: 4,
-    title: "Sponsorship Deck Released",
-    date: "Jan 5, 2026",
-    description: "Partner with RUSH 2026 and reach 10,000+ attendees.",
-    type: "sponsor",
-    color: "highlight",
   },
 ];
 
