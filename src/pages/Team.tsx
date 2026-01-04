@@ -28,7 +28,7 @@ const Team = () => {
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Sponsorship Team - Yellow */}
-            <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
+            <div className="bg-accent/20 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center" style={{ boxShadow: "0 0 30px hsl(var(--accent) / 0.3), inset 0 0 20px hsl(var(--accent) / 0.1)" }}>
               <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center overflow-hidden">
                 <img src={sponsorshipIcon} alt="Sponsorship" className="w-full h-full object-cover" />
               </div>
