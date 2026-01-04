@@ -20,7 +20,7 @@ const eventCategories = [
     name: "SPORTS",
     id: "sports",
     eventCount: 9,
-    tagline: "Where grit and teamwork define the game",
+    tagline: "Where grit & teamwork define the game",
     accentColor: "#20ABE5",
     icon: sportsIcon,
   },
@@ -29,7 +29,7 @@ const eventCategories = [
     name: "CULTURAL",
     id: "cultural",
     eventCount: 5,
-    tagline: "Where creativity and expression take centre stage",
+    tagline: "Where creativity & expression take centre stage",
     accentColor: "#DE0081",
     icon: culturalIcon,
   },
@@ -166,7 +166,7 @@ export const EventsPreview = () => {
               className="font-heading text-xs border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all px-10 py-6 group"
               style={{ boxShadow: "4px 4px 0px hsl(var(--border))" }}
             >
-              VIEW ALL 21 EVENTS
+              EXPLORE ALL 21 EVENTS
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
