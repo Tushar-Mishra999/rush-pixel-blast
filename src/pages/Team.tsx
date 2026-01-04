@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import sponsorshipIcon from "@/assets/sponsorship-icon.png";
 import promotionsIcon from "@/assets/promotions-icon.png";
 import creativeIcon from "@/assets/creative-icon.png";
+import operationsIcon from "@/assets/operations-icon.png";
 const Team = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -72,8 +73,8 @@ const Team = () => {
 
             {/* Operations Team - Green */}
             <div className="bg-green/10 border-2 border-green hover:border-green/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center">
-                <span className="font-pixel text-4xl text-green">⚙️</span>
+              <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center overflow-hidden">
+                <img src={operationsIcon} alt="Operations" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-green mb-3" style={{
               textShadow: "0 0 15px hsl(var(--green) / 0.5)"
