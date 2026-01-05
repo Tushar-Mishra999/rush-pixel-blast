@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import basketballMenImage from "@/assets/events/basketball-men.png";
+import quintessenceImage from "@/assets/events/quintessence.png";
 const categories = [{
   id: "all",
   name: "ALL",
@@ -44,7 +45,8 @@ const events = [
   name: "Quintessence (Case Comp)",
   category: "academic",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: quintessenceImage
 }, {
   id: 3,
   name: "Enigma (Escape Room)",
