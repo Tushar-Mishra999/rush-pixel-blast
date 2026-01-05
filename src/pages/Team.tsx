@@ -29,7 +29,7 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Sponsorship Team - Yellow */}
             <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-2  flex items-center justify-center overflow-hidden">
                 <img src={sponsorshipIcon} alt="Sponsorship" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-accent mb-3" style={{
@@ -44,7 +44,7 @@ const Team = () => {
 
             {/* Promotions Team - Blue */}
             <div className="bg-primary/10 border-2 border-primary hover:border-primary/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-2  flex items-center justify-center overflow-hidden">
                 <img src={promotionsIcon} alt="Promotions" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-primary mb-3" style={{
@@ -59,7 +59,7 @@ const Team = () => {
 
             {/* Creative & Design Team - Pink */}
             <div className="bg-magenta/10 border-2 border-magenta hover:border-magenta/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-magenta/20 border-2 border-magenta flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-2 flex items-center justify-center overflow-hidden">
                 <img src={creativeIcon} alt="Creative & Design" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-magenta mb-3" style={{
@@ -74,7 +74,7 @@ const Team = () => {
 
             {/* Operations Team - Green */}
             <div className="bg-green/10 border-2 border-green hover:border-green/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-green/20 border-2 border-green flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-2 border-green flex items-center justify-center overflow-hidden">
                 <img src={operationsIcon} alt="Operations" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-green mb-3" style={{
@@ -89,7 +89,7 @@ const Team = () => {
 
             {/* Media and Communications Team - Yellow */}
             <div className="bg-accent/10 border-2 border-accent hover:border-accent/80 transition-colors p-6 flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 bg-accent/20 border-2 border-accent flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-2  flex items-center justify-center overflow-hidden">
                 <img src={mediaIcon} alt="Media and Communications" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-heading text-xl text-accent mb-3" style={{
