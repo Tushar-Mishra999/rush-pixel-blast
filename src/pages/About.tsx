@@ -158,7 +158,7 @@ const About = () => {
                       {/* Description box - right side */}
                       <div className="w-[45%] pl-4">
                         <div className="border-2 border-accent p-2 bg-card">
-                          <p className="text-foreground text-xs leading-tight">{milestone.event}</p>
+                          <p className="text-foreground text-sm leading-tight">{milestone.event}</p>
                         </div>
                       </div>
                     </div>
