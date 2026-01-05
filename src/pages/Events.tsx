@@ -7,6 +7,13 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import basketballMenImage from "@/assets/events/basketball-men.png";
 import quintessenceImage from "@/assets/events/quintessence.png";
+import soloSongingImage from "@/assets/events/solo-song.png";
+import tableTennisImage from "@/assets/events/table-tennis.png";
+import throwballMenImage from "@/assets/events/throwball-men.png";
+import throwballWomenImage from "@/assets/events/throwball-women.png";
+import volleyballMenImage from "@/assets/events/volleyball-men.png";
+import volleyballWomenImage from "@/assets/events/volleyball-women.png";
+
 const categories = [{
   id: "all",
   name: "ALL",
@@ -60,19 +67,22 @@ const events = [
   name: "Volleyball Men",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: volleyballMenImage
 }, {
   id: 5,
   name: "Volleyball Women",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: volleyballWomenImage
 }, {
   id: 6,
   name: "TT Mixed",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: tableTennisImage
 }, {
   id: 7,
   name: "Pool Unisex",
@@ -96,13 +106,15 @@ const events = [
   name: "Throwball Men",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: throwballMenImage
 }, {
   id: 11,
   name: "Throwball Women",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: throwballWomenImage
 }, {
   id: 12,
   name: "Powerlifting Men",
@@ -165,8 +177,10 @@ const events = [
   name: "Solo Singing",
   category: "cultural",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: soloSongingImage
 }];
+
 const Events = () => {
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get("category");
