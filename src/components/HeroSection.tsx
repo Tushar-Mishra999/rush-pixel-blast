@@ -102,7 +102,7 @@ export const HeroSection = () => {
       <img 
         src={pixelCharacter} 
         alt="Pixel character" 
-        className="absolute top-20 right-4 md:right-12 lg:right-20 w-24 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float"
+        className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float"
       />
 
       {/* Main content */}
