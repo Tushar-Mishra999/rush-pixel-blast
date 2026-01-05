@@ -4,9 +4,9 @@ import rushLogo from "@/assets/rush-logo.png";
 export const Footer = () => {
   return <footer className="bg-card border-t-2 border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start">
             <Link to="/">
               <img src={rushLogo} alt="RUSH Logo" className="h-12 w-auto" />
             </Link>
@@ -16,7 +16,7 @@ export const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Quick Links</h4>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 items-center md:items-start">
               <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Home
               </Link>
@@ -35,7 +35,7 @@ export const Footer = () => {
           {/* Contact */}
           <div className="space-y-4">
             <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Contact</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={16} className="text-primary" />
                 <a href="mailto:rush@iimranchi.ac.in" className="hover:text-primary transition-colors">
@@ -56,7 +56,7 @@ export const Footer = () => {
           {/* Social */}
           <div className="space-y-4">
             <h4 className="font-heading text-xs text-accent uppercase tracking-wider">Follow Us</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <a href="https://www.instagram.com/rush_iimr/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border-2 border-border flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary transition-colors">
                 <Instagram size={20} />
               </a>
