@@ -138,24 +138,42 @@ const About = () => {
             </h2>
             
             <div className="relative max-w-4xl mx-auto">
-              {/* Left vertical line for mobile, center for desktop */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 md:-translate-x-1/2" />
+              {/* Center vertical line */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 -translate-x-1/2" />
               
               {milestones.map((milestone, index) => {
               const isLeft = index % 2 === 0;
-              return <div key={milestone.year} className={`relative flex items-center mb-6 md:mb-12 last:mb-0 pl-10 md:pl-0 ${isLeft ? 'md:justify-start' : 'md:justify-end'}`}>
-                    {/* Dot on the line - positioned left on mobile, center on desktop */}
-                    <div className="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-accent border-2 border-background z-10" />
+              return <div key={milestone.year} className="relative flex items-center mb-6 md:mb-12 last:mb-0">
+                    {/* Dot on the line - always centered */}
+                    <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-accent border-2 border-background z-10" />
                     
-                    {/* Timeline card */}
-                    <div className={`w-full md:w-[45%] border-2 border-accent p-3 md:p-6 bg-card transition-all duration-300 hover:scale-105 hover:shadow-glow-primary ${isLeft ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'}`}>
-                      <div className={`flex items-center gap-2 md:gap-3 mb-2 md:mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-                        <div className="w-10 h-10 md:w-14 md:h-14 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
-                          <span className="font-heading text-[10px] md:text-xs text-accent">{milestone.year}</span>
+                    {/* Mobile layout: year on left, description on right */}
+                    <div className="md:hidden flex w-full gap-2">
+                      {/* Year box - left side */}
+                      <div className="w-[45%] flex justify-end pr-4">
+                        <div className="w-12 h-12 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
+                          <span className="font-heading text-[10px] text-accent">{milestone.year}</span>
                         </div>
-                        <div className={`h-0.5 flex-1 bg-gradient-to-r ${isLeft ? 'md:from-transparent md:to-accent' : 'from-accent to-transparent'}`} />
                       </div>
-                      <p className="text-foreground text-sm md:text-base">{milestone.event}</p>
+                      {/* Description box - right side */}
+                      <div className="w-[45%] pl-4">
+                        <div className="border-2 border-accent p-2 bg-card">
+                          <p className="text-foreground text-xs leading-tight">{milestone.event}</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Desktop layout: alternating sides */}
+                    <div className={`hidden md:flex w-full ${isLeft ? 'justify-start' : 'justify-end'}`}>
+                      <div className={`w-[45%] border-2 border-accent p-6 bg-card transition-all duration-300 hover:scale-105 hover:shadow-glow-primary ${isLeft ? 'mr-auto text-right' : 'ml-auto text-left'}`}>
+                        <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'flex-row-reverse' : ''}`}>
+                          <div className="w-14 h-14 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
+                            <span className="font-heading text-xs text-accent">{milestone.year}</span>
+                          </div>
+                          <div className={`h-0.5 flex-1 bg-gradient-to-r ${isLeft ? 'from-transparent to-accent' : 'from-accent to-transparent'}`} />
+                        </div>
+                        <p className="text-foreground text-base">{milestone.event}</p>
+                      </div>
                     </div>
                   </div>;
             })}
