@@ -8,8 +8,8 @@ const RUSH_LETTERS = ["R", "U", "S", "H"];
 const COLORS = ["text-azure", "text-green", "text-magenta", "text-olive"];
 const COLOR_VARS = ["azure", "green", "magenta", "olive"];
 
-// Target date: February 14, 2026
-const TARGET_DATE = new Date("2026-02-14T00:00:00").getTime();
+// Target date: February 6, 2026
+const TARGET_DATE = new Date("2026-02-06T00:00:00").getTime();
 const useCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
