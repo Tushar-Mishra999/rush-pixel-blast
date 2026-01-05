@@ -138,14 +138,14 @@ const About = () => {
             </h2>
             
             <div className="relative max-w-4xl mx-auto">
-              {/* Center vertical line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 -translate-x-1/2" />
+              {/* Center vertical line - desktop only */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 -translate-x-1/2" />
               
               {milestones.map((milestone, index) => {
               const isLeft = index % 2 === 0;
               return <div key={milestone.year} className="relative flex items-center mb-6 md:mb-12 last:mb-0">
-                    {/* Dot on the line - always centered */}
-                    <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-accent border-2 border-background z-10" />
+                    {/* Dot on the line - desktop only */}
+                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-accent border-2 border-background z-10" />
                     
                     {/* Mobile layout: year on left, line, description on right */}
                     <div className="md:hidden flex w-full items-start">
