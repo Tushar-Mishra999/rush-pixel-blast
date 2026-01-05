@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import basketballMenImage from "@/assets/events/basketball-men.png";
 const categories = [{
   id: "all",
   name: "ALL",
@@ -117,7 +118,8 @@ const events = [
   name: "Basketball Men",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: basketballMenImage
 }, {
   id: 15,
   name: "Basketball Women",
@@ -233,7 +235,15 @@ const Events = () => {
               }}>
                     {/* Image/Gradient Header */}
                     <div className="relative aspect-[16/9] overflow-hidden mb-4">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${categoryData.gradient} transition-transform duration-500 group-hover:scale-110`} />
+                      {event.image ? (
+                        <img 
+                          src={event.image} 
+                          alt={event.name} 
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div className={`absolute inset-0 bg-gradient-to-br ${categoryData.gradient} transition-transform duration-500 group-hover:scale-110`} />
+                      )}
                       <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-colors" />
                       <div className="absolute inset-0 scanlines opacity-30" />
                       
