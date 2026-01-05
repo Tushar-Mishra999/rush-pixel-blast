@@ -150,7 +150,7 @@ const About = () => {
                     {/* Mobile layout: year on left, description on right */}
                     <div className="md:hidden flex w-full gap-2">
                       {/* Year box - left side */}
-                      <div className="w-[45%] flex justify-end pr-4">
+                      <div className="w-[45%] pr-4 flex items-start justify-start">
                         <div className="w-12 h-12 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
                           <span className="font-heading text-[10px] text-accent">{milestone.year}</span>
                         </div>
