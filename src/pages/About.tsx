@@ -147,19 +147,17 @@ const About = () => {
                     {/* Dot on the line - always centered */}
                     <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-accent border-2 border-background z-10" />
                     
-                    {/* Mobile layout: year on left, description on right */}
-                    <div className="md:hidden flex w-full gap-2">
-                      {/* Year box - left side */}
-                      <div className="pr-2">
-                        <div className="w-12 h-12 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
-                          <span className="font-heading text-[10px] text-accent">{milestone.year}</span>
-                        </div>
+                    {/* Mobile layout: year on left, line, description on right */}
+                    <div className="md:hidden flex w-full items-start">
+                      {/* Year box */}
+                      <div className="w-12 h-12 border-2 border-accent flex items-center justify-center bg-accent/10 shrink-0">
+                        <span className="font-heading text-[10px] text-accent">{milestone.year}</span>
                       </div>
-                      {/* Description box - right side */}
-                      <div className="w-[45%] pl-4">
-                        <div className="border-2 border-accent p-2 bg-card">
-                          <p className="text-foreground text-sm leading-tight">{milestone.event}</p>
-                        </div>
+                      {/* Connecting line */}
+                      <div className="h-0.5 w-4 bg-accent self-center shrink-0" />
+                      {/* Description box - extends to right */}
+                      <div className="flex-1 border-2 border-accent p-2 bg-card">
+                        <p className="text-foreground text-sm leading-tight">{milestone.event}</p>
                       </div>
                     </div>
                     
