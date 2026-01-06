@@ -5,21 +5,21 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import basketballMenImage from "@/assets/events/basketball-men.png";
-import quintessenceImage from "@/assets/events/quintessence.png";
-import soloSongingImage from "@/assets/events/solo-song.png";
-import tableTennisImage from "@/assets/events/table-tennis.png";
-import throwballMenImage from "@/assets/events/throwball-men.png";
-import throwballWomenImage from "@/assets/events/throwball-women.png";
-import volleyballMenImage from "@/assets/events/volleyball-men.png";
-import volleyballWomenImage from "@/assets/events/volleyball-women.png";
-import basketballWomenImage from "@/assets/events/basketball-women.png";
-import chessImage from "@/assets/events/chess.png";
-import cricketImage from "@/assets/events/cricket.png";
-import fashionShowImage from "@/assets/events/fashion-show.png";
-import futsalMenImage from "@/assets/events/futsal-men.png";
-import futsalWomenImage from "@/assets/events/futsal-women.png";
-import groupDanceImage from "@/assets/events/group-dance.png";
+import basketballMenImage from "@/assets/events/basketball-men.webp";
+import quintessenceImage from "@/assets/events/quintessence.webp";
+import soloSongingImage from "@/assets/events/solo-song.webp";
+import tableTennisImage from "@/assets/events/table-tennis.webp";
+import throwballMenImage from "@/assets/events/throwball-men.webp";
+import throwballWomenImage from "@/assets/events/throwball-women.webp";
+import volleyballMenImage from "@/assets/events/volleyball-men.webp";
+import volleyballWomenImage from "@/assets/events/volleyball-women.webp";
+import basketballWomenImage from "@/assets/events/basketball-women.webp";
+import chessImage from "@/assets/events/chess.webp";
+import cricketImage from "@/assets/events/cricket.webp";
+import fashionShowImage from "@/assets/events/fashion-show.webp";
+import futsalMenImage from "@/assets/events/futsal-men.webp";
+import futsalWomenImage from "@/assets/events/futsal-women.webp";
+import groupDanceImage from "@/assets/events/group-dance.webp";
 
 const categories = [{
   id: "all",
