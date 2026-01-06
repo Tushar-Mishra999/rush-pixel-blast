@@ -8,7 +8,7 @@ export const MarqueeStrip = () => {
     "◆",
     "6th, 7th, 8th FEB 2026",
     "◆",
-    "20+ EVENTS",
+    "15 EVENTS",
     "◆",
     "₹3,00,000+ PRIZE POOL",
     "◆",

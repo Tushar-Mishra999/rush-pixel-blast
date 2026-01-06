@@ -205,7 +205,7 @@ export const HeroSection = () => {
           label: "Years of Legacy",
           color: "primary"
         }, {
-          value: "20+",
+          value: "15",
           label: "Events",
           color: "secondary"
         }, {

@@ -49,25 +49,13 @@ const categories = [{
 const events = [
 // Academic
 {
-  id: 1,
-  name: "Sansad Charcha",
-  category: "academic",
-  prize: "TBA",
-  team: "TBA"
-}, {
   id: 2,
   name: "Quintessence (Case Comp)",
   category: "academic",
   prize: "TBA",
   team: "TBA",
   image: quintessenceImage
-}, {
-  id: 3,
-  name: "Enigma (Escape Room)",
-  category: "academic",
-  prize: "TBA",
-  team: "TBA"
-},
+}, 
 // Sports
 {
   id: 4,
@@ -90,13 +78,7 @@ const events = [
   prize: "TBA",
   team: "TBA",
   image: tableTennisImage
-}, {
-  id: 7,
-  name: "Pool Unisex",
-  category: "sports",
-  prize: "TBA",
-  team: "TBA"
-}, {
+},{
   id: 8,
   name: "Futsal Men",
   category: "sports",
@@ -124,13 +106,7 @@ const events = [
   prize: "TBA",
   team: "TBA",
   image: throwballWomenImage
-}, {
-  id: 12,
-  name: "Powerlifting Men",
-  category: "sports",
-  prize: "TBA",
-  team: "TBA"
-}, {
+},{
   id: 13,
   name: "Chess Unisex",
   category: "sports",
@@ -167,25 +143,13 @@ const events = [
   prize: "TBA",
   team: "TBA",
   image: groupDanceImage
-}, {
-  id: 18,
-  name: "Battle of Bands",
-  category: "cultural",
-  prize: "TBA",
-  team: "TBA"
-}, {
+},{
   id: 19,
   name: "Fashion Show",
   category: "cultural",
   prize: "TBA",
   team: "TBA",
   image: fashionShowImage
-}, {
-  id: 20,
-  name: "Solo Dance",
-  category: "cultural",
-  prize: "TBA",
-  team: "TBA"
 }, {
   id: 21,
   name: "Solo Singing",
@@ -225,7 +189,7 @@ const Events = () => {
               <span className="w-6 h-1 bg-secondary ml-2" />
             </h1>
             <p className="font-subheading text-muted-foreground max-w-2xl mx-auto font-bold">
-              21 events across 3 categories. Find your arena, show your skills, win big.
+              15 events across 3 categories. Find your arena, show your skills, win big.
             </p>
           </div>
         </section>
