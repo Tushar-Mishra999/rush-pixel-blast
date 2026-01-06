@@ -1,10 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import sponsorshipIcon from "@/assets/sponsorship-icon.png";
-import promotionsIcon from "@/assets/promotions-icon.png";
-import creativeIcon from "@/assets/creative-icon.png";
-import operationsIcon from "@/assets/operations-icon.png";
-import mediaIcon from "@/assets/media-icon.png";
+import sponsorshipIcon from "@/assets/sponsorship-icon.webp";
+import promotionsIcon from "@/assets/promotions-icon.webp";
+import creativeIcon from "@/assets/creative-icon.webp";
+import operationsIcon from "@/assets/operations-icon.webp";
+import mediaIcon from "@/assets/media-icon.webp";
 const Team = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
