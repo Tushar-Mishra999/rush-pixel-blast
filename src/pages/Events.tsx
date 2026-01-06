@@ -13,6 +13,13 @@ import throwballMenImage from "@/assets/events/throwball-men.png";
 import throwballWomenImage from "@/assets/events/throwball-women.png";
 import volleyballMenImage from "@/assets/events/volleyball-men.png";
 import volleyballWomenImage from "@/assets/events/volleyball-women.png";
+import basketballWomenImage from "@/assets/events/basketball-women.png";
+import chessImage from "@/assets/events/chess.png";
+import cricketImage from "@/assets/events/cricket.png";
+import fashionShowImage from "@/assets/events/fashion-show.png";
+import futsalMenImage from "@/assets/events/futsal-men.png";
+import futsalWomenImage from "@/assets/events/futsal-women.png";
+import groupDanceImage from "@/assets/events/group-dance.png";
 
 const categories = [{
   id: "all",
@@ -94,13 +101,15 @@ const events = [
   name: "Futsal Men",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: futsalMenImage
 }, {
   id: 9,
   name: "Futsal Women",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: futsalWomenImage
 }, {
   id: 10,
   name: "Throwball Men",
@@ -126,7 +135,8 @@ const events = [
   name: "Chess Unisex",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: chessImage
 }, {
   id: 14,
   name: "Basketball Men",
@@ -139,13 +149,15 @@ const events = [
   name: "Basketball Women",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: basketballWomenImage
 }, {
   id: 16,
   name: "Cricket Men",
   category: "sports",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: cricketImage
 },
 // Cultural
 {
@@ -153,7 +165,8 @@ const events = [
   name: "Group Dance",
   category: "cultural",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: groupDanceImage
 }, {
   id: 18,
   name: "Battle of Bands",
@@ -165,7 +178,8 @@ const events = [
   name: "Fashion Show",
   category: "cultural",
   prize: "TBA",
-  team: "TBA"
+  team: "TBA",
+  image: fashionShowImage
 }, {
   id: 20,
   name: "Solo Dance",
@@ -264,11 +278,11 @@ const Events = () => {
                       <div className="absolute inset-0 scanlines opacity-30" />
                       
                       {/* Category Code Label */}
-                      <div className="absolute bottom-3 left-3">
+                      {/* <div className="absolute bottom-3 left-3">
                         <span className="font-heading text-xs bg-background/90 text-foreground px-2 py-1 border border-border">
                           {categoryData.code}
                         </span>
-                      </div>
+                      </div> */}
                       
                       {/* Prize Badge */}
                       <div className="absolute top-3 right-3">
