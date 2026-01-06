@@ -40,6 +40,9 @@ export const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const countdown = useCountdown();
+  const isIOS =
+  typeof window !== "undefined" &&
+  /iPad|iPhone|iPod/.test(navigator.userAgent);
   useEffect(() => {
     setIsLoaded(true);
     const interval = setInterval(() => {
@@ -129,15 +132,38 @@ export const HeroSection = () => {
           transitionDelay: `${index * 100}ms`,
           fontWeight: 900,
           letterSpacing: "-0.05em",
-          WebkitTextStroke: activeIndex === index ? "2px currentColor" : "1px currentColor",
-          textShadow: activeIndex === index ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))" : "0 0 10px currentColor, 0 0 20px hsl(var(--background)), 3px 3px 0 hsl(var(--background))",
-          filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
+          WebkitTextStroke:
+          activeIndex === index
+          ? isIOS ? "1px currentColor" : "2px currentColor"
+          : "1px currentColor",
+          textShadow: activeIndex === index
+            ? isIOS
+          ? "0 0 6px currentColor, 0 0 14px currentColor, 3px 3px 0 hsl(var(--background))"
+          : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
+          : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
+
+          filter:
+            activeIndex === index
+              ? isIOS ? "brightness(1)" : "brightness(1.2)"
+              : "brightness(1)"
+          // WebkitTextStroke: activeIndex === index ? "2px currentColor" : "1px currentColor",
+          // textShadow: activeIndex === index ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))" : "0 0 10px currentColor, 0 0 20px hsl(var(--background)), 3px 3px 0 hsl(var(--background))",
+          // filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
         }} onMouseEnter={() => setActiveIndex(index)}>
               {letter}
               {/* Blocky accent line under each letter */}
-              <div className={`absolute -bottom-1 left-0 right-0 h-1 md:h-2 transition-all duration-300 ${activeIndex === index ? "opacity-100 scale-x-100" : "opacity-50 scale-x-75"}`} style={{
+              <div className={`absolute -bottom-1 left-0 right-0 h-1 md:h-2 transition-all duration-300 ${activeIndex === index
+  ? isIOS
+    ? "scale-105 animate-glitch"
+    : "scale-110 animate-glitch"
+  : "scale-100"}`} style={{
             background: `linear-gradient(90deg, transparent, hsl(var(--${COLOR_VARS[index]})), transparent)`,
-            boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${COLOR_VARS[index]}))` : "none"
+            // boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${COLOR_VARS[index]}))` : "none"
+            boxShadow: activeIndex === index
+  ? isIOS
+    ? `0 0 6px hsl(var(--${COLOR_VARS[index]}))`
+    : `0 0 10px hsl(var(--${COLOR_VARS[index]}))`
+  : "none"
           }} />
             </div>)}
         </div>
