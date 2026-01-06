@@ -95,14 +95,14 @@ export const HeroSection = () => {
       <img 
         src={pixelTv} 
         alt="Pixel TV" 
-        className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 lg:left-20 w-16 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float-left"
+        className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 lg:left-20 w-12 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float-left"
       />
 
       {/* Pixel character logo - top right, tilted left with floating animation */}
       <img 
         src={pixelCharacter} 
         alt="Pixel character" 
-        className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float"
+        className="absolute top-20 right-4 md:right-12 lg:right-20 w-12 md:w-32 lg:w-40 z-20 opacity-90 hover:opacity-100 transition-opacity animate-float"
       />
 
       {/* Main content */}
