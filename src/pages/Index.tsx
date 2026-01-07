@@ -8,6 +8,7 @@ import { LegacySection } from "@/components/LegacySection";
 import { EventsPreview } from "@/components/EventsPreview";
 import { SponsorsSection } from "@/components/SponsorsSection";
 import { AnnouncementsSection } from "@/components/AnnouncementsSection";
+import { CampusAmbassadorGuidelines } from "@/components/CampusAmbassadorGuidelines";
 import { Footer } from "@/components/Footer";
 import { Preloader } from "@/components/Preloader";
 
@@ -34,6 +35,7 @@ const Index = () => {
           <LegacySection />
           <EventsPreview />
           {/* <SponsorsSection /> */}
+          <CampusAmbassadorGuidelines />
           <AnnouncementsSection />
         </main>
         <Footer />
