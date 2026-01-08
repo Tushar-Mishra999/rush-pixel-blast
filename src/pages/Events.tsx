@@ -309,9 +309,11 @@ const Events = () => {
               <p className="text-muted-foreground mb-6">
                 Compete. Win. Take home glory and prizes.
               </p>
-              <Button variant="outline" size="lg" className="font-heading text-xs border-2 border-secondary text-secondary hover:bg-secondary hover:text-background transition-all px-8">
-                REGISTER NOW
-              </Button>
+              <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" className="font-heading text-xs border-2 border-secondary text-secondary hover:bg-secondary hover:text-background transition-all px-8">
+                  REGISTER NOW
+                </Button>
+              </a>
             </div>
           </div>
         </section>

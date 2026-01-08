@@ -40,9 +40,11 @@ export const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="pixel" size="sm">
-              Register
-            </Button>
+            <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221" target="_blank" rel="noopener noreferrer">
+              <Button variant="pixel" size="sm">
+                Register
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -57,9 +59,11 @@ export const Navbar = () => {
               {navLinks.map(link => <Link key={link.href} to={link.href} onClick={() => setIsOpen(false)} className={cn("font-heading text-xs uppercase tracking-wider py-2 transition-colors", location.pathname === link.href ? "text-primary" : "text-muted-foreground hover:text-primary")}>
                   {link.label}
                 </Link>)}
-              <Button variant="pixel" size="sm" className="mt-2 w-full">
-                Register
-              </Button>
+              <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button variant="pixel" size="sm" className="mt-2 w-full">
+                  Register
+                </Button>
+              </a>
             </div>
           </div>}
       </div>
