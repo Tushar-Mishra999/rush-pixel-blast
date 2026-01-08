@@ -214,10 +214,12 @@ export const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className={`flex flex-wrap justify-center gap-4 mb-16 transition-all duration-700 delay-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <Button variant="pixel" size="lg" className="relative group">
-            <span className="relative z-10">Register Now</span>
-            <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all" />
-          </Button>
+          <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221" target="_blank" rel="noopener noreferrer">
+            <Button variant="pixel" size="lg" className="relative group">
+              <span className="relative z-10">Register Now</span>
+              <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all" />
+            </Button>
+          </a>
           <Button variant="pixel-outline" size="lg" className="relative group">
             <span className="relative z-10">Explore Events</span>
             <div className="absolute inset-0 bg-secondary/10 blur-xl opacity-0 group-hover:opacity-100 transition-all" />
