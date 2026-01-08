@@ -140,7 +140,7 @@ export const HeroSection = () => {
             ? isIOS
           ? "0 0 6px currentColor, 0 0 14px currentColor, 3px 3px 0 hsl(var(--background))"
           : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
-          : "0 0 6px currentColor, 2px 2px 0 ",
+          : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
 
           filter:
             activeIndex === index
