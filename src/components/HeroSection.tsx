@@ -39,10 +39,19 @@ const useCountdown = () => {
 export const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const countdown = useCountdown();
   const isIOS =
   typeof window !== "undefined" &&
   /iPad|iPhone|iPod/.test(navigator.userAgent);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   useEffect(() => {
     setIsLoaded(true);
     const interval = setInterval(() => {
@@ -137,10 +146,14 @@ export const HeroSection = () => {
           ? isIOS ? "1px currentColor" : "2px currentColor"
           : "1px currentColor",
           textShadow: activeIndex === index
-            ? isIOS
-          ? "0 0 6px currentColor, 0 0 14px currentColor, 3px 3px 0 hsl(var(--background))"
-          : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
-          : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
+            ? isMobile
+              ? "0 0 4px currentColor, 0 0 8px currentColor, 2px 2px 0 hsl(var(--background))"
+              : isIOS
+                ? "0 0 6px currentColor, 0 0 14px currentColor, 3px 3px 0 hsl(var(--background))"
+                : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
+            : isMobile
+              ? "0 0 3px currentColor, 1px 1px 0 hsl(var(--background))"
+              : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
 
           filter:
             activeIndex === index
