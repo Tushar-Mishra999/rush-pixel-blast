@@ -38,7 +38,7 @@ const CampusAmbassadorGuidelines = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section header */}
-          <h2 className="font-brick text-3xl md:text-4xl lg:text-5xl text-foreground mb-8">
+          <h2 className="font-pixel text-3xl md:text-4xl lg:text-5xl text-foreground mb-8">
             Campus Ambassador Guidelines
           </h2>
           
@@ -57,7 +57,7 @@ const CampusAmbassadorGuidelines = () => {
             {/* Terms and Conditions Accordion */}
             <Accordion type="single" collapsible className="w-full text-left">
               <AccordionItem value="terms" className="border-primary/20">
-                <AccordionTrigger className="text-foreground font-brick text-xl md:text-2xl hover:text-primary hover:no-underline py-4">
+                <AccordionTrigger className="text-foreground font-pixel text-xl md:text-2xl hover:text-primary hover:no-underline py-4">
                   Terms and Conditions
                 </AccordionTrigger>
                 <AccordionContent className="pt-4">
