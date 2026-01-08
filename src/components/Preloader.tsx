@@ -32,7 +32,7 @@ export const Preloader = ({ onComplete }: PreloaderProps) => {
         isFading ? "opacity-0" : "opacity-100"
       }`}
     >
-      <p className="font-pixel text-2xl md:text-4xl tracking-wider animate-pulse">
+      <p className="font-heading text-2xl md:text-4xl tracking-wider animate-pulse">
         <span className="text-azure">L</span>
         <span className="text-green">O</span>
         <span className="text-magenta">A</span>
