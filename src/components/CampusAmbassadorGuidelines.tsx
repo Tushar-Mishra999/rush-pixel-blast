@@ -38,7 +38,7 @@ const CampusAmbassadorGuidelines = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section header */}
-          <h2 className="font-pixel text-3xl md:text-4xl lg:text-5xl text-foreground mb-8">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-8">
             Campus Ambassador Guidelines
           </h2>
           
@@ -50,14 +50,14 @@ const CampusAmbassadorGuidelines = () => {
             <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/40 rounded-bl-lg" />
             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-lg" />
             
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg md:text-lg leading-relaxed mb-12">
               Registration for RUSH implies acceptance of event rules, campus regulations, organizer decisions, media usage & confirmation of accurate information provided by participants.
             </p>
 
             {/* Terms and Conditions Accordion */}
             <Accordion type="single" collapsible className="w-full text-left">
               <AccordionItem value="terms" className="border-primary/20">
-                <AccordionTrigger className="text-foreground font-pixel text-xl md:text-2xl hover:text-primary hover:no-underline py-4">
+                <AccordionTrigger className="text-foreground font-pixel text-xl md:text-lg hover:text-primary hover:no-underline py-8">
                   Terms and Conditions
                 </AccordionTrigger>
                 <AccordionContent className="pt-4">
