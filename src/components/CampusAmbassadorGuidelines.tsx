@@ -50,9 +50,18 @@ const CampusAmbassadorGuidelines = () => {
             <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/40 rounded-bl-lg" />
             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-lg" />
             
-            <p className="text-muted-foreground text-lg md:text-lg leading-relaxed mb-12">
+            <p className="text-muted-foreground text-lg md:text-lg leading-relaxed mb-8">
               Registration for RUSH implies acceptance of event rules, campus regulations, organizer decisions, media usage & confirmation of accurate information provided by participants.
             </p>
+
+            <a 
+              href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d35ae3f2788b53309a79c"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-primary text-primary-foreground font-pixel text-lg rounded-lg hover:bg-primary/90 transition-colors mb-12"
+            >
+              KNOW MORE
+            </a>
 
             {/* Terms and Conditions Accordion */}
             <Accordion type="single" collapsible className="w-full text-left">
