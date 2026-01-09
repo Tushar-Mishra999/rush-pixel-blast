@@ -40,9 +40,12 @@ export const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const countdown = useCountdown();
+  const isMobile =
+    typeof window !== "undefined" &&
+    (window.innerWidth < 768 || /iPad|iPhone|iPod|Android/.test(navigator.userAgent));
   const isIOS =
-  typeof window !== "undefined" &&
-  /iPad|iPhone|iPod/.test(navigator.userAgent);
+    typeof window !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
   useEffect(() => {
     setIsLoaded(true);
     const interval = setInterval(() => {
@@ -132,20 +135,29 @@ export const HeroSection = () => {
           transitionDelay: `${index * 100}ms`,
           fontWeight: 900,
           letterSpacing: "-0.05em",
-          WebkitTextStroke:
-          activeIndex === index
-          ? isIOS ? "1px currentColor" : "2px currentColor"
-          : "1px currentColor",
+          textRendering: "optimizeLegibility",
+          WebkitFontSmoothing: "antialiased",
+          WebkitTextStroke: isIOS
+          ? "0px transparent"
+          : activeIndex === index
+          ? isMobile ? "1.5px currentColor" : "2px currentColor"
+          : isMobile ? "1.5px currentColor" : "1px currentColor",
           textShadow: activeIndex === index
             ? isIOS
-          ? "0 0 6px currentColor, 0 0 14px currentColor, 3px 3px 0 hsl(var(--background))"
+          ? "0 0 4px currentColor, 0 0 8px currentColor, 0 0 12px currentColor, 2px 2px 0 currentColor, -2px -2px 0 currentColor, 2px -2px 0 currentColor, -2px 2px 0 currentColor, 2px 0 0 currentColor, -2px 0 0 currentColor, 0 2px 0 currentColor, 0 -2px 0 currentColor"
+          : isMobile
+          ? "0 0 3px currentColor, 0 0 6px currentColor, 0 0 9px currentColor, 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background)), 1px -1px 0 hsl(var(--background)), -1px 1px 0 hsl(var(--background))"
           : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
+          : isIOS
+          ? "0 0 3px currentColor, 2px 2px 0 hsl(var(--background)), -2px -2px 0 hsl(var(--background)), 2px -2px 0 hsl(var(--background)), -2px 2px 0 hsl(var(--background)), 2px 0 0 hsl(var(--background)), -2px 0 0 hsl(var(--background)), 0 2px 0 hsl(var(--background)), 0 -2px 0 hsl(var(--background)), 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background)), 1px -1px 0 hsl(var(--background)), -1px 1px 0 hsl(var(--background))"
+          : isMobile
+          ? "0 0 3px currentColor, 0 0 5px currentColor, 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background))"
           : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
 
           filter:
             activeIndex === index
-              ? isIOS ? "brightness(1)" : "brightness(1.2)"
-              : "brightness(1)"
+              ? isMobile ? "brightness(1.3) saturate(1.2)" : "brightness(1.2)"
+              : isMobile ? "brightness(1.15) saturate(1.1)" : "brightness(1)"
           // WebkitTextStroke: activeIndex === index ? "2px currentColor" : "1px currentColor",
           // textShadow: activeIndex === index ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))" : "0 0 10px currentColor, 0 0 20px hsl(var(--background)), 3px 3px 0 hsl(var(--background))",
           // filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
@@ -153,15 +165,15 @@ export const HeroSection = () => {
               {letter}
               {/* Blocky accent line under each letter */}
               <div className={`absolute -bottom-1 left-0 right-0 h-1 md:h-2 transition-all duration-300 ${activeIndex === index
-  ? isIOS
+  ? isMobile
     ? "scale-105 animate-glitch"
     : "scale-110 animate-glitch"
   : "scale-100"}`} style={{
             background: `linear-gradient(90deg, transparent, hsl(var(--${COLOR_VARS[index]})), transparent)`,
             // boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${COLOR_VARS[index]}))` : "none"
             boxShadow: activeIndex === index
-  ? isIOS
-    ? `0 0 6px hsl(var(--${COLOR_VARS[index]}))`
+  ? isMobile
+    ? `0 0 6px hsl(var(--${COLOR_VARS[index]})), 0 0 10px hsl(var(--${COLOR_VARS[index]}) / 0.6)`
     : `0 0 10px hsl(var(--${COLOR_VARS[index]}))`
   : "none"
           }} />
