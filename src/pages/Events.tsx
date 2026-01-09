@@ -20,7 +20,7 @@ import fashionShowImage from "@/assets/events/fashion-show.webp";
 import futsalMenImage from "@/assets/events/futsal-men.webp";
 import futsalWomenImage from "@/assets/events/futsal-women.webp";
 import groupDanceImage from "@/assets/events/group-dance.webp";
-
+import { Link} from "react-router-dom";
 const categories = [{
   id: "all",
   name: "ALL",
@@ -54,8 +54,35 @@ const events = [
   category: "academic",
   prize: "TBA",
   team: "TBA",
-  image: quintessenceImage
+  image: quintessenceImage,
+  link:"https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d6f651fbb9ea66de2b576"
 }, 
+// Cultural
+{
+  id: 17,
+  name: "SYNCSPHERE: Group Dance",
+  category: "cultural",
+  prize: "TBA",
+  team: "TBA",
+  image: groupDanceImage,
+  link : "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d6c33e51a632032164a96"
+},{
+  id: 19,
+  name: "VOGUEVERSE: Fashion Show",
+  category: "cultural",
+  prize: "TBA",
+  team: "TBA",
+  image: fashionShowImage,
+  link : "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d6b281fbb9ea66de2b53c",
+}, {
+  id: 21,
+  name: "Pitchpulse: Solo Singing",
+  category: "cultural",
+  prize: "TBA",
+  team: "TBA",
+  image: soloSongingImage,
+  link : "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d6dc9e51a632032164cb4"
+},
 // Sports
 {
   id: 4,
@@ -63,101 +90,90 @@ const events = [
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: volleyballMenImage
+  image: volleyballMenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d68841fbb9ea66de2b503",
 }, {
   id: 5,
   name: "Volleyball Women",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: volleyballWomenImage
+  image: volleyballWomenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d69831fbb9ea66de2b50b"
 }, {
   id: 6,
   name: "TT Mixed",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: tableTennisImage
+  image: tableTennisImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d678d8c4d008fac95d87d"
 },{
   id: 8,
   name: "Futsal Men",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: futsalMenImage
+  image: futsalMenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d5f25fc33805e3d7487ee"
 }, {
   id: 9,
   name: "Futsal Women",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: futsalWomenImage
+  image: futsalWomenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d6050fc33805e3d74880d"
 }, {
   id: 10,
   name: "Throwball Men",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: throwballMenImage
+  image: throwballMenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d62cffc33805e3d748a68"
 }, {
   id: 11,
   name: "Throwball Women",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: throwballWomenImage
+  image: throwballWomenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d65e28c4d008fac95d846"
 },{
   id: 13,
   name: "Chess Unisex",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: chessImage
+  image: chessImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d5ae5fc33805e3d7483b1"
 }, {
   id: 14,
   name: "Basketball Men",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: basketballMenImage
+  image: basketballMenImage,
+  link : "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d392712d424a65d8814a2"
 }, {
   id: 15,
   name: "Basketball Women",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: basketballWomenImage
+  image: basketballWomenImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d3aad2337542d98da0665"
 }, {
   id: 16,
   name: "Cricket Men",
   category: "sports",
   prize: "TBA",
   team: "TBA",
-  image: cricketImage
+  image: cricketImage,
+  link: "https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d5dafe638cc5edad8f7f7"
 },
-// Cultural
-{
-  id: 17,
-  name: "Group Dance",
-  category: "cultural",
-  prize: "TBA",
-  team: "TBA",
-  image: groupDanceImage
-},{
-  id: 19,
-  name: "Fashion Show",
-  category: "cultural",
-  prize: "TBA",
-  team: "TBA",
-  image: fashionShowImage
-}, {
-  id: 21,
-  name: "Solo Singing",
-  category: "cultural",
-  prize: "TBA",
-  team: "TBA",
-  image: soloSongingImage
-}];
+];
 
 const Events = () => {
   const [searchParams] = useSearchParams();
@@ -279,13 +295,14 @@ const Events = () => {
                           {event.category}
                         </span>
                       </div>
-
+                    <Link to={event.link}>
                       <Button variant="ghost" size="sm" className="w-full justify-between border border-border hover:border-current transition-colors" style={{
                     "--hover-color": categoryData.accentColor
                   } as React.CSSProperties}>
                         <span>View Details</span>
                         <ArrowRight size={16} />
                       </Button>
+                    </Link>
                     </div>
                   </div>;
             })}
