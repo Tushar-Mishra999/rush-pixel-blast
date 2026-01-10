@@ -1,4 +1,11 @@
 export const AboutTheme = () => {
+  const isIOS =
+    typeof window !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const isMobile =
+    typeof window !== "undefined" &&
+    (window.innerWidth < 768 || isIOS);
+  
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Gradient background */}
@@ -15,7 +22,13 @@ export const AboutTheme = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h3 className="font-heading text-lg md:text-xl text-accent font-bold"
-            style={{ textShadow: "0 0 20px hsl(var(--accent))" }}>
+            style={{ 
+              textShadow: isIOS 
+                ? "0 0 6px hsl(var(--accent) / 0.6)" 
+                : isMobile 
+                ? "0 0 8px hsl(var(--accent) / 0.7)"
+                : "0 0 12px hsl(var(--accent) / 0.8)"
+            }}>
             Rendering the Future That Matters
           </h3>
           

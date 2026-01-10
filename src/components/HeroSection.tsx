@@ -149,7 +149,7 @@ export const HeroSection = () => {
           ? "0 0 3px currentColor, 0 0 6px currentColor, 0 0 9px currentColor, 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background)), 1px -1px 0 hsl(var(--background)), -1px 1px 0 hsl(var(--background))"
           : "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))"
           : isIOS
-          ? "0 0 3px currentColor, 2px 2px 0 hsl(var(--background)), -2px -2px 0 hsl(var(--background)), 2px -2px 0 hsl(var(--background)), -2px 2px 0 hsl(var(--background)), 2px 0 0 hsl(var(--background)), -2px 0 0 hsl(var(--background)), 0 2px 0 hsl(var(--background)), 0 -2px 0 hsl(var(--background)), 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background)), 1px -1px 0 hsl(var(--background)), -1px 1px 0 hsl(var(--background))"
+          ? "1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background)), 1px -1px 0 hsl(var(--background)), -1px 1px 0 hsl(var(--background))"
           : isMobile
           ? "0 0 3px currentColor, 0 0 5px currentColor, 1px 1px 0 hsl(var(--background)), -1px -1px 0 hsl(var(--background))"
           : "0 0 6px currentColor, 2px 2px 0 hsl(var(--background))",
@@ -157,7 +157,7 @@ export const HeroSection = () => {
           filter:
             activeIndex === index
               ? isMobile ? "brightness(1.3) saturate(1.2)" : "brightness(1.2)"
-              : isMobile ? "brightness(1.15) saturate(1.1)" : "brightness(1)"
+              : isIOS ? "none" : isMobile ? "brightness(1.15) saturate(1.1)" : "brightness(1)"
           // WebkitTextStroke: activeIndex === index ? "2px currentColor" : "1px currentColor",
           // textShadow: activeIndex === index ? "0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor, 4px 4px 0 hsl(var(--background))" : "0 0 10px currentColor, 0 0 20px hsl(var(--background)), 3px 3px 0 hsl(var(--background))",
           // filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
