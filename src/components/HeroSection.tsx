@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FloatingPixels } from "@/components/PixelBlock";
 import { ChevronDown } from "lucide-react";
@@ -232,10 +233,12 @@ export const HeroSection = () => {
               <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all" />
             </Button>
           </a>
-          <Button variant="pixel-outline" size="lg" className="relative group">
-            <span className="relative z-10">Explore Events</span>
-            <div className="absolute inset-0 bg-secondary/10 blur-xl opacity-0 group-hover:opacity-100 transition-all" />
-          </Button>
+          <Link to="/events">
+            <Button variant="pixel-outline" size="lg" className="relative group">
+              <span className="relative z-10">Explore Events</span>
+              <div className="absolute inset-0 bg-secondary/10 blur-xl opacity-0 group-hover:opacity-100 transition-all" />
+            </Button>
+          </Link>
         </div>
 
         {/* Stats with cyberpunk styling */}
