@@ -164,20 +164,6 @@ export const HeroSection = () => {
           // filter: activeIndex === index ? "brightness(1.2)" : "brightness(1)"
         }} onMouseEnter={() => setActiveIndex(index)}>
               {letter}
-              {/* Blocky accent line under each letter */}
-              <div className={`absolute -bottom-1 left-0 right-0 h-1 md:h-2 transition-all duration-300 ${activeIndex === index
-  ? isMobile
-    ? "scale-105 animate-glitch"
-    : "scale-110 animate-glitch"
-  : "scale-100"}`} style={{
-            background: `linear-gradient(90deg, transparent, hsl(var(--${COLOR_VARS[index]})), transparent)`,
-            // boxShadow: activeIndex === index ? `0 0 10px hsl(var(--${COLOR_VARS[index]}))` : "none"
-            boxShadow: activeIndex === index
-  ? isMobile
-    ? `0 0 6px hsl(var(--${COLOR_VARS[index]})), 0 0 10px hsl(var(--${COLOR_VARS[index]}) / 0.6)`
-    : `0 0 10px hsl(var(--${COLOR_VARS[index]}))`
-  : "none"
-          }} />
             </div>)}
         </div>
 
