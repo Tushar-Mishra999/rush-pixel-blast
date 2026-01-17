@@ -276,8 +276,7 @@ const Events = () => {
                         </h3>
                       </div>
                       
-                      <div className="flex justify-between items-center text-sm mb-4">
-                        <span className="text-muted-foreground">Team: {event.team}</span>
+                      <div className="flex justify-end items-center text-sm mb-3">
                         <span className="text-xs uppercase px-2 py-0.5" style={{
                       backgroundColor: `${categoryData.accentColor}20`,
                       color: categoryData.accentColor
