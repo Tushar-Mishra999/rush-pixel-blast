@@ -264,16 +264,6 @@ const Events = () => {
                         </span>
                       </div> */}
                       
-                      {/* Prize Badge */}
-                      <div className="absolute top-3 right-3">
-                        <span className="font-heading text-xs px-2 py-1 border" style={{
-                      backgroundColor: `${categoryData.accentColor}20`,
-                      borderColor: categoryData.accentColor,
-                      color: categoryData.accentColor
-                    }}>
-                          {event.prize}
-                        </span>
-                      </div>
                     </div>
                     
                     {/* Event Info */}
