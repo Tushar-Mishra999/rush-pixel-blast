@@ -231,7 +231,7 @@ export const HeroSection = () => {
             </a>
             <span className="text-muted-foreground/40 text-xs hidden md:inline">•</span>
             <Link to="/events">
-              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-magenta/60 text-magenta hover:border-magenta hover:bg-magenta/10">
+              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-azure/60 text-azure hover:border-azure hover:bg-azure/10">
                 <span className="relative z-10">Explore Events</span>
               </Button>
             </Link>
