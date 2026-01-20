@@ -222,18 +222,22 @@ export const HeroSection = () => {
             </Button>
           </a>
           
-          {/* Secondary CTAs - smaller, side by side */}
+          {/* Secondary CTAs - gradient rainbow effect */}
           <div className="flex flex-wrap justify-center items-center gap-3">
             <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d35ae3f2788b53309a79c" target="_blank" rel="noopener noreferrer">
-              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-azure/60 text-azure hover:border-azure hover:bg-azure/10">
-                <span className="relative z-10">Campus Ambassador</span>
-              </Button>
+              <div className="relative group p-[2px] animate-gradient-shift bg-gradient-to-r from-azure via-magenta to-olive bg-[length:200%_200%] hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-background px-4 py-2">
+                  <span className="relative z-10 text-xs md:text-sm font-heading text-foreground group-hover:text-white transition-colors">Campus Ambassador</span>
+                </div>
+              </div>
             </a>
             <span className="text-muted-foreground/40 text-xs hidden md:inline">•</span>
             <Link to="/events">
-              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-azure/60 text-azure hover:border-azure hover:bg-azure/10">
-                <span className="relative z-10">Explore Events</span>
-              </Button>
+              <div className="relative group p-[2px] animate-gradient-shift bg-gradient-to-r from-green via-azure to-magenta bg-[length:200%_200%] hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.5s' }}>
+                <div className="bg-background px-4 py-2">
+                  <span className="relative z-10 text-xs md:text-sm font-heading text-foreground group-hover:text-white transition-colors">Explore Events</span>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
