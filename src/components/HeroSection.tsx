@@ -212,25 +212,30 @@ export const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className={`flex flex-wrap justify-center items-center gap-4 mb-16 transition-all duration-700 delay-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d35ae3f2788b53309a79c" target="_blank" rel="noopener noreferrer">
-            <Button variant="pixel-outline" size="lg" className="relative group">
-              <span className="relative z-10">Campus Ambassador</span>
-              <div className="absolute inset-0 bg-secondary/10 blur-xl opacity-0 group-hover:opacity-100 transition-all" />
-            </Button>
-          </a>
+        {/* CTA Buttons - Asymmetric Layout */}
+        <div className={`flex flex-col items-center gap-6 mb-16 transition-all duration-700 delay-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          {/* Primary CTA - Register Now (larger, centered) */}
           <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221" target="_blank" rel="noopener noreferrer">
-            <Button variant="pixel" size="lg" className="relative group">
-              <span className="relative z-10">Register Now</span>
-              <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all" />
+            <Button variant="pixel" size="lg" className="relative group px-10 py-6 text-lg md:text-xl">
+              <span className="relative z-10 font-heading tracking-wider">Register Now</span>
+              <div className="absolute inset-0 bg-primary/30 blur-xl group-hover:bg-primary/50 transition-all" />
             </Button>
           </a>
-          <Link to="/events">
-            <Button variant="pixel-outline" size="lg" className="relative group">
-              <span className="relative z-10">Explore Events</span>
-              <div className="absolute inset-0 bg-secondary/10 blur-xl opacity-0 group-hover:opacity-100 transition-all" />
-            </Button>
-          </Link>
+          
+          {/* Secondary CTAs - smaller, side by side */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d35ae3f2788b53309a79c" target="_blank" rel="noopener noreferrer">
+              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-azure/60 text-azure hover:border-azure hover:bg-azure/10">
+                <span className="relative z-10">Campus Ambassador</span>
+              </Button>
+            </a>
+            <span className="text-muted-foreground/40 text-xs hidden md:inline">•</span>
+            <Link to="/events">
+              <Button variant="pixel-outline" size="sm" className="relative group text-xs md:text-sm border-magenta/60 text-magenta hover:border-magenta hover:bg-magenta/10">
+                <span className="relative z-10">Explore Events</span>
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Stats with cyberpunk styling */}
