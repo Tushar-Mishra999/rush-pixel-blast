@@ -225,7 +225,7 @@ export const HeroSection = () => {
           {/* Secondary CTAs - gradient rainbow effect */}
           <div className="flex flex-wrap justify-center items-center gap-3">
             <a href="https://www.festbuzz.in/fests/695cd2005d0951e6c22f3221/events/695d35ae3f2788b53309a79c" target="_blank" rel="noopener noreferrer">
-              <div className="relative group p-[2px] animate-gradient-shift bg-gradient-to-r from-azure via-magenta to-olive bg-[length:200%_200%] hover:shadow-lg transition-shadow duration-300">
+              <div className="relative group p-[2px] bg-gradient-to-r from-azure via-magenta to-olive hover:shadow-lg transition-shadow duration-300">
                 <div className="bg-background px-4 py-2">
                   <span className="relative z-10 text-xs md:text-sm font-heading text-foreground group-hover:text-white transition-colors">Campus Ambassador</span>
                 </div>
@@ -233,7 +233,7 @@ export const HeroSection = () => {
             </a>
             <span className="text-muted-foreground/40 text-xs hidden md:inline">•</span>
             <Link to="/events">
-              <div className="relative group p-[2px] animate-gradient-shift bg-gradient-to-r from-green via-azure to-magenta bg-[length:200%_200%] hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.5s' }}>
+              <div className="relative group p-[2px] bg-gradient-to-r from-green via-azure to-magenta hover:shadow-lg transition-shadow duration-300">
                 <div className="bg-background px-4 py-2">
                   <span className="relative z-10 text-xs md:text-sm font-heading text-foreground group-hover:text-white transition-colors">Explore Events</span>
                 </div>
