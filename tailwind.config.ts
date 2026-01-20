@@ -148,6 +148,11 @@ export default {
           "60%": { transform: "translate(2px, 2px)" },
           "80%": { transform: "translate(2px, -2px)" },
         },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         "float": "float 3s ease-in-out infinite",
@@ -164,6 +169,7 @@ export default {
         "bounce-slow": "bounce-slow 3s ease-in-out infinite",
         "marquee": "marquee 20s linear infinite",
         "glitch": "glitch 2s infinite",
+        "gradient-shift": "gradient-shift 3s ease infinite",
       },
     },
   },
