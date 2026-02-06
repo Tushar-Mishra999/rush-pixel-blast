@@ -175,40 +175,32 @@ export const HeroSection = () => {
           Rush 2026, IIM Ranchi's flagship annual festival, celebrates imagination, purposeful action and the responsibility to shape progress that truly matters.
         </p>
 
-        {/* Countdown Timer */}
-        <div className={`flex justify-center items-center gap-4 md:gap-6 mb-10 transition-all duration-700 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          {countdownUnits.map((unit, index) => <div key={unit.label} className="relative group">
-              <div className={`relative p-3 md:p-4 border-2 bg-card/40 backdrop-blur-sm transition-all duration-300`} style={{
-            borderColor: `hsl(var(--${unit.color}))`,
-            boxShadow: `0 0 20px hsl(var(--${unit.color}) / 0.3), inset 0 0 15px hsl(var(--${unit.color}) / 0.1)`
-          }}>
-                {/* Corner accents */}
-                <div className="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2" style={{
-              borderColor: `hsl(var(--${unit.color}))`
-            }} />
-                <div className="absolute -top-1 -right-1 w-2 h-2 border-t-2 border-r-2" style={{
-              borderColor: `hsl(var(--${unit.color}))`
-            }} />
-                <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b-2 border-l-2" style={{
-              borderColor: `hsl(var(--${unit.color}))`
-            }} />
-                <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2" style={{
-              borderColor: `hsl(var(--${unit.color}))`
-            }} />
-
-                <div className={`font-heading text-2xl md:text-4xl text-${unit.color}`} style={{
-              textShadow: `0 0 10px hsl(var(--${unit.color})), 0 0 20px hsl(var(--${unit.color}) / 0.5)`,
-              minWidth: "2ch",
-              display: "block"
+        {/* Live Now Badge */}
+        <div className={`flex justify-center items-center mb-10 transition-all duration-700 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <div className="relative group">
+            <div className="relative px-8 py-4 border-2 bg-card/40 backdrop-blur-sm transition-all duration-300 border-primary" style={{
+              boxShadow: "0 0 30px hsl(var(--primary) / 0.4), inset 0 0 20px hsl(var(--primary) / 0.1)"
             }}>
-                  {String(unit.value).padStart(2, "0")}
-                </div>
-                <div className="font-heading text-[8px] md:text-[10px] text-muted-foreground mt-1 tracking-wider">
-                  {unit.label}
-                </div>
-              </div>
+              {/* Corner accents */}
+              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary" />
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-primary" />
+              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary" />
 
-            </div>)}
+              <div className="flex items-center gap-3">
+                {/* Pulsing dot */}
+                <div className="relative">
+                  <div className="w-3 h-3 bg-green rounded-full animate-pulse" />
+                  <div className="absolute inset-0 w-3 h-3 bg-green rounded-full animate-ping opacity-75" />
+                </div>
+                <span className="font-heading text-2xl md:text-4xl text-primary animate-neon-pulse" style={{
+                  textShadow: "0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3)"
+                }}>
+                  LIVE NOW
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* CTA Buttons */}
