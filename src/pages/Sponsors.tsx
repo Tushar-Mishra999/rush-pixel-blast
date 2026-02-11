@@ -138,7 +138,7 @@ const Sponsors = () => {
               {/* Jharkhand Tourism - Title Sponsor */}
               <div className="flex flex-col items-center gap-3">
                 <h3 className="font-heading text-xs md:text-lg text-accent tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--accent) / 0.5)" }}>
-                  TOURISM TITLE SPONSOR
+                  TITLE SPONSOR
                 </h3>
                 <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-accent/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-accent transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--accent) / 0.2)" }}>
                   <img src={jharkhandTourismLogo} alt="Jharkhand Tourism - Title Sponsor" className="max-w-full max-h-full object-contain" />
