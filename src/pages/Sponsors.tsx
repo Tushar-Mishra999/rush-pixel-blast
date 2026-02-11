@@ -3,6 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 
+// Current Sponsor logos
+import bpclLogo from "@/assets/sponsors/bpcl.jpeg";
+import jharkhandTourismLogo from "@/assets/sponsors/jharkhand-tourism.png";
+
 // Past Sponsor logos
 import aprillaVespa from "@/assets/sponsors/aprilla-vespa.png";
 import centralBank from "@/assets/sponsors/central-bank.png";
@@ -118,6 +122,39 @@ const Sponsors = () => {
             <h1 className="font-heading text-3xl text-foreground mb-4 md:text-3xl">
               Partner with RUSH 2026
             </h1>
+          </div>
+        </section>
+
+        {/* Current Sponsors */}
+        <section className="py-16 bg-background border-b-2 border-border">
+          <div className="container px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-3xl text-accent mb-4" style={{ textShadow: "0 0 20px hsl(var(--accent) / 0.5)" }}>
+                Current Sponsors
+              </h2>
+            </div>
+
+            <div className="flex justify-center items-stretch gap-8 md:gap-16 flex-wrap max-w-4xl mx-auto">
+              {/* BPCL - Associate Sponsor */}
+              <div className="flex flex-col items-center gap-4">
+                <h3 className="font-heading text-sm md:text-base text-primary tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--primary) / 0.5)" }}>
+                  ASSOCIATE SPONSOR
+                </h3>
+                <div className="w-56 h-36 md:w-72 md:h-44 border-2 border-primary/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-4 hover:border-primary transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}>
+                  <img src={bpclLogo} alt="BPCL - Associate Sponsor" className="max-w-full max-h-full object-contain" />
+                </div>
+              </div>
+
+              {/* Jharkhand Tourism - Title Sponsor */}
+              <div className="flex flex-col items-center gap-4">
+                <h3 className="font-heading text-sm md:text-base text-accent tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--accent) / 0.5)" }}>
+                  TITLE SPONSOR
+                </h3>
+                <div className="w-56 h-36 md:w-72 md:h-44 border-2 border-accent/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-4 hover:border-accent transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--accent) / 0.2)" }}>
+                  <img src={jharkhandTourismLogo} alt="Jharkhand Tourism - Title Sponsor" className="max-w-full max-h-full object-contain" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
