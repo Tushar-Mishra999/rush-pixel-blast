@@ -135,23 +135,23 @@ const Sponsors = () => {
             </div>
 
             <div className="flex justify-center items-stretch gap-6 md:gap-10 flex-nowrap max-w-5xl mx-auto">
-              {/* BPCL - Associate Sponsor */}
-              <div className="flex flex-col items-center gap-3">
-                <h3 className="font-heading text-xs md:text-lg text-primary tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--primary) / 0.5)" }}>
-                  BPCL ASSOCIATE SPONSOR
-                </h3>
-                <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-primary/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-primary transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}>
-                  <img src={bpclLogo} alt="BPCL - Associate Sponsor" className="max-w-full max-h-full object-contain" />
-                </div>
-              </div>
-
               {/* Jharkhand Tourism - Title Sponsor */}
               <div className="flex flex-col items-center gap-3">
                 <h3 className="font-heading text-xs md:text-lg text-accent tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--accent) / 0.5)" }}>
-                  JHARKHAND TOURISM TITLE SPONSOR
+                  TOURISM TITLE SPONSOR
                 </h3>
                 <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-accent/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-accent transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--accent) / 0.2)" }}>
                   <img src={jharkhandTourismLogo} alt="Jharkhand Tourism - Title Sponsor" className="max-w-full max-h-full object-contain" />
+                </div>
+              </div>
+
+              {/* BPCL - Associate Sponsor */}
+              <div className="flex flex-col items-center gap-3">
+                <h3 className="font-heading text-xs md:text-lg text-primary tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--primary) / 0.5)" }}>
+                  ASSOCIATE SPONSOR
+                </h3>
+                <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-primary/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-primary transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}>
+                  <img src={bpclLogo} alt="BPCL - Associate Sponsor" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
