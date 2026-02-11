@@ -140,7 +140,7 @@ const Sponsors = () => {
                 <h3 className="font-heading text-xs md:text-lg text-accent tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--accent) / 0.5)" }}>
                   TITLE SPONSOR
                 </h3>
-                <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-accent/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-accent transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--accent) / 0.2)" }}>
+                <div className="w-52 h-32 md:w-[420px] md:h-56 border-2 border-accent/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-4 hover:border-accent transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--accent) / 0.2)" }}>
                   <img src={jharkhandTourismLogo} alt="Jharkhand Tourism - Title Sponsor" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
@@ -150,7 +150,7 @@ const Sponsors = () => {
                 <h3 className="font-heading text-xs md:text-lg text-primary tracking-wider" style={{ textShadow: "0 0 10px hsl(var(--primary) / 0.5)" }}>
                   ASSOCIATE SPONSOR
                 </h3>
-                <div className="w-40 h-28 md:w-80 md:h-48 border-2 border-primary/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-3 hover:border-primary transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}>
+                <div className="w-52 h-32 md:w-[420px] md:h-56 border-2 border-primary/50 bg-card/60 backdrop-blur-sm flex items-center justify-center p-4 hover:border-primary transition-all duration-300" style={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}>
                   <img src={bpclLogo} alt="BPCL - Associate Sponsor" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
